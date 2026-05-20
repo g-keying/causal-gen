@@ -8,21 +8,46 @@ class Hparams:
         for k, v in dict.items():
             setattr(self, k, v)
 
+ultrasound = Hparams()
+ultrasound.lr = 1e-3
+ultrasound.bs = 16              # small dataset, smaller batch
+ultrasound.wd = 0.01
+ultrasound.z_dim = 16
+ultrasound.input_res = 128      # resize your 1280x960 to 128x128
+ultrasound.input_channels = 1  # grayscale
+ultrasound.pad = 4
+ultrasound.enc_arch = "128b1d2,64b3d2,32b3d2,16b3d2,8b3d4,1b2"
+ultrasound.dec_arch = "1b2,8b4,16b4,32b4,64b4,128b2"
+ultrasound.widths = [16, 32, 64, 128, 256, 512]
+### CHANGE THESE =================== 
+ultrasound.parents_x = ["freq", "power", "focus_depth"]
+ultrasound.context_dim = 3
+### ================================ 
+ultrasound.concat_pa = True
+ultrasound.context_norm = "[-1,1]"
+HPARAMS_REGISTRY["ultrasound"] = ultrasound
+
 
 morphomnist = Hparams()
-morphomnist.lr = 1e-3
-morphomnist.bs = 32
-morphomnist.wd = 0.01
-morphomnist.z_dim = 16
-morphomnist.input_res = 32
-morphomnist.pad = 4
+morphomnist.lr = 1e-3 # learning rate
+morphomnist.bs = 32 # batch size
+morphomnist.wd = 0.01 # weight decay
+morphomnist.z_dim = 16 # size of latent space (constant)
+morphomnist.input_res = 32 # input resolution
+morphomnist.pad = 4 # padding added around images during augmentation
 morphomnist.enc_arch = "32b3d2,16b3d2,8b3d2,4b3d4,1b4"
+# encoder architecture for residual blocks
+# 32b3d2 = at 32×32 resolution for 3 blocks/latents
+# then downsample by 2 → 16×16
 morphomnist.dec_arch = "1b4,4b4,8b4,16b4,32b4"
 morphomnist.widths = [16, 32, 64, 128, 256]
+# number of channels for each resolution
+# 32x32 has 16 channels 
 morphomnist.parents_x = ["thickness", "intensity", "digit"]
+morphomnist.context_dim = 12
 morphomnist.concat_pa = True
 morphomnist.context_norm = "[-1,1]"
-morphomnist.context_dim = 12
+# size of pa vector fed into the mode;
 HPARAMS_REGISTRY["morphomnist"] = morphomnist
 
 
