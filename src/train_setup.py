@@ -8,7 +8,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-from datasets import cmnist, mimic, morphomnist, ukbb
+from datasets import cmnist, mimic, morphomnist, ukbb, ultrasound
 from hps import Hparams
 from utils import linear_warmup, seed_worker
 
@@ -22,6 +22,8 @@ def setup_dataloaders(args: Hparams) -> Dict[str, DataLoader]:
         datasets = cmnist(args)
     elif "mimic" in args.hps:
         datasets = mimic(args)
+    elif "ultrasound" in args.hps:
+        datasets = ultrasound(args)
     else:
         NotImplementedError
 
