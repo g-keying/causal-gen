@@ -319,17 +319,23 @@ class MorphoMNISTPGM(BasePGM):
             "digit": "categorical",
         }
         # priors
+        # uniform distribution for the digits
         self.digit_logits = nn.Parameter(torch.zeros(1, 10))  # uniform prior
+        
+        # defines a standard Gaussian N(0,1) as starting point
         for k in ["t", "i"]:  # thickness, intensity, standard Gaussian
             self.register_buffer(f"{k}_base_loc", torch.zeros(1))
             self.register_buffer(f"{k}_base_scale", torch.ones(1))
 
         # constraint, assumes data is [-1,1] normalized
+        # sigmoid transforms -> (0, 1)
+        # affine transform of (0, 1) -> (-1, 1)
         normalize_transform = T.ComposeTransform(
             [T.SigmoidTransform(), T.AffineTransform(loc=-1, scale=2)]
         )
 
         # thickness flow
+        # t = exp ( affinenorm * spline )
         self.thickness_module = T.ComposeTransformModule(
             [T.Spline(1, count_bins=4, order="linear")]
         )
@@ -345,7 +351,7 @@ class MorphoMNISTPGM(BasePGM):
         self.intensity_flow = [self.context_nn, normalize_transform]
 
         if args.setup != "sup_pgm":
-            # anticausal predictors
+            # anticausal predictors for each variable (parent | image)
             input_shape = (args.input_channels, args.input_res, args.input_res)
             # q(t | x, i) = Normal(mu(x, i), sigma(x, i)), 2 outputs: loc & scale
             self.encoder_t = CNN(input_shape, num_outputs=2, context_dim=1, width=8)
@@ -361,23 +367,31 @@ class MorphoMNISTPGM(BasePGM):
 
     def model(self) -> Dict[str, Tensor]:
         pyro.module("MorphoMNISTPGM", self)
+        # tells Pyro to track all the learnable parameters in this class
+
         # p(y), digit label prior dist
         py = dist.OneHotCategorical(
             probs=F.softmax(self.digit_logits, dim=-1)
         )  # .to_event(1)
         # with pyro.poutine.scale(scale=0.05):
         digit = pyro.sample("digit", py)
-
+        # → rolls a weighted die with 10 sides
+        # → returns e.g. [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]  (digit=3)
+        
+        # .to_event(1) mean it returns a 1D vector rather than scalar
         # p(t), thickness flow
         pt_base = dist.Normal(self.t_base_loc, self.t_base_scale).to_event(1)
+        # the starting "noise", i.e what we abduct
         pt = dist.TransformedDistribution(pt_base, self.thickness_flow)
         thickness = pyro.sample("thickness", pt)
 
         # p(i | t), intensity conditional flow
         pi_t_base = dist.Normal(self.i_base_loc, self.i_base_scale).to_event(1)
+        # the starting "noise", i.e what we abduct
         pi_t = ConditionalTransformedDistribution(
             pi_t_base, self.intensity_flow
         ).condition(thickness)
+        
         intensity = pyro.sample("intensity", pi_t)
         _ = self.context_nn
 
@@ -385,6 +399,7 @@ class MorphoMNISTPGM(BasePGM):
 
     def guide(self, **obs) -> None:
         # guide for (optional) semi-supervised learning
+        # if there are some unknown variables, CNN guesses from the image
         with pyro.plate("observations", obs["x"].shape[0]):
             # q(i | x)
             if obs["intensity"] is None:
@@ -411,11 +426,15 @@ class MorphoMNISTPGM(BasePGM):
         pyro.module("MorphoMNISTPGM", self)
         with pyro.plate("observations", obs["x"].shape[0]):
             # q(t | x, i)
+            # 1. predicted t based on 
             t_loc, t_logscale = self.encoder_t(obs["x"], y=obs["intensity"]).chunk(
                 2, dim=-1
             )
+            # 2. guassian based on predicted t
             qt_x = dist.Normal(torch.tanh(t_loc), self.f(t_logscale)).to_event(1)
+            # 3. compare prediction qt_x to obs["thickness"]
             pyro.sample("thickness_aux", qt_x, obs=obs["thickness"])
+            # ↑ compares prediction against true value → computes loss → updates encoder weights
 
             # q(i | x)
             i_loc, i_logscale = self.encoder_i(obs["x"]).chunk(2, dim=-1)
@@ -428,10 +447,12 @@ class MorphoMNISTPGM(BasePGM):
             pyro.sample("digit_aux", qy_x, obs=obs["digit"])
 
     def predict(self, **obs) -> Dict[str, Tensor]:
+        # given an image, what are the predicted variable values?
         # q(t | x, i)
         t_loc, t_logscale = self.encoder_t(obs["x"], y=obs["intensity"]).chunk(
             2, dim=-1
         )
+        # predicts t given image and intensity
         t_loc = torch.tanh(t_loc)
         # q(i | x)
         i_loc, i_logscale = self.encoder_i(obs["x"]).chunk(2, dim=-1)
@@ -701,6 +722,108 @@ class ChestPGM(BasePGM):
             "finding": f_prob,
             "age": a_loc,
         }
+
+    def svi_model(self, **obs) -> None:
+        with pyro.plate("observations", obs["x"].shape[0]):
+            pyro.condition(self.model, data=obs)()
+
+    def guide_pass(self, **obs) -> None:
+        pass
+
+
+class UltrasoundPGM(BasePGM):
+    def __init__(self, args):
+        super().__init__()
+        self.variables = {
+            "freq" : "continuous",
+            "focus" : "continuous",
+            "power": "continuous"
+        }
+    
+        # defines standard Guassian N(0,1) as a starting point / sample
+        # this is learnt to become the exogenous noise later
+        for k in ["f", "p", "d"]:  # thickness, intensity, standard Gaussian
+            self.register_buffer(f"{k}_base_loc", torch.zeros(1))
+            self.register_buffer(f"{k}_base_scale", torch.ones(1))
+    
+        normalize_transform = T.ComposeTransform(
+            [T.SigmoidTransform(), T.AffineTransform(loc=-1, scale=2)]
+        )
+
+        self.freq_module = T.ComposeTransformModule([T.Spline(1, count_bins=4, order="linear")])
+        self.freq_flow = T.ComposeTransform([self.freq_module, normalize_transform])
+
+        self.power_module = T.ComposeTransformModule([T.Spline(1, count_bins=4, order="linear")])
+        self.power_flow = T.ComposeTransform([self.power_module, normalize_transform])
+
+        self.focus_module = T.ComposeTransformModule([T.Spline(1, count_bins=4, order="linear")])
+        self.focus_flow = T.ComposeTransform([self.focus_module, normalize_transform])
+
+        if args.setup != "sup_pgm":
+            input_shape = (args.input_channels, args.input_res, args.input_res)
+            self.encoder_freq  = CNN(input_shape, num_outputs=2, width=8)
+            self.encoder_power = CNN(input_shape, num_outputs=2, width=8)
+            self.encoder_focus = CNN(input_shape, num_outputs=2, width=8)
+            self.f = lambda x: F.softplus(x)
+
+
+    def model(self) -> Dict[str, Tensor]:
+        # sets the normalising flow functions
+        pyro.module("UltrasoundPGM", self)
+
+        pf_base = dist.Normal(self.f_base_loc, self.f_base_scale).to_event(1)
+        # the starting "noise", i.e what we abduct
+        pf = dist.TransformedDistribution(pf_base, self.freq_flow)
+        freq = pyro.sample("freq", pf)
+
+        pd_base = dist.Normal(self.d_base_loc, self.d_base_scale).to_event(1)
+        # the starting "noise", i.e what we abduct
+        pd = dist.TransformedDistribution(pd_base, self.focus_flow)
+        focus = pyro.sample("focus", pd)
+
+        pp_base = dist.Normal(self.p_base_loc, self.p_base_scale).to_event(1)
+        # the starting "noise", i.e what we abduct
+        pp = dist.TransformedDistribution(pp_base, self.power_flow)
+        power = pyro.sample("power", pp)
+
+        return {"power": power, "focus": focus, "freq": freq}
+
+    def model_anticausal(self, **obs) -> None:
+        # trains the encoders 
+        pyro.module("UltrasoundPGM", self)
+        with pyro.plate("observations", obs["x"].shape[0]):
+            # q(f | x) — predict freq from image only (no causal links between variables)
+            f_loc, f_logscale = self.encoder_freq(obs["x"]).chunk(2, dim=-1)
+            qf_x = dist.Normal(torch.tanh(f_loc), self.f(f_logscale)).to_event(1)
+            pyro.sample("freq_aux", qf_x, obs=obs["freq"])
+
+            # q(p | x)
+            p_loc, p_logscale = self.encoder_power(obs["x"]).chunk(2, dim=-1)
+            qp_x = dist.Normal(torch.tanh(p_loc), self.f(p_logscale)).to_event(1)
+            pyro.sample("power_aux", qp_x, obs=obs["power"])
+
+            # q(d | x)
+            d_loc, d_logscale = self.encoder_focus(obs["x"]).chunk(2, dim=-1)
+            qd_x = dist.Normal(torch.tanh(d_loc), self.f(d_logscale)).to_event(1)
+            pyro.sample("focus_aux", qd_x, obs=obs["focus"])
+
+    def predict(self, **obs) -> Dict[str, Tensor]:
+        # used for evaluation once encoders are trained
+        # given an image, what are the predicted variable values?
+
+        # q(f | x)
+        f_loc, _ = self.encoder_freq(obs["x"]).chunk(2, dim=-1)
+        f_loc = torch.tanh(f_loc)
+
+        # q(p | x)
+        p_loc, _ = self.encoder_power(obs["x"]).chunk(2, dim=-1)
+        p_loc = torch.tanh(p_loc)
+
+        # q(d | x)
+        d_loc, _ = self.encoder_focus(obs["x"]).chunk(2, dim=-1)
+        d_loc = torch.tanh(d_loc)
+
+        return {"freq": f_loc, "focus": d_loc, "power": p_loc} 
 
     def svi_model(self, **obs) -> None:
         with pyro.plate("observations", obs["x"].shape[0]):
