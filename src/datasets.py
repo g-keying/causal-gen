@@ -135,6 +135,14 @@ def ukbb(args: Hparams) -> Dict[str, UKBBDataset]:
     return datasets
 
 
+"""
+morpho-mnist dataset saved as .gz files
+train dataset prefix : "train"
+test dataset prefix : "t10k"
+"""
+
+# type(data) = uint8 images
+
 def _load_uint8(f):
     idx_dtype, ndim = struct.unpack("BBBB", f.read(4))[2:]
     shape = struct.unpack(">" + "I" * ndim, f.read(4 * ndim))
@@ -172,6 +180,7 @@ def _get_paths(root_dir, train):
     metrics_path = os.path.join(root_dir, metrics_filename)
     return images_path, labels_path, metrics_path
 
+# labels = digits, metrics (for normalising flow)= thickness, intensity
 
 def load_morphomnist_like(
     root_dir, train: bool = True, columns=None
@@ -184,7 +193,7 @@ def load_morphomnist_like(
         columns: list of morphometrics to load; by default (``None``) loads the image index and
             all available metrics: area, length, thickness, slant, width, and height
     Returns:
-        images, labels, metrics
+        images, labels, metrics (FOR NORMALISING FLOW)
     """
     images_path, labels_path, metrics_path = _get_paths(root_dir, train)
     images = load_idx(images_path)
@@ -204,27 +213,38 @@ class MorphoMNIST(Dataset):
         root_dir: str,
         train: bool = True,
         transform: Optional[torchvision.transforms.Compose] = None,
-        columns: Optional[List[str]] = None,
+        columns: Optional[List[str]] = None, 
+        # columns labels for metrics/parents, if none then all labels
         norm: Optional[str] = None,
         concat_pa: bool = True,
     ):
         self.train = train
         self.transform = transform
-        self.columns = columns
+        self.columns = columns 
         self.concat_pa = concat_pa
         self.norm = norm
 
         cols_not_digit = [c for c in self.columns if c != "digit"]
+        # loading everything for normalising flow
+
         images, labels, metrics_df = load_morphomnist_like(
             root_dir, train, cols_not_digit
-        )
+        ) # loads images, labels, metrics 
+        # labels is separate as it is stored elsewhere
         self.images = torch.from_numpy(np.array(images)).unsqueeze(1)
+        # loads all images into memory
+
+        # 10 digits, converts category -> vector of 0s and single 1
         self.labels = F.one_hot(
             torch.from_numpy(np.array(labels)).long(), num_classes=10
         )
+        # digit 3 → [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+        ############ 0  1  2  3  4  5  6  7  8  9
 
         if self.columns is None:
             self.columns = metrics_df.columns
+        # samples = parents
+        # here loads all metrics except digit
         self.samples = {k: torch.tensor(metrics_df[k]) for k in cols_not_digit}
 
         self.min_max = {
@@ -232,6 +252,8 @@ class MorphoMNIST(Dataset):
             "intensity": [66.601204, 254.90317],
         }
 
+        # then normalizes depending on self.norm
+        # k = key, v = value
         for k, v in self.samples.items():  # optional preprocessing
             print(f"{k} normalization: {norm}")
             if norm == "[-1,1]":
@@ -248,6 +270,7 @@ class MorphoMNIST(Dataset):
                 NotImplementedError(f"{norm} not implemented.")
         print(f"#samples: {len(metrics_df)}\n")
 
+        # adds label to the samples
         self.samples.update({"digit": self.labels})
 
     def __len__(self):
@@ -270,6 +293,14 @@ class MorphoMNIST(Dataset):
             )
         else:
             sample.update({k: v[idx] for k, v in self.samples.items()})
+        '''
+          sample = {
+            "x":         <image tensor>,
+            "thickness": tensor(1.2),
+            "intensity": tensor(0.3),
+            "digit":     tensor([0, 1, 0, 0, 0, 0, 0, 0, 0, 0]),
+            }
+        '''
         return sample
 
 
@@ -304,6 +335,7 @@ def morphomnist(args: Hparams) -> Dict[str, MorphoMNIST]:
     return datasets
 
 
+# ColourMNIST
 class ColourMNIST(Dataset):
     def __init__(
         self,
@@ -388,7 +420,7 @@ def cmnist(args: Hparams) -> Dict[str, ColourMNIST]:
 
     return datasets
 
-
+# MIMIC
 class MIMICMetadata(TypedDict):
     age: float  # age in years
     sex: int  # 0 -> male , 1 -> female
@@ -527,5 +559,124 @@ def mimic(
             parents_x=args.parents_x,  # ["age", "race", "sex", "finding"],
             concat_pa=(True if not hasattr(args, "concat_pa") else args.concat_pa),
             transform=augmentation[("eval" if split != "train" else split)],
+        )
+    return datasets
+
+
+# Ultrasound
+class Ultrasound(Dataset):
+    def __init__(
+        self,
+        root_dir: str,
+        df: pd.DataFrame,
+        transform: Optional[torchvision.transforms.Compose] = None,
+        columns: Optional[List[str]] = None, 
+        norm: Optional[str] = None,
+        concat_pa: bool = True,
+        min_max: Optional[dict] = None,
+    ):
+        super().__init__()
+        self.root_dir = root_dir
+        self.transform = transform
+        self.columns = columns 
+        self.concat_pa = concat_pa
+
+        self.img_files = list(df["file_source"])
+
+        self.min_max = min_max or {
+            k: [float(df[k].min()), float(df[k].max())]
+            for k in self.columns
+        }
+
+        # normalising the parents
+        # samples is a dictionary with key: parent_name, value: value
+        self.samples = {}
+        for k in self.columns:
+            v = torch.tensor(df[k].values).float()
+            print(f"{k} normalization: {norm}")
+            if norm == "[-1,1]":
+                v = normalize(v, x_min=self.min_max[k][0], x_max=self.min_max[k][1])
+            elif norm == "[0,1]":
+                v = normalize(v, x_min=self.min_max[k][0], x_max=self.min_max[k][1], zero_one=True)
+            self.samples[k] = v
+
+        print(f"#samples: {len(df)}\n")
+
+    def __len__(self):
+        return len(self.img_files)
+
+    def __getitem__(self, idx: int) -> Dict[str, Tensor]:
+        img_path = os.path.join(self.root_dir, "images", str(self.img_files[idx]) + ".png")
+        x = Image.open(img_path) # opens as a PIL image
+        sample = {}
+        if self.transform is not None:
+            sample["x"] = self.transform(x)
+        else:
+            sample["x"] = TF.PILToTensor()(x) # normalises image btwn 0 and -1
+
+        if self.concat_pa:
+            sample["pa"] = torch.cat([
+                torch.tensor([self.samples[k][idx]]) for k in self.columns
+                ], dim=0)
+        # → bundles all variables into ONE single vector
+        # sample = {"x": image, "pa": tensor([-1.0, 0.5, 0.3])}
+        #                                      freq  power depth
+        # used for training for conditioning on parents
+
+        else:
+            sample.update({k: v[idx] for k, v in self.samples.items()})
+        # → returns each variable separately with its name
+        # sample = {"x": image, "TUSDispFrequency": tensor(-1.0), 
+        #                        "TxPowerPercent": tensor(0.5),
+        #                        "focus_depth": tensor(0.3)}
+        return sample
+
+
+def ultrasound(args: Hparams) -> Dict[str, Ultrasound]:
+    if not args.data_dir:
+        args.data_dir = "../datasets/ultrasound"
+
+    df = pd.read_csv(os.path.join(args.data_dir, "ultrasound.csv"))
+
+    # deterministic 70/15/15 train/valid/test split
+    n = len(df)
+    idx = np.random.RandomState(42).permutation(n)
+    n_train = int(0.70 * n)
+    n_valid = int(0.15 * n)
+    splits = {
+        "train": df.iloc[idx[:n_train]].reset_index(drop=True),
+        "valid": df.iloc[idx[n_train:n_train + n_valid]].reset_index(drop=True),
+        "test": df.iloc[idx[n_train + n_valid:]].reset_index(drop=True),
+    }
+
+    # hard coded normalisation stats, if none then automatically computes them
+    min_max = {            
+        "TxPowerPercent": [0.0, 1.0],
+        "focus_depth": [0, 16],
+        "TUSDispFrequency": [4.0, 6.0]
+    }
+    
+    augmentation = {
+        "train": TF.Compose([
+            TF.Resize((args.input_res, args.input_res)),
+            TF.RandomHorizontalFlip(p=0.5),
+            TF.PILToTensor(),
+        ]),
+        "eval": TF.Compose([
+            TF.Resize((args.input_res, args.input_res)),
+            TF.PILToTensor(),
+        ]),
+    }
+
+    datasets = {}
+    for split in ["train", "valid", "test"]:
+        datasets[split] = Ultrasound(
+            root_dir=args.data_dir,
+            df=splits[split],
+            transform=augmentation["train" if split == "train" else "eval"],
+            columns=args.parents_x,
+            norm=(None if not hasattr(args, "context_norm") else args.context_norm),
+            concat_pa=(True if not hasattr(args, "concat_pa") else args.concat_pa),
+            min_max=min_max,
         )
     return datasets
