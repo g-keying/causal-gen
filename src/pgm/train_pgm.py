@@ -16,12 +16,13 @@ from tqdm import tqdm
 from utils_pgm import plot_joint, update_stats
 
 sys.path.append("..")
-from datasets import cmnist, get_attr_max_min, mimic, morphomnist, ukbb
+from datasets import cmnist, get_attr_max_min, mimic, morphomnist, ukbb, ultrasound
 from hps import Hparams
 from train_setup import setup_directories, setup_logging, setup_tensorboard
 from utils import EMA, seed_all, seed_worker
 
-
+# normalises the data
+# --- ADD ---
 def preprocess(
     batch: Dict[str, Tensor], dataset: str = "ukbb", split: str = "l"
 ) -> Dict[str, Tensor]:
@@ -172,6 +173,7 @@ def sup_epoch(
 
 
 @torch.no_grad()
+# --- ADD ---
 def eval_epoch(
     args: Hparams, model: nn.Module, dataloader: DataLoader
 ) -> Dict[str, float]:
@@ -244,19 +246,25 @@ def eval_epoch(
                     multi_class="ovr",
                     average="macro",
                 )
+        elif args.dataset == "ultrasound":
+                min_max = dataloader.dataset.min_max[k]
+                _min, _max = min_max[0], min_max[1]
+                preds_k = ((preds[k] + 1) / 2) * (_max - _min) + _min
+                targets_k = ((targets[k] + 1) / 2) * (_max - _min) + _min
+                stats[k + "_mae"] = (targets_k - preds_k).abs().mean().item()
         else:
             NotImplementedError
     return stats
 
-
+# --- ADD ---
 def setup_dataloaders(args: Hparams) -> Dict[str, DataLoader]:
     if "ukbb" in args.dataset:
         datasets = ukbb(args)
     elif args.dataset == "morphomnist":
-        assert args.input_channels == 1
-        assert args.input_res == 32
-        assert args.pad == 4
-        args.parents_x = ["thickness", "intensity", "digit"]
+        assert args.input_channels == 1 # grayscale
+        assert args.input_res == 32 #input resolution # overides hps.py
+        assert args.pad == 4 # padding 4
+        args.parents_x = ["thickness", "intensity", "digit"] # overides hps.py
         args.context_norm = "[-1,1]"
         args.concat_pa = False
         datasets = morphomnist(args)
@@ -269,6 +277,14 @@ def setup_dataloaders(args: Hparams) -> Dict[str, DataLoader]:
         datasets = cmnist(args)
     elif args.dataset == "mimic":
         datasets = mimic(args)
+    elif args.dataset == "ultrasound":
+        assert args.input_channels == 1 # grayscale
+        assert args.input_res == 128 #input resolution # overides hps.py
+        assert args.pad == 4 # padding 4
+        args.parents_x = ["freq", "power", "focus"] # overides hps.py
+        args.context_norm = "[-1,1]"
+        args.concat_pa = False
+        datasets = ultrasound(args)
     else:
         NotImplementedError
 
@@ -309,7 +325,7 @@ def setup_dataloaders(args: Hparams) -> Dict[str, DataLoader]:
     dataloaders["test"] = DataLoader(datasets["test"], shuffle=False, **kwargs)
     return dataloaders
 
-
+# -- ADD TO MODEL PGM ---
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--exp_name", help="Experiment name.", type=str, default="")
@@ -415,6 +431,9 @@ if __name__ == "__main__":
         from flow_pgm import ColourMNISTPGM
 
         model = ColourMNISTPGM(args)
+    elif args.dataset == "ultrasound":
+        from flow_pgm import UltrasoundPGM
+        model = UltrasoundPGM(args)
     else:
         NotImplementedError
     ema = EMA(model, beta=0.999)
