@@ -1,0 +1,183 @@
+28-May-26 11:19:06, --accu_steps=1
+28-May-26 11:19:06, --best_loss=inf
+28-May-26 11:19:06, --beta=1.0
+28-May-26 11:19:06, --beta_warmup_steps=0
+28-May-26 11:19:06, --betas=[0.9, 0.9]
+28-May-26 11:19:06, --bias_max_res=64
+28-May-26 11:19:06, --bottleneck=4
+28-May-26 11:19:06, --bs=32
+28-May-26 11:19:06, --concat_pa=True
+28-May-26 11:19:06, --cond_prior=True
+28-May-26 11:19:06, --context_dim=12
+28-May-26 11:19:06, --context_norm=[-1,1]
+28-May-26 11:19:06, --data_dir=../datasets/morphomnist
+28-May-26 11:19:06, --dec_arch=1b4,4b4,8b4,16b4,32b4
+28-May-26 11:19:06, --deterministic=False
+28-May-26 11:19:06, --device=cuda:0
+28-May-26 11:19:06, --ema_rate=0.999
+28-May-26 11:19:06, --enc_arch=32b3d2,16b3d2,8b3d2,4b3d4,1b4
+28-May-26 11:19:06, --epochs=5000
+28-May-26 11:19:06, --eval_freq=4
+28-May-26 11:19:06, --exp_name=mnist_run_1
+28-May-26 11:19:06, --grad_clip=350
+28-May-26 11:19:06, --grad_skip=500
+28-May-26 11:19:06, --hflip=0.5
+28-May-26 11:19:06, --hps=morphomnist
+28-May-26 11:19:06, --input_channels=1
+28-May-26 11:19:06, --input_res=32
+28-May-26 11:19:06, --iter=0
+28-May-26 11:19:06, --kl_free_bits=0.0
+28-May-26 11:19:06, --lr=0.001
+28-May-26 11:19:06, --lr_warmup_steps=100
+28-May-26 11:19:06, --pad=4
+28-May-26 11:19:06, --parents_x=['thickness', 'intensity', 'digit']
+28-May-26 11:19:06, --q_correction=False
+28-May-26 11:19:06, --resume=
+28-May-26 11:19:06, --save_dir=../checkpoints/t_i_d/mnist_run_1
+28-May-26 11:19:06, --seed=7
+28-May-26 11:19:06, --start_epoch=0
+28-May-26 11:19:06, --std_init=0.0
+28-May-26 11:19:06, --vae=hierarchical
+28-May-26 11:19:06, --viz_freq=10000
+28-May-26 11:19:06, --vr=None
+28-May-26 11:19:06, --wd=0.01
+28-May-26 11:19:06, --widths=[16, 32, 64, 128, 256]
+28-May-26 11:19:06, --x_like=diag_dgauss
+28-May-26 11:19:06, --z_dim=16
+28-May-26 11:19:06, --z_max_res=192
+28-May-26 11:19:06, total params: 2,047,074
+28-May-26 11:19:06, Epoch 1:
+28-May-26 11:25:00, => train | nelbo: 0.8416 - nll: 0.7669 - kl: 0.0748 - steps: 1875
+28-May-26 11:25:14, => valid | nelbo: 0.8457 - nll: 0.7805 - kl: 0.0651 - steps: 1875
+28-May-26 11:25:15, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 11:25:15, Epoch 2:
+28-May-26 11:30:23, => train | nelbo: 0.6717 - nll: 0.5791 - kl: 0.0926 - steps: 3750
+28-May-26 11:30:23, Epoch 3:
+28-May-26 11:35:38, => train | nelbo: 0.6447 - nll: 0.5504 - kl: 0.0943 - steps: 5625
+28-May-26 11:35:38, Epoch 4:
+28-May-26 11:41:00, => train | nelbo: 0.6306 - nll: 0.5352 - kl: 0.0953 - steps: 7500
+28-May-26 11:41:00, Epoch 5:
+28-May-26 11:46:24, => train | nelbo: 0.6194 - nll: 0.5224 - kl: 0.0970 - steps: 9375
+28-May-26 11:46:38, => valid | nelbo: 0.5950 - nll: 0.5042 - kl: 0.0908 - steps: 9375
+28-May-26 11:46:39, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 11:46:39, Epoch 6:
+28-May-26 11:51:58, => train | nelbo: 0.6108 - nll: 0.5120 - kl: 0.0988 - steps: 11250
+28-May-26 11:51:58, Epoch 7:
+28-May-26 11:57:21, => train | nelbo: 0.6028 - nll: 0.5021 - kl: 0.1007 - steps: 13125
+28-May-26 11:57:21, Epoch 8:
+28-May-26 12:03:00, => train | nelbo: 0.5956 - nll: 0.4931 - kl: 0.1025 - steps: 15000
+28-May-26 12:03:00, Epoch 9:
+28-May-26 12:08:35, => train | nelbo: 0.5912 - nll: 0.4876 - kl: 0.1036 - steps: 16875
+28-May-26 12:08:48, => valid | nelbo: 0.5656 - nll: 0.4673 - kl: 0.0983 - steps: 16875
+28-May-26 12:08:49, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 12:08:49, Epoch 10:
+28-May-26 12:14:25, => train | nelbo: 0.5868 - nll: 0.4823 - kl: 0.1046 - steps: 18750
+28-May-26 12:14:25, Epoch 11:
+28-May-26 12:20:06, => train | nelbo: 0.5827 - nll: 0.4772 - kl: 0.1055 - steps: 20625
+28-May-26 12:20:06, Epoch 12:
+28-May-26 12:25:46, => train | nelbo: 0.5807 - nll: 0.4747 - kl: 0.1061 - steps: 22500
+28-May-26 12:25:46, Epoch 13:
+28-May-26 12:31:17, => train | nelbo: 0.5770 - nll: 0.4701 - kl: 0.1069 - steps: 24375
+28-May-26 12:31:30, => valid | nelbo: 0.5513 - nll: 0.4497 - kl: 0.1016 - steps: 24375
+28-May-26 12:31:31, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 12:31:31, Epoch 14:
+28-May-26 12:37:04, => train | nelbo: 0.5739 - nll: 0.4664 - kl: 0.1076 - steps: 26250
+28-May-26 12:37:04, Epoch 15:
+28-May-26 12:43:01, => train | nelbo: 0.5730 - nll: 0.4652 - kl: 0.1078 - steps: 28125
+28-May-26 12:43:01, Epoch 16:
+28-May-26 12:49:06, => train | nelbo: 0.5702 - nll: 0.4621 - kl: 0.1081 - steps: 30000
+28-May-26 12:49:06, Epoch 17:
+28-May-26 12:54:52, => train | nelbo: 0.5694 - nll: 0.4608 - kl: 0.1085 - steps: 31875
+28-May-26 12:55:07, => valid | nelbo: 0.5428 - nll: 0.4394 - kl: 0.1034 - steps: 31875
+28-May-26 12:55:07, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 12:55:07, Epoch 18:
+28-May-26 13:00:50, => train | nelbo: 0.5677 - nll: 0.4590 - kl: 0.1087 - steps: 33750
+28-May-26 13:00:50, Epoch 19:
+28-May-26 13:06:04, => train | nelbo: 0.5638 - nll: 0.4541 - kl: 0.1096 - steps: 35625
+28-May-26 13:06:04, Epoch 20:
+28-May-26 13:11:03, => train | nelbo: 0.5629 - nll: 0.4531 - kl: 0.1098 - steps: 37500
+28-May-26 13:11:03, Epoch 21:
+28-May-26 13:16:25, => train | nelbo: 0.5621 - nll: 0.4521 - kl: 0.1100 - steps: 39375
+28-May-26 13:16:37, => valid | nelbo: 0.5359 - nll: 0.4310 - kl: 0.1050 - steps: 39375
+28-May-26 13:16:38, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 13:16:38, Epoch 22:
+28-May-26 13:21:59, => train | nelbo: 0.5611 - nll: 0.4509 - kl: 0.1102 - steps: 41250
+28-May-26 13:21:59, Epoch 23:
+28-May-26 13:27:01, => train | nelbo: 0.5598 - nll: 0.4495 - kl: 0.1103 - steps: 43125
+28-May-26 13:27:01, Epoch 24:
+28-May-26 13:31:58, => train | nelbo: 0.5568 - nll: 0.4457 - kl: 0.1111 - steps: 45000
+28-May-26 13:31:58, Epoch 25:
+28-May-26 13:36:47, => train | nelbo: 0.5560 - nll: 0.4446 - kl: 0.1113 - steps: 46875
+28-May-26 13:37:00, => valid | nelbo: 0.5299 - nll: 0.4238 - kl: 0.1061 - steps: 46875
+28-May-26 13:37:00, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 13:37:00, Epoch 26:
+28-May-26 13:42:03, => train | nelbo: 0.5559 - nll: 0.4445 - kl: 0.1114 - steps: 48750
+28-May-26 13:42:03, Epoch 27:
+28-May-26 13:47:03, => train | nelbo: 0.5543 - nll: 0.4425 - kl: 0.1118 - steps: 50625
+28-May-26 13:47:03, Epoch 28:
+28-May-26 13:51:59, => train | nelbo: 0.5537 - nll: 0.4418 - kl: 0.1119 - steps: 52500
+28-May-26 13:51:59, Epoch 29:
+28-May-26 13:56:59, => train | nelbo: 0.5508 - nll: 0.4383 - kl: 0.1124 - steps: 54375
+28-May-26 13:57:13, => valid | nelbo: 0.5252 - nll: 0.4183 - kl: 0.1069 - steps: 54375
+28-May-26 13:57:13, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 13:57:13, Epoch 30:
+28-May-26 14:02:06, => train | nelbo: 0.5507 - nll: 0.4382 - kl: 0.1125 - steps: 56250
+28-May-26 14:02:06, Epoch 31:
+28-May-26 14:07:00, => train | nelbo: 0.5497 - nll: 0.4368 - kl: 0.1129 - steps: 58125
+28-May-26 14:07:00, Epoch 32:
+28-May-26 14:12:00, => train | nelbo: 0.5495 - nll: 0.4367 - kl: 0.1128 - steps: 60000
+28-May-26 14:12:00, Epoch 33:
+28-May-26 14:16:59, => train | nelbo: 0.5480 - nll: 0.4351 - kl: 0.1129 - steps: 61875
+28-May-26 14:17:11, => valid | nelbo: 0.5216 - nll: 0.4138 - kl: 0.1078 - steps: 61875
+28-May-26 14:17:12, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 14:17:12, Epoch 34:
+28-May-26 14:22:11, => train | nelbo: 0.5469 - nll: 0.4337 - kl: 0.1132 - steps: 63750
+28-May-26 14:22:11, Epoch 35:
+28-May-26 14:27:10, => train | nelbo: 0.5468 - nll: 0.4335 - kl: 0.1132 - steps: 65625
+28-May-26 14:27:10, Epoch 36:
+28-May-26 14:32:32, => train | nelbo: 0.5458 - nll: 0.4322 - kl: 0.1136 - steps: 67500
+28-May-26 14:32:32, Epoch 37:
+28-May-26 14:37:32, => train | nelbo: 0.5447 - nll: 0.4309 - kl: 0.1138 - steps: 69375
+28-May-26 14:37:44, => valid | nelbo: 0.5182 - nll: 0.4100 - kl: 0.1082 - steps: 69375
+28-May-26 14:37:45, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 14:37:45, Epoch 38:
+28-May-26 14:43:09, => train | nelbo: 0.5451 - nll: 0.4318 - kl: 0.1134 - steps: 71250
+28-May-26 14:43:09, Epoch 39:
+28-May-26 14:48:10, => train | nelbo: 0.5436 - nll: 0.4298 - kl: 0.1138 - steps: 73125
+28-May-26 14:48:10, Epoch 40:
+28-May-26 14:53:36, => train | nelbo: 0.5423 - nll: 0.4283 - kl: 0.1140 - steps: 75000
+28-May-26 14:53:36, Epoch 41:
+28-May-26 14:59:08, => train | nelbo: 0.5413 - nll: 0.4268 - kl: 0.1145 - steps: 76875
+28-May-26 14:59:23, => valid | nelbo: 0.5149 - nll: 0.4058 - kl: 0.1091 - steps: 76875
+28-May-26 14:59:24, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 14:59:24, Epoch 42:
+28-May-26 15:05:20, => train | nelbo: 0.5411 - nll: 0.4266 - kl: 0.1145 - steps: 78750
+28-May-26 15:05:20, Epoch 43:
+28-May-26 15:11:21, => train | nelbo: 0.5416 - nll: 0.4272 - kl: 0.1144 - steps: 80625
+28-May-26 15:11:21, Epoch 44:
+28-May-26 15:17:16, => train | nelbo: 0.5404 - nll: 0.4257 - kl: 0.1146 - steps: 82500
+28-May-26 15:17:16, Epoch 45:
+28-May-26 15:23:06, => train | nelbo: 0.5395 - nll: 0.4248 - kl: 0.1148 - steps: 84375
+28-May-26 15:23:20, => valid | nelbo: 0.5125 - nll: 0.4034 - kl: 0.1091 - steps: 84375
+28-May-26 15:23:21, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 15:23:21, Epoch 46:
+28-May-26 15:29:08, => train | nelbo: 0.5383 - nll: 0.4230 - kl: 0.1153 - steps: 86250
+28-May-26 15:29:08, Epoch 47:
+28-May-26 15:35:03, => train | nelbo: 0.5375 - nll: 0.4222 - kl: 0.1154 - steps: 88125
+28-May-26 15:35:03, Epoch 48:
+28-May-26 15:40:52, => train | nelbo: 0.5363 - nll: 0.4204 - kl: 0.1159 - steps: 90000
+28-May-26 15:40:52, Epoch 49:
+28-May-26 15:46:33, => train | nelbo: 0.5376 - nll: 0.4223 - kl: 0.1153 - steps: 91875
+28-May-26 15:46:47, => valid | nelbo: 0.5104 - nll: 0.4004 - kl: 0.1100 - steps: 91875
+28-May-26 15:46:48, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 15:46:48, Epoch 50:
+28-May-26 15:52:36, => train | nelbo: 0.5365 - nll: 0.4209 - kl: 0.1156 - steps: 93750
+28-May-26 15:52:36, Epoch 51:
+28-May-26 15:58:27, => train | nelbo: 0.5376 - nll: 0.4221 - kl: 0.1155 - steps: 95625
+28-May-26 15:58:27, Epoch 52:
+28-May-26 16:04:09, => train | nelbo: 0.5357 - nll: 0.4198 - kl: 0.1159 - steps: 97500
+28-May-26 16:04:09, Epoch 53:
+28-May-26 16:09:29, => train | nelbo: 0.5342 - nll: 0.4179 - kl: 0.1163 - steps: 99375
+28-May-26 16:09:43, => valid | nelbo: 0.5078 - nll: 0.3967 - kl: 0.1110 - steps: 99375
+28-May-26 16:09:44, Model saved: ../checkpoints/t_i_d/mnist_run_1/checkpoint.pt
+28-May-26 16:09:44, Epoch 54:

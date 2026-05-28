@@ -1,0 +1,2776 @@
+27-May-26 22:35:53, --accu_steps=1
+27-May-26 22:35:53, --best_loss=inf
+27-May-26 22:35:53, --beta=1.0
+27-May-26 22:35:53, --beta_warmup_steps=0
+27-May-26 22:35:53, --betas=[0.9, 0.9]
+27-May-26 22:35:53, --bias_max_res=64
+27-May-26 22:35:53, --bottleneck=4
+27-May-26 22:35:53, --bs=16
+27-May-26 22:35:53, --concat_pa=True
+27-May-26 22:35:53, --cond_prior=True
+27-May-26 22:35:53, --context_dim=3
+27-May-26 22:35:53, --context_norm=[-1,1]
+27-May-26 22:35:53, --data_dir=../datasets/ultrasound
+27-May-26 22:35:53, --dec_arch=1b2,8b4,16b4,32b4,64b4,128b2
+27-May-26 22:35:53, --deterministic=False
+27-May-26 22:35:53, --device=cuda:0
+27-May-26 22:35:53, --ema_rate=0.999
+27-May-26 22:35:53, --enc_arch=128b1d2,64b3d2,32b3d2,16b3d2,8b3d8,1b2
+27-May-26 22:35:53, --epochs=5000
+27-May-26 22:35:53, --eval_freq=4
+27-May-26 22:35:53, --exp_name=ultrasound_run1
+27-May-26 22:35:53, --grad_clip=350
+27-May-26 22:35:53, --grad_skip=500
+27-May-26 22:35:53, --hflip=0.5
+27-May-26 22:35:53, --hps=ultrasound
+27-May-26 22:35:53, --input_channels=1
+27-May-26 22:35:53, --input_res=128
+27-May-26 22:35:53, --iter=0
+27-May-26 22:35:53, --kl_free_bits=0.0
+27-May-26 22:35:53, --lr=0.001
+27-May-26 22:35:53, --lr_warmup_steps=100
+27-May-26 22:35:53, --pad=4
+27-May-26 22:35:53, --parents_x=['freq', 'power', 'focus']
+27-May-26 22:35:53, --q_correction=False
+27-May-26 22:35:53, --resume=
+27-May-26 22:35:53, --save_dir=../checkpoints/f_p_f/ultrasound_run1
+27-May-26 22:35:53, --seed=7
+27-May-26 22:35:53, --start_epoch=0
+27-May-26 22:35:53, --std_init=0.0
+27-May-26 22:35:53, --vae=hierarchical
+27-May-26 22:35:53, --viz_freq=10000
+27-May-26 22:35:53, --vr=None
+27-May-26 22:35:53, --wd=0.01
+27-May-26 22:35:53, --widths=[16, 32, 64, 128, 256, 512]
+27-May-26 22:35:53, --x_like=diag_dgauss
+27-May-26 22:35:53, --z_dim=16
+27-May-26 22:35:53, --z_max_res=192
+27-May-26 22:35:53, total params: 5,548,594
+27-May-26 22:35:54, Epoch 1:
+27-May-26 22:36:11, => train | nelbo: 3.9884 - nll: 3.9880 - kl: 0.0003 - steps: 17
+27-May-26 22:36:13, => valid | nelbo: 3.8760 - nll: 3.8757 - kl: 0.0003 - steps: 17
+27-May-26 22:36:14, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:36:14, Epoch 2:
+27-May-26 22:36:20, => train | nelbo: 3.7014 - nll: 3.7006 - kl: 0.0008 - steps: 34
+27-May-26 22:36:20, Epoch 3:
+27-May-26 22:36:24, => train | nelbo: 3.4665 - nll: 3.4651 - kl: 0.0013 - steps: 51
+27-May-26 22:36:24, Epoch 4:
+27-May-26 22:36:31, => train | nelbo: 3.2220 - nll: 3.2002 - kl: 0.0218 - steps: 68
+27-May-26 22:36:31, Epoch 5:
+27-May-26 22:36:34, => train | nelbo: 2.8390 - nll: 2.7981 - kl: 0.0408 - steps: 85
+27-May-26 22:36:34, => valid | nelbo: 2.6996 - nll: 2.6464 - kl: 0.0532 - steps: 85
+27-May-26 22:36:36, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:36:36, Epoch 6:
+27-May-26 22:36:39, => train | nelbo: 2.6179 - nll: 2.5777 - kl: 0.0402 - steps: 102
+27-May-26 22:36:39, Epoch 7:
+27-May-26 22:36:42, => train | nelbo: 2.4886 - nll: 2.4609 - kl: 0.0277 - steps: 119
+27-May-26 22:36:42, Epoch 8:
+27-May-26 22:36:49, => train | nelbo: 2.3910 - nll: 2.3661 - kl: 0.0249 - steps: 136
+27-May-26 22:36:49, Epoch 9:
+27-May-26 22:36:52, => train | nelbo: 2.3283 - nll: 2.3072 - kl: 0.0212 - steps: 153
+27-May-26 22:36:53, => valid | nelbo: 2.3444 - nll: 2.3238 - kl: 0.0206 - steps: 153
+27-May-26 22:36:54, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:36:54, Epoch 10:
+27-May-26 22:36:58, => train | nelbo: 2.2906 - nll: 2.2688 - kl: 0.0218 - steps: 170
+27-May-26 22:36:58, Epoch 11:
+27-May-26 22:37:01, => train | nelbo: 2.2669 - nll: 2.2463 - kl: 0.0206 - steps: 187
+27-May-26 22:37:01, Epoch 12:
+27-May-26 22:37:04, => train | nelbo: 2.2032 - nll: 2.1809 - kl: 0.0224 - steps: 204
+27-May-26 22:37:04, Epoch 13:
+27-May-26 22:37:07, => train | nelbo: 2.1809 - nll: 2.1594 - kl: 0.0215 - steps: 221
+27-May-26 22:37:08, => valid | nelbo: 2.2589 - nll: 2.2398 - kl: 0.0192 - steps: 221
+27-May-26 22:37:09, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:37:09, Epoch 14:
+27-May-26 22:37:12, => train | nelbo: 2.1649 - nll: 2.1431 - kl: 0.0218 - steps: 238
+27-May-26 22:37:12, Epoch 15:
+27-May-26 22:37:15, => train | nelbo: 2.1762 - nll: 2.1529 - kl: 0.0233 - steps: 255
+27-May-26 22:37:15, Epoch 16:
+27-May-26 22:37:21, => train | nelbo: 2.1646 - nll: 2.1428 - kl: 0.0218 - steps: 272
+27-May-26 22:37:21, Epoch 17:
+27-May-26 22:37:25, => train | nelbo: 2.1400 - nll: 2.1206 - kl: 0.0194 - steps: 289
+27-May-26 22:37:25, => valid | nelbo: 2.2124 - nll: 2.1932 - kl: 0.0192 - steps: 289
+27-May-26 22:37:26, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:37:26, Epoch 18:
+27-May-26 22:37:29, => train | nelbo: 2.1164 - nll: 2.0986 - kl: 0.0178 - steps: 306
+27-May-26 22:37:29, Epoch 19:
+27-May-26 22:37:33, => train | nelbo: 2.1004 - nll: 2.0823 - kl: 0.0181 - steps: 323
+27-May-26 22:37:33, Epoch 20:
+27-May-26 22:37:36, => train | nelbo: 2.1033 - nll: 2.0833 - kl: 0.0201 - steps: 340
+27-May-26 22:37:36, Epoch 21:
+27-May-26 22:37:39, => train | nelbo: 2.1087 - nll: 2.0895 - kl: 0.0192 - steps: 357
+27-May-26 22:37:40, => valid | nelbo: 2.1843 - nll: 2.1636 - kl: 0.0207 - steps: 357
+27-May-26 22:37:41, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:37:41, Epoch 22:
+27-May-26 22:37:44, => train | nelbo: 2.0759 - nll: 2.0582 - kl: 0.0177 - steps: 374
+27-May-26 22:37:44, Epoch 23:
+27-May-26 22:37:47, => train | nelbo: 2.0582 - nll: 2.0414 - kl: 0.0168 - steps: 391
+27-May-26 22:37:47, Epoch 24:
+27-May-26 22:37:50, => train | nelbo: 2.0531 - nll: 2.0364 - kl: 0.0167 - steps: 408
+27-May-26 22:37:50, Epoch 25:
+27-May-26 22:37:53, => train | nelbo: 2.0606 - nll: 2.0417 - kl: 0.0188 - steps: 425
+27-May-26 22:37:54, => valid | nelbo: 2.1599 - nll: 2.1388 - kl: 0.0211 - steps: 425
+27-May-26 22:37:55, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:37:55, Epoch 26:
+27-May-26 22:37:58, => train | nelbo: 2.0489 - nll: 2.0322 - kl: 0.0167 - steps: 442
+27-May-26 22:37:58, Epoch 27:
+27-May-26 22:38:02, => train | nelbo: 2.0383 - nll: 2.0228 - kl: 0.0155 - steps: 459
+27-May-26 22:38:02, Epoch 28:
+27-May-26 22:38:06, => train | nelbo: 2.0328 - nll: 2.0161 - kl: 0.0167 - steps: 476
+27-May-26 22:38:06, Epoch 29:
+27-May-26 22:38:09, => train | nelbo: 2.0271 - nll: 2.0116 - kl: 0.0155 - steps: 493
+27-May-26 22:38:10, => valid | nelbo: 2.1404 - nll: 2.1183 - kl: 0.0221 - steps: 493
+27-May-26 22:38:11, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:38:11, Epoch 30:
+27-May-26 22:38:15, => train | nelbo: 2.0313 - nll: 2.0167 - kl: 0.0146 - steps: 510
+27-May-26 22:38:15, Epoch 31:
+27-May-26 22:38:21, => train | nelbo: 2.0131 - nll: 1.9979 - kl: 0.0152 - steps: 527
+27-May-26 22:38:21, Epoch 32:
+27-May-26 22:38:24, => train | nelbo: 2.0299 - nll: 2.0136 - kl: 0.0163 - steps: 544
+27-May-26 22:38:24, Epoch 33:
+27-May-26 22:38:28, => train | nelbo: 2.0285 - nll: 2.0126 - kl: 0.0158 - steps: 561
+27-May-26 22:38:28, => valid | nelbo: 2.1281 - nll: 2.1057 - kl: 0.0224 - steps: 561
+27-May-26 22:38:30, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:38:30, Epoch 34:
+27-May-26 22:38:33, => train | nelbo: 2.0227 - nll: 2.0076 - kl: 0.0151 - steps: 578
+27-May-26 22:38:33, Epoch 35:
+27-May-26 22:38:36, => train | nelbo: 2.0077 - nll: 1.9940 - kl: 0.0138 - steps: 595
+27-May-26 22:38:36, Epoch 36:
+27-May-26 22:38:39, => train | nelbo: 2.0026 - nll: 1.9893 - kl: 0.0133 - steps: 612
+27-May-26 22:38:39, Epoch 37:
+27-May-26 22:38:42, => train | nelbo: 1.9930 - nll: 1.9796 - kl: 0.0134 - steps: 629
+27-May-26 22:38:43, => valid | nelbo: 2.1173 - nll: 2.0943 - kl: 0.0230 - steps: 629
+27-May-26 22:38:44, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:38:44, Epoch 38:
+27-May-26 22:38:47, => train | nelbo: 1.9872 - nll: 1.9746 - kl: 0.0126 - steps: 646
+27-May-26 22:38:47, Epoch 39:
+27-May-26 22:38:50, => train | nelbo: 1.9962 - nll: 1.9820 - kl: 0.0142 - steps: 663
+27-May-26 22:38:50, Epoch 40:
+27-May-26 22:38:53, => train | nelbo: 2.0075 - nll: 1.9931 - kl: 0.0144 - steps: 680
+27-May-26 22:38:53, Epoch 41:
+27-May-26 22:38:56, => train | nelbo: 1.9861 - nll: 1.9724 - kl: 0.0137 - steps: 697
+27-May-26 22:38:57, => valid | nelbo: 2.1100 - nll: 2.0864 - kl: 0.0236 - steps: 697
+27-May-26 22:38:58, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:38:58, Epoch 42:
+27-May-26 22:39:01, => train | nelbo: 1.9814 - nll: 1.9683 - kl: 0.0131 - steps: 714
+27-May-26 22:39:01, Epoch 43:
+27-May-26 22:39:05, => train | nelbo: 1.9776 - nll: 1.9651 - kl: 0.0125 - steps: 731
+27-May-26 22:39:05, Epoch 44:
+27-May-26 22:39:08, => train | nelbo: 1.9753 - nll: 1.9632 - kl: 0.0121 - steps: 748
+27-May-26 22:39:08, Epoch 45:
+27-May-26 22:39:12, => train | nelbo: 1.9809 - nll: 1.9675 - kl: 0.0134 - steps: 765
+27-May-26 22:39:13, => valid | nelbo: 2.1010 - nll: 2.0775 - kl: 0.0234 - steps: 765
+27-May-26 22:39:14, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:39:14, Epoch 46:
+27-May-26 22:39:17, => train | nelbo: 1.9580 - nll: 1.9461 - kl: 0.0119 - steps: 782
+27-May-26 22:39:17, Epoch 47:
+27-May-26 22:39:20, => train | nelbo: 1.9563 - nll: 1.9445 - kl: 0.0118 - steps: 799
+27-May-26 22:39:20, Epoch 48:
+27-May-26 22:39:23, => train | nelbo: 1.9566 - nll: 1.9449 - kl: 0.0117 - steps: 816
+27-May-26 22:39:23, Epoch 49:
+27-May-26 22:39:26, => train | nelbo: 1.9970 - nll: 1.9802 - kl: 0.0168 - steps: 833
+27-May-26 22:39:27, => valid | nelbo: 2.0970 - nll: 2.0729 - kl: 0.0241 - steps: 833
+27-May-26 22:39:28, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:39:28, Epoch 50:
+27-May-26 22:39:32, => train | nelbo: 1.9688 - nll: 1.9532 - kl: 0.0156 - steps: 850
+27-May-26 22:39:32, Epoch 51:
+27-May-26 22:39:35, => train | nelbo: 1.9548 - nll: 1.9418 - kl: 0.0130 - steps: 867
+27-May-26 22:39:35, Epoch 52:
+27-May-26 22:39:38, => train | nelbo: 1.9431 - nll: 1.9323 - kl: 0.0108 - steps: 884
+27-May-26 22:39:38, Epoch 53:
+27-May-26 22:39:42, => train | nelbo: 1.9536 - nll: 1.9418 - kl: 0.0118 - steps: 901
+27-May-26 22:39:42, => valid | nelbo: 2.0915 - nll: 2.0673 - kl: 0.0242 - steps: 901
+27-May-26 22:39:44, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:39:44, Epoch 54:
+27-May-26 22:39:47, => train | nelbo: 1.9516 - nll: 1.9409 - kl: 0.0107 - steps: 918
+27-May-26 22:39:47, Epoch 55:
+27-May-26 22:39:50, => train | nelbo: 1.9316 - nll: 1.9204 - kl: 0.0111 - steps: 935
+27-May-26 22:39:50, Epoch 56:
+27-May-26 22:39:53, => train | nelbo: 1.9399 - nll: 1.9290 - kl: 0.0109 - steps: 952
+27-May-26 22:39:53, Epoch 57:
+27-May-26 22:39:57, => train | nelbo: 1.9293 - nll: 1.9186 - kl: 0.0106 - steps: 969
+27-May-26 22:39:57, => valid | nelbo: 2.0881 - nll: 2.0636 - kl: 0.0245 - steps: 969
+27-May-26 22:39:58, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:39:58, Epoch 58:
+27-May-26 22:40:02, => train | nelbo: 1.9261 - nll: 1.9153 - kl: 0.0108 - steps: 986
+27-May-26 22:40:02, Epoch 59:
+27-May-26 22:40:05, => train | nelbo: 1.9141 - nll: 1.9025 - kl: 0.0116 - steps: 1003
+27-May-26 22:40:05, Epoch 60:
+27-May-26 22:40:08, => train | nelbo: 1.9363 - nll: 1.9252 - kl: 0.0111 - steps: 1020
+27-May-26 22:40:08, Epoch 61:
+27-May-26 22:40:15, => train | nelbo: 1.9288 - nll: 1.9165 - kl: 0.0123 - steps: 1037
+27-May-26 22:40:15, => valid | nelbo: 2.0847 - nll: 2.0603 - kl: 0.0245 - steps: 1037
+27-May-26 22:40:16, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:40:16, Epoch 62:
+27-May-26 22:40:19, => train | nelbo: 1.9041 - nll: 1.8943 - kl: 0.0098 - steps: 1054
+27-May-26 22:40:19, Epoch 63:
+27-May-26 22:40:22, => train | nelbo: 1.9030 - nll: 1.8933 - kl: 0.0097 - steps: 1071
+27-May-26 22:40:22, Epoch 64:
+27-May-26 22:40:26, => train | nelbo: 1.9013 - nll: 1.8910 - kl: 0.0103 - steps: 1088
+27-May-26 22:40:26, Epoch 65:
+27-May-26 22:40:29, => train | nelbo: 1.9052 - nll: 1.8943 - kl: 0.0109 - steps: 1105
+27-May-26 22:40:30, => valid | nelbo: 2.0809 - nll: 2.0560 - kl: 0.0249 - steps: 1105
+27-May-26 22:40:31, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:40:31, Epoch 66:
+27-May-26 22:40:35, => train | nelbo: 1.8876 - nll: 1.8771 - kl: 0.0105 - steps: 1122
+27-May-26 22:40:35, Epoch 67:
+27-May-26 22:40:38, => train | nelbo: 1.8893 - nll: 1.8787 - kl: 0.0106 - steps: 1139
+27-May-26 22:40:38, Epoch 68:
+27-May-26 22:40:41, => train | nelbo: 1.8914 - nll: 1.8810 - kl: 0.0104 - steps: 1156
+27-May-26 22:40:41, Epoch 69:
+27-May-26 22:40:44, => train | nelbo: 1.8782 - nll: 1.8679 - kl: 0.0102 - steps: 1173
+27-May-26 22:40:45, => valid | nelbo: 2.0793 - nll: 2.0541 - kl: 0.0252 - steps: 1173
+27-May-26 22:40:46, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:40:46, Epoch 70:
+27-May-26 22:40:49, => train | nelbo: 1.8676 - nll: 1.8586 - kl: 0.0090 - steps: 1190
+27-May-26 22:40:49, Epoch 71:
+27-May-26 22:40:52, => train | nelbo: 1.8704 - nll: 1.8607 - kl: 0.0097 - steps: 1207
+27-May-26 22:40:52, Epoch 72:
+27-May-26 22:40:55, => train | nelbo: 1.8644 - nll: 1.8543 - kl: 0.0101 - steps: 1224
+27-May-26 22:40:55, Epoch 73:
+27-May-26 22:40:58, => train | nelbo: 1.8625 - nll: 1.8522 - kl: 0.0103 - steps: 1241
+27-May-26 22:40:59, => valid | nelbo: 2.0771 - nll: 2.0515 - kl: 0.0257 - steps: 1241
+27-May-26 22:41:00, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:41:00, Epoch 74:
+27-May-26 22:41:03, => train | nelbo: 1.8580 - nll: 1.8489 - kl: 0.0091 - steps: 1258
+27-May-26 22:41:03, Epoch 75:
+27-May-26 22:41:06, => train | nelbo: 1.8562 - nll: 1.8468 - kl: 0.0094 - steps: 1275
+27-May-26 22:41:06, Epoch 76:
+27-May-26 22:41:09, => train | nelbo: 1.8471 - nll: 1.8367 - kl: 0.0104 - steps: 1292
+27-May-26 22:41:09, Epoch 77:
+27-May-26 22:41:13, => train | nelbo: 1.8664 - nll: 1.8563 - kl: 0.0101 - steps: 1309
+27-May-26 22:41:13, => valid | nelbo: 2.0785 - nll: 2.0513 - kl: 0.0272 - steps: 1309
+27-May-26 22:41:13, Epoch 78:
+27-May-26 22:41:16, => train | nelbo: 1.8555 - nll: 1.8456 - kl: 0.0099 - steps: 1326
+27-May-26 22:41:16, Epoch 79:
+27-May-26 22:41:20, => train | nelbo: 1.8304 - nll: 1.8210 - kl: 0.0094 - steps: 1343
+27-May-26 22:41:20, Epoch 80:
+27-May-26 22:41:23, => train | nelbo: 1.8510 - nll: 1.8416 - kl: 0.0094 - steps: 1360
+27-May-26 22:41:23, Epoch 81:
+27-May-26 22:41:26, => train | nelbo: 1.8375 - nll: 1.8268 - kl: 0.0107 - steps: 1377
+27-May-26 22:41:27, => valid | nelbo: 2.0766 - nll: 2.0485 - kl: 0.0281 - steps: 1377
+27-May-26 22:41:28, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:41:28, Epoch 82:
+27-May-26 22:41:31, => train | nelbo: 1.8204 - nll: 1.8117 - kl: 0.0087 - steps: 1394
+27-May-26 22:41:31, Epoch 83:
+27-May-26 22:41:34, => train | nelbo: 1.8481 - nll: 1.8382 - kl: 0.0099 - steps: 1411
+27-May-26 22:41:34, Epoch 84:
+27-May-26 22:41:38, => train | nelbo: 1.8283 - nll: 1.8169 - kl: 0.0114 - steps: 1428
+27-May-26 22:41:38, Epoch 85:
+27-May-26 22:41:41, => train | nelbo: 1.8252 - nll: 1.8150 - kl: 0.0102 - steps: 1445
+27-May-26 22:41:42, => valid | nelbo: 2.0794 - nll: 2.0501 - kl: 0.0293 - steps: 1445
+27-May-26 22:41:42, Epoch 86:
+27-May-26 22:41:45, => train | nelbo: 1.8112 - nll: 1.8018 - kl: 0.0094 - steps: 1462
+27-May-26 22:41:45, Epoch 87:
+27-May-26 22:41:49, => train | nelbo: 1.8534 - nll: 1.8440 - kl: 0.0095 - steps: 1479
+27-May-26 22:41:49, Epoch 88:
+27-May-26 22:41:53, => train | nelbo: 1.8177 - nll: 1.8059 - kl: 0.0118 - steps: 1496
+27-May-26 22:41:53, Epoch 89:
+27-May-26 22:41:56, => train | nelbo: 1.7985 - nll: 1.7902 - kl: 0.0083 - steps: 1513
+27-May-26 22:41:57, => valid | nelbo: 2.0767 - nll: 2.0475 - kl: 0.0292 - steps: 1513
+27-May-26 22:41:57, Epoch 90:
+27-May-26 22:42:00, => train | nelbo: 1.7955 - nll: 1.7875 - kl: 0.0080 - steps: 1530
+27-May-26 22:42:00, Epoch 91:
+27-May-26 22:42:04, => train | nelbo: 1.8512 - nll: 1.8368 - kl: 0.0144 - steps: 1547
+27-May-26 22:42:04, Epoch 92:
+27-May-26 22:42:07, => train | nelbo: 1.8028 - nll: 1.7922 - kl: 0.0106 - steps: 1564
+27-May-26 22:42:07, Epoch 93:
+27-May-26 22:42:10, => train | nelbo: 1.8050 - nll: 1.7964 - kl: 0.0086 - steps: 1581
+27-May-26 22:42:11, => valid | nelbo: 2.0829 - nll: 2.0513 - kl: 0.0315 - steps: 1581
+27-May-26 22:42:11, Epoch 94:
+27-May-26 22:42:14, => train | nelbo: 1.7935 - nll: 1.7840 - kl: 0.0095 - steps: 1598
+27-May-26 22:42:14, Epoch 95:
+27-May-26 22:42:17, => train | nelbo: 1.7840 - nll: 1.7754 - kl: 0.0086 - steps: 1615
+27-May-26 22:42:17, Epoch 96:
+27-May-26 22:42:21, => train | nelbo: 1.7833 - nll: 1.7747 - kl: 0.0086 - steps: 1632
+27-May-26 22:42:21, Epoch 97:
+27-May-26 22:42:24, => train | nelbo: 1.7782 - nll: 1.7696 - kl: 0.0087 - steps: 1649
+27-May-26 22:42:25, => valid | nelbo: 2.0871 - nll: 2.0539 - kl: 0.0332 - steps: 1649
+27-May-26 22:42:25, Epoch 98:
+27-May-26 22:42:28, => train | nelbo: 1.7679 - nll: 1.7593 - kl: 0.0086 - steps: 1666
+27-May-26 22:42:28, Epoch 99:
+27-May-26 22:42:31, => train | nelbo: 1.7581 - nll: 1.7497 - kl: 0.0084 - steps: 1683
+27-May-26 22:42:31, Epoch 100:
+27-May-26 22:42:35, => train | nelbo: 1.7565 - nll: 1.7488 - kl: 0.0077 - steps: 1700
+27-May-26 22:42:35, Epoch 101:
+27-May-26 22:42:38, => train | nelbo: 1.7688 - nll: 1.7598 - kl: 0.0090 - steps: 1717
+27-May-26 22:42:39, => valid | nelbo: 2.0952 - nll: 2.0611 - kl: 0.0341 - steps: 1717
+27-May-26 22:42:39, Epoch 102:
+27-May-26 22:42:42, => train | nelbo: 1.7565 - nll: 1.7483 - kl: 0.0082 - steps: 1734
+27-May-26 22:42:42, Epoch 103:
+27-May-26 22:42:46, => train | nelbo: 1.7576 - nll: 1.7486 - kl: 0.0090 - steps: 1751
+27-May-26 22:42:46, Epoch 104:
+27-May-26 22:42:49, => train | nelbo: 1.7570 - nll: 1.7490 - kl: 0.0080 - steps: 1768
+27-May-26 22:42:49, Epoch 105:
+27-May-26 22:42:52, => train | nelbo: 1.7491 - nll: 1.7408 - kl: 0.0083 - steps: 1785
+27-May-26 22:42:53, => valid | nelbo: 2.1052 - nll: 2.0690 - kl: 0.0362 - steps: 1785
+27-May-26 22:42:53, Epoch 106:
+27-May-26 22:42:56, => train | nelbo: 1.7471 - nll: 1.7381 - kl: 0.0090 - steps: 1802
+27-May-26 22:42:56, Epoch 107:
+27-May-26 22:42:59, => train | nelbo: 1.7314 - nll: 1.7239 - kl: 0.0075 - steps: 1819
+27-May-26 22:42:59, Epoch 108:
+27-May-26 22:43:02, => train | nelbo: 1.7384 - nll: 1.7303 - kl: 0.0081 - steps: 1836
+27-May-26 22:43:02, Epoch 109:
+27-May-26 22:43:05, => train | nelbo: 1.7401 - nll: 1.7302 - kl: 0.0099 - steps: 1853
+27-May-26 22:43:06, => valid | nelbo: 2.1258 - nll: 2.0866 - kl: 0.0392 - steps: 1853
+27-May-26 22:43:06, Epoch 110:
+27-May-26 22:43:10, => train | nelbo: 1.7414 - nll: 1.7337 - kl: 0.0077 - steps: 1870
+27-May-26 22:43:10, Epoch 111:
+27-May-26 22:43:13, => train | nelbo: 1.7435 - nll: 1.7334 - kl: 0.0101 - steps: 1887
+27-May-26 22:43:13, Epoch 112:
+27-May-26 22:43:16, => train | nelbo: 1.7279 - nll: 1.7190 - kl: 0.0089 - steps: 1904
+27-May-26 22:43:16, Epoch 113:
+27-May-26 22:43:20, => train | nelbo: 1.7216 - nll: 1.7143 - kl: 0.0073 - steps: 1921
+27-May-26 22:43:20, => valid | nelbo: 2.1459 - nll: 2.1049 - kl: 0.0410 - steps: 1921
+27-May-26 22:43:20, Epoch 114:
+27-May-26 22:43:24, => train | nelbo: 1.7251 - nll: 1.7174 - kl: 0.0078 - steps: 1938
+27-May-26 22:43:24, Epoch 115:
+27-May-26 22:43:26, => train | nelbo: 1.7449 - nll: 1.7343 - kl: 0.0105 - steps: 1955
+27-May-26 22:43:26, Epoch 116:
+27-May-26 22:43:30, => train | nelbo: 1.7185 - nll: 1.7090 - kl: 0.0095 - steps: 1972
+27-May-26 22:43:30, Epoch 117:
+27-May-26 22:43:34, => train | nelbo: 1.7124 - nll: 1.7050 - kl: 0.0074 - steps: 1989
+27-May-26 22:43:34, => valid | nelbo: 2.1709 - nll: 2.1286 - kl: 0.0423 - steps: 1989
+27-May-26 22:43:34, Epoch 118:
+27-May-26 22:43:38, => train | nelbo: 1.6985 - nll: 1.6913 - kl: 0.0072 - steps: 2006
+27-May-26 22:43:38, Epoch 119:
+27-May-26 22:43:41, => train | nelbo: 1.7027 - nll: 1.6951 - kl: 0.0076 - steps: 2023
+27-May-26 22:43:41, Epoch 120:
+27-May-26 22:43:44, => train | nelbo: 1.7172 - nll: 1.7089 - kl: 0.0084 - steps: 2040
+27-May-26 22:43:44, Epoch 121:
+27-May-26 22:43:51, => train | nelbo: 1.7149 - nll: 1.7063 - kl: 0.0086 - steps: 2057
+27-May-26 22:43:51, => valid | nelbo: 2.1957 - nll: 2.1536 - kl: 0.0421 - steps: 2057
+27-May-26 22:43:51, Epoch 122:
+27-May-26 22:43:54, => train | nelbo: 1.7106 - nll: 1.7012 - kl: 0.0094 - steps: 2074
+27-May-26 22:43:54, Epoch 123:
+27-May-26 22:43:58, => train | nelbo: 1.7055 - nll: 1.6976 - kl: 0.0080 - steps: 2091
+27-May-26 22:43:58, Epoch 124:
+27-May-26 22:44:02, => train | nelbo: 1.6882 - nll: 1.6807 - kl: 0.0076 - steps: 2108
+27-May-26 22:44:02, Epoch 125:
+27-May-26 22:44:05, => train | nelbo: 1.6851 - nll: 1.6777 - kl: 0.0073 - steps: 2125
+27-May-26 22:44:06, => valid | nelbo: 2.2314 - nll: 2.1885 - kl: 0.0429 - steps: 2125
+27-May-26 22:44:06, Epoch 126:
+27-May-26 22:44:09, => train | nelbo: 1.7036 - nll: 1.6947 - kl: 0.0089 - steps: 2142
+27-May-26 22:44:09, Epoch 127:
+27-May-26 22:44:12, => train | nelbo: 1.6872 - nll: 1.6796 - kl: 0.0076 - steps: 2159
+27-May-26 22:44:12, Epoch 128:
+27-May-26 22:44:15, => train | nelbo: 1.6852 - nll: 1.6773 - kl: 0.0080 - steps: 2176
+27-May-26 22:44:15, Epoch 129:
+27-May-26 22:44:19, => train | nelbo: 1.6743 - nll: 1.6665 - kl: 0.0078 - steps: 2193
+27-May-26 22:44:19, => valid | nelbo: 2.2719 - nll: 2.2252 - kl: 0.0467 - steps: 2193
+27-May-26 22:44:19, Epoch 130:
+27-May-26 22:44:22, => train | nelbo: 1.7189 - nll: 1.7110 - kl: 0.0079 - steps: 2210
+27-May-26 22:44:22, Epoch 131:
+27-May-26 22:44:26, => train | nelbo: 1.6877 - nll: 1.6769 - kl: 0.0108 - steps: 2227
+27-May-26 22:44:26, Epoch 132:
+27-May-26 22:44:29, => train | nelbo: 1.6899 - nll: 1.6825 - kl: 0.0074 - steps: 2244
+27-May-26 22:44:29, Epoch 133:
+27-May-26 22:44:32, => train | nelbo: 1.6703 - nll: 1.6622 - kl: 0.0081 - steps: 2261
+27-May-26 22:44:33, => valid | nelbo: 2.3026 - nll: 2.2578 - kl: 0.0448 - steps: 2261
+27-May-26 22:44:33, Epoch 134:
+27-May-26 22:44:36, => train | nelbo: 1.6668 - nll: 1.6590 - kl: 0.0078 - steps: 2278
+27-May-26 22:44:36, Epoch 135:
+27-May-26 22:44:40, => train | nelbo: 1.6589 - nll: 1.6517 - kl: 0.0072 - steps: 2295
+27-May-26 22:44:40, Epoch 136:
+27-May-26 22:44:43, => train | nelbo: 1.6772 - nll: 1.6680 - kl: 0.0092 - steps: 2312
+27-May-26 22:44:43, Epoch 137:
+27-May-26 22:44:47, => train | nelbo: 1.6770 - nll: 1.6683 - kl: 0.0087 - steps: 2329
+27-May-26 22:44:47, => valid | nelbo: 2.3408 - nll: 2.2961 - kl: 0.0447 - steps: 2329
+27-May-26 22:44:47, Epoch 138:
+27-May-26 22:44:50, => train | nelbo: 1.6666 - nll: 1.6585 - kl: 0.0081 - steps: 2346
+27-May-26 22:44:50, Epoch 139:
+27-May-26 22:44:54, => train | nelbo: 1.6529 - nll: 1.6453 - kl: 0.0075 - steps: 2363
+27-May-26 22:44:54, Epoch 140:
+27-May-26 22:44:57, => train | nelbo: 1.6611 - nll: 1.6526 - kl: 0.0084 - steps: 2380
+27-May-26 22:44:57, Epoch 141:
+27-May-26 22:45:00, => train | nelbo: 1.6808 - nll: 1.6721 - kl: 0.0086 - steps: 2397
+27-May-26 22:45:01, => valid | nelbo: 2.3767 - nll: 2.3326 - kl: 0.0441 - steps: 2397
+27-May-26 22:45:01, Epoch 142:
+27-May-26 22:45:05, => train | nelbo: 1.6651 - nll: 1.6560 - kl: 0.0090 - steps: 2414
+27-May-26 22:45:05, Epoch 143:
+27-May-26 22:45:08, => train | nelbo: 1.6796 - nll: 1.6702 - kl: 0.0094 - steps: 2431
+27-May-26 22:45:08, Epoch 144:
+27-May-26 22:45:11, => train | nelbo: 1.6607 - nll: 1.6523 - kl: 0.0083 - steps: 2448
+27-May-26 22:45:11, Epoch 145:
+27-May-26 22:45:14, => train | nelbo: 1.6580 - nll: 1.6504 - kl: 0.0076 - steps: 2465
+27-May-26 22:45:15, => valid | nelbo: 2.3912 - nll: 2.3510 - kl: 0.0402 - steps: 2465
+27-May-26 22:45:15, Epoch 146:
+27-May-26 22:45:19, => train | nelbo: 1.6550 - nll: 1.6467 - kl: 0.0083 - steps: 2482
+27-May-26 22:45:19, Epoch 147:
+27-May-26 22:45:22, => train | nelbo: 1.6750 - nll: 1.6658 - kl: 0.0092 - steps: 2499
+27-May-26 22:45:22, Epoch 148:
+27-May-26 22:45:25, => train | nelbo: 1.6373 - nll: 1.6282 - kl: 0.0090 - steps: 2516
+27-May-26 22:45:25, Epoch 149:
+27-May-26 22:45:28, => train | nelbo: 1.6447 - nll: 1.6379 - kl: 0.0068 - steps: 2533
+27-May-26 22:45:29, => valid | nelbo: 2.4090 - nll: 2.3715 - kl: 0.0375 - steps: 2533
+27-May-26 22:45:29, Epoch 150:
+27-May-26 22:45:32, => train | nelbo: 1.6378 - nll: 1.6306 - kl: 0.0071 - steps: 2550
+27-May-26 22:45:32, Epoch 151:
+27-May-26 22:45:35, => train | nelbo: 1.6361 - nll: 1.6288 - kl: 0.0073 - steps: 2567
+27-May-26 22:45:35, Epoch 152:
+27-May-26 22:45:38, => train | nelbo: 1.6341 - nll: 1.6270 - kl: 0.0070 - steps: 2584
+27-May-26 22:45:38, Epoch 153:
+27-May-26 22:45:41, => train | nelbo: 1.6247 - nll: 1.6172 - kl: 0.0075 - steps: 2601
+27-May-26 22:45:42, => valid | nelbo: 2.4274 - nll: 2.3918 - kl: 0.0356 - steps: 2601
+27-May-26 22:45:42, Epoch 154:
+27-May-26 22:45:45, => train | nelbo: 1.6301 - nll: 1.6232 - kl: 0.0068 - steps: 2618
+27-May-26 22:45:45, Epoch 155:
+27-May-26 22:45:49, => train | nelbo: 1.6176 - nll: 1.6106 - kl: 0.0070 - steps: 2635
+27-May-26 22:45:49, Epoch 156:
+27-May-26 22:45:52, => train | nelbo: 1.6198 - nll: 1.6122 - kl: 0.0076 - steps: 2652
+27-May-26 22:45:52, Epoch 157:
+27-May-26 22:45:55, => train | nelbo: 1.6132 - nll: 1.6064 - kl: 0.0068 - steps: 2669
+27-May-26 22:45:56, => valid | nelbo: 2.4385 - nll: 2.4052 - kl: 0.0333 - steps: 2669
+27-May-26 22:45:56, Epoch 158:
+27-May-26 22:45:59, => train | nelbo: 1.6436 - nll: 1.6356 - kl: 0.0080 - steps: 2686
+27-May-26 22:45:59, Epoch 159:
+27-May-26 22:46:02, => train | nelbo: 1.6532 - nll: 1.6444 - kl: 0.0088 - steps: 2703
+27-May-26 22:46:02, Epoch 160:
+27-May-26 22:46:06, => train | nelbo: 1.6106 - nll: 1.6022 - kl: 0.0084 - steps: 2720
+27-May-26 22:46:06, Epoch 161:
+27-May-26 22:46:09, => train | nelbo: 1.6333 - nll: 1.6259 - kl: 0.0074 - steps: 2737
+27-May-26 22:46:10, => valid | nelbo: 2.4361 - nll: 2.4051 - kl: 0.0310 - steps: 2737
+27-May-26 22:46:10, Epoch 162:
+27-May-26 22:46:13, => train | nelbo: 1.6138 - nll: 1.6067 - kl: 0.0071 - steps: 2754
+27-May-26 22:46:13, Epoch 163:
+27-May-26 22:46:17, => train | nelbo: 1.6104 - nll: 1.6028 - kl: 0.0076 - steps: 2771
+27-May-26 22:46:17, Epoch 164:
+27-May-26 22:46:20, => train | nelbo: 1.6560 - nll: 1.6467 - kl: 0.0093 - steps: 2788
+27-May-26 22:46:20, Epoch 165:
+27-May-26 22:46:24, => train | nelbo: 1.6140 - nll: 1.6054 - kl: 0.0087 - steps: 2805
+27-May-26 22:46:25, => valid | nelbo: 2.4393 - nll: 2.4093 - kl: 0.0299 - steps: 2805
+27-May-26 22:46:25, Epoch 166:
+27-May-26 22:46:28, => train | nelbo: 1.6059 - nll: 1.5976 - kl: 0.0084 - steps: 2822
+27-May-26 22:46:28, Epoch 167:
+27-May-26 22:46:32, => train | nelbo: 1.5979 - nll: 1.5908 - kl: 0.0071 - steps: 2839
+27-May-26 22:46:32, Epoch 168:
+27-May-26 22:46:35, => train | nelbo: 1.5939 - nll: 1.5864 - kl: 0.0074 - steps: 2856
+27-May-26 22:46:35, Epoch 169:
+27-May-26 22:46:39, => train | nelbo: 1.6007 - nll: 1.5920 - kl: 0.0087 - steps: 2873
+27-May-26 22:46:39, => valid | nelbo: 2.4260 - nll: 2.3995 - kl: 0.0266 - steps: 2873
+27-May-26 22:46:39, Epoch 170:
+27-May-26 22:46:42, => train | nelbo: 1.5999 - nll: 1.5923 - kl: 0.0075 - steps: 2890
+27-May-26 22:46:42, Epoch 171:
+27-May-26 22:46:46, => train | nelbo: 1.6044 - nll: 1.5970 - kl: 0.0074 - steps: 2907
+27-May-26 22:46:46, Epoch 172:
+27-May-26 22:46:49, => train | nelbo: 1.5822 - nll: 1.5746 - kl: 0.0076 - steps: 2924
+27-May-26 22:46:49, Epoch 173:
+27-May-26 22:46:52, => train | nelbo: 1.5951 - nll: 1.5875 - kl: 0.0077 - steps: 2941
+27-May-26 22:46:53, => valid | nelbo: 2.4081 - nll: 2.3835 - kl: 0.0246 - steps: 2941
+27-May-26 22:46:53, Epoch 174:
+27-May-26 22:46:56, => train | nelbo: 1.5864 - nll: 1.5787 - kl: 0.0077 - steps: 2958
+27-May-26 22:46:56, Epoch 175:
+27-May-26 22:46:59, => train | nelbo: 1.5867 - nll: 1.5786 - kl: 0.0080 - steps: 2975
+27-May-26 22:46:59, Epoch 176:
+27-May-26 22:47:02, => train | nelbo: 1.5912 - nll: 1.5839 - kl: 0.0073 - steps: 2992
+27-May-26 22:47:02, Epoch 177:
+27-May-26 22:47:05, => train | nelbo: 1.5765 - nll: 1.5693 - kl: 0.0072 - steps: 3009
+27-May-26 22:47:06, => valid | nelbo: 2.3893 - nll: 2.3658 - kl: 0.0236 - steps: 3009
+27-May-26 22:47:06, Epoch 178:
+27-May-26 22:47:09, => train | nelbo: 1.5835 - nll: 1.5752 - kl: 0.0083 - steps: 3026
+27-May-26 22:47:09, Epoch 179:
+27-May-26 22:47:13, => train | nelbo: 1.5700 - nll: 1.5626 - kl: 0.0074 - steps: 3043
+27-May-26 22:47:13, Epoch 180:
+27-May-26 22:47:16, => train | nelbo: 1.5762 - nll: 1.5690 - kl: 0.0072 - steps: 3060
+27-May-26 22:47:16, Epoch 181:
+27-May-26 22:47:19, => train | nelbo: 1.5731 - nll: 1.5652 - kl: 0.0078 - steps: 3077
+27-May-26 22:47:20, => valid | nelbo: 2.3659 - nll: 2.3450 - kl: 0.0209 - steps: 3077
+27-May-26 22:47:20, Epoch 182:
+27-May-26 22:47:23, => train | nelbo: 1.5794 - nll: 1.5715 - kl: 0.0079 - steps: 3094
+27-May-26 22:47:23, Epoch 183:
+27-May-26 22:47:27, => train | nelbo: 1.5742 - nll: 1.5672 - kl: 0.0071 - steps: 3111
+27-May-26 22:47:27, Epoch 184:
+27-May-26 22:47:31, => train | nelbo: 1.5635 - nll: 1.5561 - kl: 0.0074 - steps: 3128
+27-May-26 22:47:31, Epoch 185:
+27-May-26 22:47:34, => train | nelbo: 1.5788 - nll: 1.5713 - kl: 0.0076 - steps: 3145
+27-May-26 22:47:35, => valid | nelbo: 2.3344 - nll: 2.3148 - kl: 0.0196 - steps: 3145
+27-May-26 22:47:35, Epoch 186:
+27-May-26 22:47:38, => train | nelbo: 1.5613 - nll: 1.5535 - kl: 0.0078 - steps: 3162
+27-May-26 22:47:38, Epoch 187:
+27-May-26 22:47:42, => train | nelbo: 1.5606 - nll: 1.5531 - kl: 0.0075 - steps: 3179
+27-May-26 22:47:42, Epoch 188:
+27-May-26 22:47:45, => train | nelbo: 1.5666 - nll: 1.5599 - kl: 0.0068 - steps: 3196
+27-May-26 22:47:45, Epoch 189:
+27-May-26 22:47:49, => train | nelbo: 1.5511 - nll: 1.5432 - kl: 0.0079 - steps: 3213
+27-May-26 22:47:49, => valid | nelbo: 2.3035 - nll: 2.2846 - kl: 0.0188 - steps: 3213
+27-May-26 22:47:49, Epoch 190:
+27-May-26 22:47:52, => train | nelbo: 1.5668 - nll: 1.5590 - kl: 0.0078 - steps: 3230
+27-May-26 22:47:52, Epoch 191:
+27-May-26 22:47:56, => train | nelbo: 1.5391 - nll: 1.5316 - kl: 0.0075 - steps: 3247
+27-May-26 22:47:56, Epoch 192:
+27-May-26 22:47:59, => train | nelbo: 1.5482 - nll: 1.5395 - kl: 0.0086 - steps: 3264
+27-May-26 22:47:59, Epoch 193:
+27-May-26 22:48:02, => train | nelbo: 1.5461 - nll: 1.5393 - kl: 0.0068 - steps: 3281
+27-May-26 22:48:03, => valid | nelbo: 2.2719 - nll: 2.2540 - kl: 0.0178 - steps: 3281
+27-May-26 22:48:03, Epoch 194:
+27-May-26 22:48:06, => train | nelbo: 1.5365 - nll: 1.5298 - kl: 0.0068 - steps: 3298
+27-May-26 22:48:06, Epoch 195:
+27-May-26 22:48:09, => train | nelbo: 1.5589 - nll: 1.5518 - kl: 0.0071 - steps: 3315
+27-May-26 22:48:09, Epoch 196:
+27-May-26 22:48:12, => train | nelbo: 1.5461 - nll: 1.5390 - kl: 0.0071 - steps: 3332
+27-May-26 22:48:12, Epoch 197:
+27-May-26 22:48:16, => train | nelbo: 1.5342 - nll: 1.5270 - kl: 0.0072 - steps: 3349
+27-May-26 22:48:16, => valid | nelbo: 2.2448 - nll: 2.2275 - kl: 0.0173 - steps: 3349
+27-May-26 22:48:16, Epoch 198:
+27-May-26 22:48:19, => train | nelbo: 1.5401 - nll: 1.5318 - kl: 0.0082 - steps: 3366
+27-May-26 22:48:19, Epoch 199:
+27-May-26 22:48:22, => train | nelbo: 1.5430 - nll: 1.5361 - kl: 0.0069 - steps: 3383
+27-May-26 22:48:22, Epoch 200:
+27-May-26 22:48:26, => train | nelbo: 1.5708 - nll: 1.5634 - kl: 0.0074 - steps: 3400
+27-May-26 22:48:26, Epoch 201:
+27-May-26 22:48:29, => train | nelbo: 1.5588 - nll: 1.5509 - kl: 0.0078 - steps: 3417
+27-May-26 22:48:29, => valid | nelbo: 2.2024 - nll: 2.1858 - kl: 0.0166 - steps: 3417
+27-May-26 22:48:29, Epoch 202:
+27-May-26 22:48:32, => train | nelbo: 1.5238 - nll: 1.5161 - kl: 0.0076 - steps: 3434
+27-May-26 22:48:32, Epoch 203:
+27-May-26 22:48:36, => train | nelbo: 1.5465 - nll: 1.5391 - kl: 0.0073 - steps: 3451
+27-May-26 22:48:36, Epoch 204:
+27-May-26 22:48:39, => train | nelbo: 1.5270 - nll: 1.5190 - kl: 0.0081 - steps: 3468
+27-May-26 22:48:39, Epoch 205:
+27-May-26 22:48:42, => train | nelbo: 1.5186 - nll: 1.5110 - kl: 0.0076 - steps: 3485
+27-May-26 22:48:43, => valid | nelbo: 2.1698 - nll: 2.1540 - kl: 0.0158 - steps: 3485
+27-May-26 22:48:43, Epoch 206:
+27-May-26 22:48:46, => train | nelbo: 1.5200 - nll: 1.5125 - kl: 0.0074 - steps: 3502
+27-May-26 22:48:46, Epoch 207:
+27-May-26 22:48:49, => train | nelbo: 1.5244 - nll: 1.5162 - kl: 0.0082 - steps: 3519
+27-May-26 22:48:49, Epoch 208:
+27-May-26 22:48:52, => train | nelbo: 1.5383 - nll: 1.5303 - kl: 0.0080 - steps: 3536
+27-May-26 22:48:52, Epoch 209:
+27-May-26 22:48:56, => train | nelbo: 1.5310 - nll: 1.5241 - kl: 0.0068 - steps: 3553
+27-May-26 22:48:57, => valid | nelbo: 2.1283 - nll: 2.1133 - kl: 0.0149 - steps: 3553
+27-May-26 22:48:57, Epoch 210:
+27-May-26 22:49:00, => train | nelbo: 1.5209 - nll: 1.5133 - kl: 0.0076 - steps: 3570
+27-May-26 22:49:00, Epoch 211:
+27-May-26 22:49:03, => train | nelbo: 1.5309 - nll: 1.5212 - kl: 0.0097 - steps: 3587
+27-May-26 22:49:03, Epoch 212:
+27-May-26 22:49:06, => train | nelbo: 1.5064 - nll: 1.4992 - kl: 0.0072 - steps: 3604
+27-May-26 22:49:06, Epoch 213:
+27-May-26 22:49:10, => train | nelbo: 1.4988 - nll: 1.4926 - kl: 0.0062 - steps: 3621
+27-May-26 22:49:11, => valid | nelbo: 2.0950 - nll: 2.0803 - kl: 0.0147 - steps: 3621
+27-May-26 22:49:11, Epoch 214:
+27-May-26 22:49:14, => train | nelbo: 1.5344 - nll: 1.5273 - kl: 0.0070 - steps: 3638
+27-May-26 22:49:14, Epoch 215:
+27-May-26 22:49:18, => train | nelbo: 1.5080 - nll: 1.4988 - kl: 0.0091 - steps: 3655
+27-May-26 22:49:18, Epoch 216:
+27-May-26 22:49:21, => train | nelbo: 1.5048 - nll: 1.4975 - kl: 0.0072 - steps: 3672
+27-May-26 22:49:21, Epoch 217:
+27-May-26 22:49:25, => train | nelbo: 1.5106 - nll: 1.5032 - kl: 0.0074 - steps: 3689
+27-May-26 22:49:25, => valid | nelbo: 2.0573 - nll: 2.0431 - kl: 0.0142 - steps: 3689
+27-May-26 22:49:26, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:49:26, Epoch 218:
+27-May-26 22:49:30, => train | nelbo: 1.5088 - nll: 1.5015 - kl: 0.0072 - steps: 3706
+27-May-26 22:49:30, Epoch 219:
+27-May-26 22:49:33, => train | nelbo: 1.5000 - nll: 1.4917 - kl: 0.0083 - steps: 3723
+27-May-26 22:49:33, Epoch 220:
+27-May-26 22:49:37, => train | nelbo: 1.5480 - nll: 1.5388 - kl: 0.0092 - steps: 3740
+27-May-26 22:49:37, Epoch 221:
+27-May-26 22:49:40, => train | nelbo: 1.5196 - nll: 1.5116 - kl: 0.0080 - steps: 3757
+27-May-26 22:49:41, => valid | nelbo: 2.0191 - nll: 2.0055 - kl: 0.0136 - steps: 3757
+27-May-26 22:49:42, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:49:42, Epoch 222:
+27-May-26 22:49:45, => train | nelbo: 1.4942 - nll: 1.4879 - kl: 0.0064 - steps: 3774
+27-May-26 22:49:45, Epoch 223:
+27-May-26 22:49:48, => train | nelbo: 1.5015 - nll: 1.4937 - kl: 0.0079 - steps: 3791
+27-May-26 22:49:48, Epoch 224:
+27-May-26 22:49:51, => train | nelbo: 1.5536 - nll: 1.5468 - kl: 0.0067 - steps: 3808
+27-May-26 22:49:51, Epoch 225:
+27-May-26 22:49:55, => train | nelbo: 1.5303 - nll: 1.5194 - kl: 0.0109 - steps: 3825
+27-May-26 22:49:55, => valid | nelbo: 1.9811 - nll: 1.9676 - kl: 0.0135 - steps: 3825
+27-May-26 22:49:56, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:49:56, Epoch 226:
+27-May-26 22:50:00, => train | nelbo: 1.4923 - nll: 1.4843 - kl: 0.0080 - steps: 3842
+27-May-26 22:50:00, Epoch 227:
+27-May-26 22:50:03, => train | nelbo: 1.4800 - nll: 1.4736 - kl: 0.0064 - steps: 3859
+27-May-26 22:50:03, Epoch 228:
+27-May-26 22:50:06, => train | nelbo: 1.4695 - nll: 1.4636 - kl: 0.0059 - steps: 3876
+27-May-26 22:50:06, Epoch 229:
+27-May-26 22:50:09, => train | nelbo: 1.4826 - nll: 1.4749 - kl: 0.0077 - steps: 3893
+27-May-26 22:50:10, => valid | nelbo: 1.9492 - nll: 1.9363 - kl: 0.0129 - steps: 3893
+27-May-26 22:50:11, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:50:11, Epoch 230:
+27-May-26 22:50:15, => train | nelbo: 1.4846 - nll: 1.4775 - kl: 0.0072 - steps: 3910
+27-May-26 22:50:15, Epoch 231:
+27-May-26 22:50:18, => train | nelbo: 1.4798 - nll: 1.4734 - kl: 0.0063 - steps: 3927
+27-May-26 22:50:18, Epoch 232:
+27-May-26 22:50:21, => train | nelbo: 1.4942 - nll: 1.4870 - kl: 0.0072 - steps: 3944
+27-May-26 22:50:21, Epoch 233:
+27-May-26 22:50:24, => train | nelbo: 1.4844 - nll: 1.4769 - kl: 0.0075 - steps: 3961
+27-May-26 22:50:25, => valid | nelbo: 1.9157 - nll: 1.9034 - kl: 0.0124 - steps: 3961
+27-May-26 22:50:26, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:50:26, Epoch 234:
+27-May-26 22:50:29, => train | nelbo: 1.4978 - nll: 1.4898 - kl: 0.0079 - steps: 3978
+27-May-26 22:50:29, Epoch 235:
+27-May-26 22:50:33, => train | nelbo: 1.4849 - nll: 1.4773 - kl: 0.0076 - steps: 3995
+27-May-26 22:50:33, Epoch 236:
+27-May-26 22:50:36, => train | nelbo: 1.4793 - nll: 1.4723 - kl: 0.0070 - steps: 4012
+27-May-26 22:50:36, Epoch 237:
+27-May-26 22:50:39, => train | nelbo: 1.4684 - nll: 1.4614 - kl: 0.0070 - steps: 4029
+27-May-26 22:50:40, => valid | nelbo: 1.8872 - nll: 1.8751 - kl: 0.0122 - steps: 4029
+27-May-26 22:50:41, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:50:41, Epoch 238:
+27-May-26 22:50:44, => train | nelbo: 1.4677 - nll: 1.4607 - kl: 0.0069 - steps: 4046
+27-May-26 22:50:44, Epoch 239:
+27-May-26 22:50:48, => train | nelbo: 1.4679 - nll: 1.4613 - kl: 0.0066 - steps: 4063
+27-May-26 22:50:48, Epoch 240:
+27-May-26 22:50:51, => train | nelbo: 1.4477 - nll: 1.4411 - kl: 0.0066 - steps: 4080
+27-May-26 22:50:51, Epoch 241:
+27-May-26 22:50:57, => train | nelbo: 1.4690 - nll: 1.4626 - kl: 0.0064 - steps: 4097
+27-May-26 22:50:58, => valid | nelbo: 1.8603 - nll: 1.8485 - kl: 0.0118 - steps: 4097
+27-May-26 22:50:59, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:50:59, Epoch 242:
+27-May-26 22:51:02, => train | nelbo: 1.4698 - nll: 1.4623 - kl: 0.0075 - steps: 4114
+27-May-26 22:51:02, Epoch 243:
+27-May-26 22:51:05, => train | nelbo: 1.4836 - nll: 1.4752 - kl: 0.0084 - steps: 4131
+27-May-26 22:51:05, Epoch 244:
+27-May-26 22:51:08, => train | nelbo: 1.4610 - nll: 1.4536 - kl: 0.0074 - steps: 4148
+27-May-26 22:51:08, Epoch 245:
+27-May-26 22:51:11, => train | nelbo: 1.4526 - nll: 1.4458 - kl: 0.0069 - steps: 4165
+27-May-26 22:51:12, => valid | nelbo: 1.8313 - nll: 1.8198 - kl: 0.0116 - steps: 4165
+27-May-26 22:51:13, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:51:13, Epoch 246:
+27-May-26 22:51:17, => train | nelbo: 1.4304 - nll: 1.4243 - kl: 0.0061 - steps: 4182
+27-May-26 22:51:17, Epoch 247:
+27-May-26 22:51:20, => train | nelbo: 1.4919 - nll: 1.4836 - kl: 0.0083 - steps: 4199
+27-May-26 22:51:20, Epoch 248:
+27-May-26 22:51:23, => train | nelbo: 1.4603 - nll: 1.4521 - kl: 0.0083 - steps: 4216
+27-May-26 22:51:23, Epoch 249:
+27-May-26 22:51:26, => train | nelbo: 1.4685 - nll: 1.4614 - kl: 0.0071 - steps: 4233
+27-May-26 22:51:27, => valid | nelbo: 1.8026 - nll: 1.7917 - kl: 0.0109 - steps: 4233
+27-May-26 22:51:28, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:51:28, Epoch 250:
+27-May-26 22:51:31, => train | nelbo: 1.4353 - nll: 1.4286 - kl: 0.0066 - steps: 4250
+27-May-26 22:51:31, Epoch 251:
+27-May-26 22:51:35, => train | nelbo: 1.4446 - nll: 1.4375 - kl: 0.0071 - steps: 4267
+27-May-26 22:51:35, Epoch 252:
+27-May-26 22:51:37, => train | nelbo: 1.4448 - nll: 1.4379 - kl: 0.0069 - steps: 4284
+27-May-26 22:51:37, Epoch 253:
+27-May-26 22:51:41, => train | nelbo: 1.4435 - nll: 1.4367 - kl: 0.0068 - steps: 4301
+27-May-26 22:51:41, => valid | nelbo: 1.7786 - nll: 1.7678 - kl: 0.0108 - steps: 4301
+27-May-26 22:51:42, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:51:42, Epoch 254:
+27-May-26 22:51:46, => train | nelbo: 1.4312 - nll: 1.4248 - kl: 0.0064 - steps: 4318
+27-May-26 22:51:46, Epoch 255:
+27-May-26 22:51:49, => train | nelbo: 1.4483 - nll: 1.4409 - kl: 0.0074 - steps: 4335
+27-May-26 22:51:49, Epoch 256:
+27-May-26 22:51:52, => train | nelbo: 1.4641 - nll: 1.4555 - kl: 0.0087 - steps: 4352
+27-May-26 22:51:52, Epoch 257:
+27-May-26 22:51:55, => train | nelbo: 1.4391 - nll: 1.4313 - kl: 0.0078 - steps: 4369
+27-May-26 22:51:56, => valid | nelbo: 1.7521 - nll: 1.7417 - kl: 0.0104 - steps: 4369
+27-May-26 22:51:57, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:51:57, Epoch 258:
+27-May-26 22:52:00, => train | nelbo: 1.4273 - nll: 1.4205 - kl: 0.0068 - steps: 4386
+27-May-26 22:52:00, Epoch 259:
+27-May-26 22:52:03, => train | nelbo: 1.4303 - nll: 1.4239 - kl: 0.0064 - steps: 4403
+27-May-26 22:52:03, Epoch 260:
+27-May-26 22:52:06, => train | nelbo: 1.4244 - nll: 1.4178 - kl: 0.0066 - steps: 4420
+27-May-26 22:52:06, Epoch 261:
+27-May-26 22:52:10, => train | nelbo: 1.4377 - nll: 1.4307 - kl: 0.0071 - steps: 4437
+27-May-26 22:52:10, => valid | nelbo: 1.7331 - nll: 1.7228 - kl: 0.0102 - steps: 4437
+27-May-26 22:52:12, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:52:12, Epoch 262:
+27-May-26 22:52:15, => train | nelbo: 1.4222 - nll: 1.4156 - kl: 0.0066 - steps: 4454
+27-May-26 22:52:15, Epoch 263:
+27-May-26 22:52:18, => train | nelbo: 1.4461 - nll: 1.4392 - kl: 0.0069 - steps: 4471
+27-May-26 22:52:18, Epoch 264:
+27-May-26 22:52:22, => train | nelbo: 1.4542 - nll: 1.4446 - kl: 0.0096 - steps: 4488
+27-May-26 22:52:22, Epoch 265:
+27-May-26 22:52:25, => train | nelbo: 1.4418 - nll: 1.4326 - kl: 0.0093 - steps: 4505
+27-May-26 22:52:26, => valid | nelbo: 1.7082 - nll: 1.6982 - kl: 0.0100 - steps: 4505
+27-May-26 22:52:27, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:52:27, Epoch 266:
+27-May-26 22:52:30, => train | nelbo: 1.4407 - nll: 1.4332 - kl: 0.0075 - steps: 4522
+27-May-26 22:52:30, Epoch 267:
+27-May-26 22:52:33, => train | nelbo: 1.4192 - nll: 1.4128 - kl: 0.0064 - steps: 4539
+27-May-26 22:52:33, Epoch 268:
+27-May-26 22:52:36, => train | nelbo: 1.4234 - nll: 1.4168 - kl: 0.0066 - steps: 4556
+27-May-26 22:52:36, Epoch 269:
+27-May-26 22:52:39, => train | nelbo: 1.4303 - nll: 1.4229 - kl: 0.0075 - steps: 4573
+27-May-26 22:52:40, => valid | nelbo: 1.6850 - nll: 1.6755 - kl: 0.0095 - steps: 4573
+27-May-26 22:52:41, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:52:41, Epoch 270:
+27-May-26 22:52:44, => train | nelbo: 1.4260 - nll: 1.4193 - kl: 0.0067 - steps: 4590
+27-May-26 22:52:44, Epoch 271:
+27-May-26 22:52:47, => train | nelbo: 1.4156 - nll: 1.4092 - kl: 0.0064 - steps: 4607
+27-May-26 22:52:47, Epoch 272:
+27-May-26 22:52:51, => train | nelbo: 1.4474 - nll: 1.4406 - kl: 0.0068 - steps: 4624
+27-May-26 22:52:51, Epoch 273:
+27-May-26 22:52:54, => train | nelbo: 1.4186 - nll: 1.4115 - kl: 0.0071 - steps: 4641
+27-May-26 22:52:54, => valid | nelbo: 1.6647 - nll: 1.6553 - kl: 0.0094 - steps: 4641
+27-May-26 22:52:55, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:52:55, Epoch 274:
+27-May-26 22:52:59, => train | nelbo: 1.4074 - nll: 1.4005 - kl: 0.0070 - steps: 4658
+27-May-26 22:52:59, Epoch 275:
+27-May-26 22:53:02, => train | nelbo: 1.3980 - nll: 1.3911 - kl: 0.0069 - steps: 4675
+27-May-26 22:53:02, Epoch 276:
+27-May-26 22:53:05, => train | nelbo: 1.4168 - nll: 1.4095 - kl: 0.0073 - steps: 4692
+27-May-26 22:53:05, Epoch 277:
+27-May-26 22:53:08, => train | nelbo: 1.4255 - nll: 1.4171 - kl: 0.0084 - steps: 4709
+27-May-26 22:53:09, => valid | nelbo: 1.6479 - nll: 1.6387 - kl: 0.0091 - steps: 4709
+27-May-26 22:53:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:53:10, Epoch 278:
+27-May-26 22:53:13, => train | nelbo: 1.3955 - nll: 1.3875 - kl: 0.0080 - steps: 4726
+27-May-26 22:53:13, Epoch 279:
+27-May-26 22:53:17, => train | nelbo: 1.3935 - nll: 1.3872 - kl: 0.0063 - steps: 4743
+27-May-26 22:53:17, Epoch 280:
+27-May-26 22:53:20, => train | nelbo: 1.4326 - nll: 1.4259 - kl: 0.0067 - steps: 4760
+27-May-26 22:53:20, Epoch 281:
+27-May-26 22:53:23, => train | nelbo: 1.4154 - nll: 1.4083 - kl: 0.0071 - steps: 4777
+27-May-26 22:53:23, => valid | nelbo: 1.6276 - nll: 1.6186 - kl: 0.0091 - steps: 4777
+27-May-26 22:53:25, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:53:25, Epoch 282:
+27-May-26 22:53:28, => train | nelbo: 1.4259 - nll: 1.4180 - kl: 0.0079 - steps: 4794
+27-May-26 22:53:28, Epoch 283:
+27-May-26 22:53:31, => train | nelbo: 1.4104 - nll: 1.4020 - kl: 0.0085 - steps: 4811
+27-May-26 22:53:31, Epoch 284:
+27-May-26 22:53:34, => train | nelbo: 1.4306 - nll: 1.4232 - kl: 0.0074 - steps: 4828
+27-May-26 22:53:34, Epoch 285:
+27-May-26 22:53:37, => train | nelbo: 1.4398 - nll: 1.4328 - kl: 0.0070 - steps: 4845
+27-May-26 22:53:38, => valid | nelbo: 1.6096 - nll: 1.6011 - kl: 0.0084 - steps: 4845
+27-May-26 22:53:39, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:53:39, Epoch 286:
+27-May-26 22:53:42, => train | nelbo: 1.3919 - nll: 1.3847 - kl: 0.0073 - steps: 4862
+27-May-26 22:53:42, Epoch 287:
+27-May-26 22:53:46, => train | nelbo: 1.3866 - nll: 1.3797 - kl: 0.0069 - steps: 4879
+27-May-26 22:53:46, Epoch 288:
+27-May-26 22:53:49, => train | nelbo: 1.4186 - nll: 1.4117 - kl: 0.0068 - steps: 4896
+27-May-26 22:53:49, Epoch 289:
+27-May-26 22:53:52, => train | nelbo: 1.4128 - nll: 1.4046 - kl: 0.0082 - steps: 4913
+27-May-26 22:53:53, => valid | nelbo: 1.5942 - nll: 1.5858 - kl: 0.0084 - steps: 4913
+27-May-26 22:53:54, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:53:54, Epoch 290:
+27-May-26 22:53:57, => train | nelbo: 1.4067 - nll: 1.4000 - kl: 0.0067 - steps: 4930
+27-May-26 22:53:57, Epoch 291:
+27-May-26 22:54:00, => train | nelbo: 1.3851 - nll: 1.3780 - kl: 0.0071 - steps: 4947
+27-May-26 22:54:00, Epoch 292:
+27-May-26 22:54:04, => train | nelbo: 1.3918 - nll: 1.3851 - kl: 0.0067 - steps: 4964
+27-May-26 22:54:04, Epoch 293:
+27-May-26 22:54:07, => train | nelbo: 1.3833 - nll: 1.3762 - kl: 0.0071 - steps: 4981
+27-May-26 22:54:07, => valid | nelbo: 1.5776 - nll: 1.5695 - kl: 0.0081 - steps: 4981
+27-May-26 22:54:08, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:54:08, Epoch 294:
+27-May-26 22:54:12, => train | nelbo: 1.3875 - nll: 1.3806 - kl: 0.0069 - steps: 4998
+27-May-26 22:54:12, Epoch 295:
+27-May-26 22:54:15, => train | nelbo: 1.3737 - nll: 1.3677 - kl: 0.0060 - steps: 5015
+27-May-26 22:54:15, Epoch 296:
+27-May-26 22:54:18, => train | nelbo: 1.3698 - nll: 1.3633 - kl: 0.0066 - steps: 5032
+27-May-26 22:54:18, Epoch 297:
+27-May-26 22:54:22, => train | nelbo: 1.4043 - nll: 1.3973 - kl: 0.0070 - steps: 5049
+27-May-26 22:54:23, => valid | nelbo: 1.5613 - nll: 1.5533 - kl: 0.0080 - steps: 5049
+27-May-26 22:54:24, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:54:24, Epoch 298:
+27-May-26 22:54:28, => train | nelbo: 1.3795 - nll: 1.3723 - kl: 0.0072 - steps: 5066
+27-May-26 22:54:28, Epoch 299:
+27-May-26 22:54:31, => train | nelbo: 1.3750 - nll: 1.3684 - kl: 0.0066 - steps: 5083
+27-May-26 22:54:31, Epoch 300:
+27-May-26 22:54:34, => train | nelbo: 1.3889 - nll: 1.3820 - kl: 0.0070 - steps: 5100
+27-May-26 22:54:34, Epoch 301:
+27-May-26 22:54:37, => train | nelbo: 1.4219 - nll: 1.4112 - kl: 0.0107 - steps: 5117
+27-May-26 22:54:38, => valid | nelbo: 1.5469 - nll: 1.5390 - kl: 0.0079 - steps: 5117
+27-May-26 22:54:39, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:54:39, Epoch 302:
+27-May-26 22:54:42, => train | nelbo: 1.3807 - nll: 1.3739 - kl: 0.0069 - steps: 5134
+27-May-26 22:54:42, Epoch 303:
+27-May-26 22:54:45, => train | nelbo: 1.3627 - nll: 1.3568 - kl: 0.0060 - steps: 5151
+27-May-26 22:54:45, Epoch 304:
+27-May-26 22:54:49, => train | nelbo: 1.3903 - nll: 1.3835 - kl: 0.0068 - steps: 5168
+27-May-26 22:54:49, Epoch 305:
+27-May-26 22:54:52, => train | nelbo: 1.3707 - nll: 1.3630 - kl: 0.0077 - steps: 5185
+27-May-26 22:54:52, => valid | nelbo: 1.5327 - nll: 1.5252 - kl: 0.0076 - steps: 5185
+27-May-26 22:54:53, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:54:53, Epoch 306:
+27-May-26 22:54:57, => train | nelbo: 1.4025 - nll: 1.3941 - kl: 0.0084 - steps: 5202
+27-May-26 22:54:57, Epoch 307:
+27-May-26 22:55:00, => train | nelbo: 1.3633 - nll: 1.3568 - kl: 0.0065 - steps: 5219
+27-May-26 22:55:00, Epoch 308:
+27-May-26 22:55:04, => train | nelbo: 1.4289 - nll: 1.4206 - kl: 0.0083 - steps: 5236
+27-May-26 22:55:04, Epoch 309:
+27-May-26 22:55:07, => train | nelbo: 1.3903 - nll: 1.3822 - kl: 0.0081 - steps: 5253
+27-May-26 22:55:08, => valid | nelbo: 1.5195 - nll: 1.5122 - kl: 0.0073 - steps: 5253
+27-May-26 22:55:09, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:55:09, Epoch 310:
+27-May-26 22:55:12, => train | nelbo: 1.3987 - nll: 1.3915 - kl: 0.0072 - steps: 5270
+27-May-26 22:55:12, Epoch 311:
+27-May-26 22:55:15, => train | nelbo: 1.3682 - nll: 1.3611 - kl: 0.0071 - steps: 5287
+27-May-26 22:55:15, Epoch 312:
+27-May-26 22:55:18, => train | nelbo: 1.3637 - nll: 1.3575 - kl: 0.0062 - steps: 5304
+27-May-26 22:55:18, Epoch 313:
+27-May-26 22:55:21, => train | nelbo: 1.3811 - nll: 1.3739 - kl: 0.0072 - steps: 5321
+27-May-26 22:55:22, => valid | nelbo: 1.5066 - nll: 1.4993 - kl: 0.0073 - steps: 5321
+27-May-26 22:55:23, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:55:23, Epoch 314:
+27-May-26 22:55:26, => train | nelbo: 1.3641 - nll: 1.3562 - kl: 0.0079 - steps: 5338
+27-May-26 22:55:26, Epoch 315:
+27-May-26 22:55:29, => train | nelbo: 1.3813 - nll: 1.3744 - kl: 0.0069 - steps: 5355
+27-May-26 22:55:29, Epoch 316:
+27-May-26 22:55:33, => train | nelbo: 1.3639 - nll: 1.3572 - kl: 0.0066 - steps: 5372
+27-May-26 22:55:33, Epoch 317:
+27-May-26 22:55:36, => train | nelbo: 1.3872 - nll: 1.3807 - kl: 0.0065 - steps: 5389
+27-May-26 22:55:37, => valid | nelbo: 1.4928 - nll: 1.4859 - kl: 0.0069 - steps: 5389
+27-May-26 22:55:38, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:55:38, Epoch 318:
+27-May-26 22:55:41, => train | nelbo: 1.3606 - nll: 1.3533 - kl: 0.0073 - steps: 5406
+27-May-26 22:55:41, Epoch 319:
+27-May-26 22:55:45, => train | nelbo: 1.4015 - nll: 1.3912 - kl: 0.0103 - steps: 5423
+27-May-26 22:55:45, Epoch 320:
+27-May-26 22:55:48, => train | nelbo: 1.3580 - nll: 1.3496 - kl: 0.0084 - steps: 5440
+27-May-26 22:55:48, Epoch 321:
+27-May-26 22:55:52, => train | nelbo: 1.3689 - nll: 1.3628 - kl: 0.0061 - steps: 5457
+27-May-26 22:55:52, => valid | nelbo: 1.4819 - nll: 1.4750 - kl: 0.0069 - steps: 5457
+27-May-26 22:55:54, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:55:54, Epoch 322:
+27-May-26 22:55:57, => train | nelbo: 1.3877 - nll: 1.3802 - kl: 0.0075 - steps: 5474
+27-May-26 22:55:57, Epoch 323:
+27-May-26 22:56:00, => train | nelbo: 1.3565 - nll: 1.3498 - kl: 0.0067 - steps: 5491
+27-May-26 22:56:00, Epoch 324:
+27-May-26 22:56:03, => train | nelbo: 1.3702 - nll: 1.3637 - kl: 0.0065 - steps: 5508
+27-May-26 22:56:03, Epoch 325:
+27-May-26 22:56:06, => train | nelbo: 1.3522 - nll: 1.3439 - kl: 0.0082 - steps: 5525
+27-May-26 22:56:06, => valid | nelbo: 1.4696 - nll: 1.4628 - kl: 0.0068 - steps: 5525
+27-May-26 22:56:07, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:56:07, Epoch 326:
+27-May-26 22:56:11, => train | nelbo: 1.4017 - nll: 1.3943 - kl: 0.0074 - steps: 5542
+27-May-26 22:56:11, Epoch 327:
+27-May-26 22:56:14, => train | nelbo: 1.3533 - nll: 1.3465 - kl: 0.0068 - steps: 5559
+27-May-26 22:56:14, Epoch 328:
+27-May-26 22:56:17, => train | nelbo: 1.3855 - nll: 1.3764 - kl: 0.0091 - steps: 5576
+27-May-26 22:56:17, Epoch 329:
+27-May-26 22:56:21, => train | nelbo: 1.3480 - nll: 1.3401 - kl: 0.0079 - steps: 5593
+27-May-26 22:56:21, => valid | nelbo: 1.4581 - nll: 1.4517 - kl: 0.0065 - steps: 5593
+27-May-26 22:56:23, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:56:23, Epoch 330:
+27-May-26 22:56:26, => train | nelbo: 1.3566 - nll: 1.3502 - kl: 0.0064 - steps: 5610
+27-May-26 22:56:26, Epoch 331:
+27-May-26 22:56:29, => train | nelbo: 1.3493 - nll: 1.3415 - kl: 0.0078 - steps: 5627
+27-May-26 22:56:29, Epoch 332:
+27-May-26 22:56:32, => train | nelbo: 1.3527 - nll: 1.3459 - kl: 0.0068 - steps: 5644
+27-May-26 22:56:32, Epoch 333:
+27-May-26 22:56:35, => train | nelbo: 1.3414 - nll: 1.3352 - kl: 0.0062 - steps: 5661
+27-May-26 22:56:36, => valid | nelbo: 1.4485 - nll: 1.4420 - kl: 0.0065 - steps: 5661
+27-May-26 22:56:37, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:56:37, Epoch 334:
+27-May-26 22:56:40, => train | nelbo: 1.3378 - nll: 1.3314 - kl: 0.0065 - steps: 5678
+27-May-26 22:56:40, Epoch 335:
+27-May-26 22:56:43, => train | nelbo: 1.3518 - nll: 1.3453 - kl: 0.0065 - steps: 5695
+27-May-26 22:56:43, Epoch 336:
+27-May-26 22:56:46, => train | nelbo: 1.3637 - nll: 1.3567 - kl: 0.0070 - steps: 5712
+27-May-26 22:56:46, Epoch 337:
+27-May-26 22:56:50, => train | nelbo: 1.3440 - nll: 1.3367 - kl: 0.0073 - steps: 5729
+27-May-26 22:56:50, => valid | nelbo: 1.4392 - nll: 1.4329 - kl: 0.0063 - steps: 5729
+27-May-26 22:56:52, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:56:52, Epoch 338:
+27-May-26 22:56:55, => train | nelbo: 1.3389 - nll: 1.3324 - kl: 0.0065 - steps: 5746
+27-May-26 22:56:55, Epoch 339:
+27-May-26 22:56:58, => train | nelbo: 1.3449 - nll: 1.3388 - kl: 0.0061 - steps: 5763
+27-May-26 22:56:58, Epoch 340:
+27-May-26 22:57:01, => train | nelbo: 1.3333 - nll: 1.3267 - kl: 0.0066 - steps: 5780
+27-May-26 22:57:01, Epoch 341:
+27-May-26 22:57:04, => train | nelbo: 1.3682 - nll: 1.3596 - kl: 0.0085 - steps: 5797
+27-May-26 22:57:05, => valid | nelbo: 1.4293 - nll: 1.4230 - kl: 0.0063 - steps: 5797
+27-May-26 22:57:06, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:57:06, Epoch 342:
+27-May-26 22:57:09, => train | nelbo: 1.3496 - nll: 1.3413 - kl: 0.0083 - steps: 5814
+27-May-26 22:57:09, Epoch 343:
+27-May-26 22:57:12, => train | nelbo: 1.3430 - nll: 1.3357 - kl: 0.0073 - steps: 5831
+27-May-26 22:57:12, Epoch 344:
+27-May-26 22:57:15, => train | nelbo: 1.3577 - nll: 1.3508 - kl: 0.0069 - steps: 5848
+27-May-26 22:57:15, Epoch 345:
+27-May-26 22:57:19, => train | nelbo: 1.3376 - nll: 1.3309 - kl: 0.0068 - steps: 5865
+27-May-26 22:57:19, => valid | nelbo: 1.4190 - nll: 1.4130 - kl: 0.0061 - steps: 5865
+27-May-26 22:57:20, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:57:20, Epoch 346:
+27-May-26 22:57:23, => train | nelbo: 1.3814 - nll: 1.3739 - kl: 0.0075 - steps: 5882
+27-May-26 22:57:23, Epoch 347:
+27-May-26 22:57:27, => train | nelbo: 1.3331 - nll: 1.3264 - kl: 0.0067 - steps: 5899
+27-May-26 22:57:27, Epoch 348:
+27-May-26 22:57:30, => train | nelbo: 1.3524 - nll: 1.3448 - kl: 0.0075 - steps: 5916
+27-May-26 22:57:30, Epoch 349:
+27-May-26 22:57:33, => train | nelbo: 1.3329 - nll: 1.3251 - kl: 0.0078 - steps: 5933
+27-May-26 22:57:34, => valid | nelbo: 1.4097 - nll: 1.4038 - kl: 0.0059 - steps: 5933
+27-May-26 22:57:35, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:57:35, Epoch 350:
+27-May-26 22:57:39, => train | nelbo: 1.3635 - nll: 1.3565 - kl: 0.0069 - steps: 5950
+27-May-26 22:57:39, Epoch 351:
+27-May-26 22:57:42, => train | nelbo: 1.3209 - nll: 1.3133 - kl: 0.0076 - steps: 5967
+27-May-26 22:57:42, Epoch 352:
+27-May-26 22:57:45, => train | nelbo: 1.3573 - nll: 1.3483 - kl: 0.0090 - steps: 5984
+27-May-26 22:57:45, Epoch 353:
+27-May-26 22:57:48, => train | nelbo: 1.3481 - nll: 1.3407 - kl: 0.0074 - steps: 6001
+27-May-26 22:57:49, => valid | nelbo: 1.4019 - nll: 1.3960 - kl: 0.0058 - steps: 6001
+27-May-26 22:57:50, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:57:50, Epoch 354:
+27-May-26 22:57:53, => train | nelbo: 1.3312 - nll: 1.3246 - kl: 0.0066 - steps: 6018
+27-May-26 22:57:53, Epoch 355:
+27-May-26 22:57:56, => train | nelbo: 1.3209 - nll: 1.3142 - kl: 0.0068 - steps: 6035
+27-May-26 22:57:56, Epoch 356:
+27-May-26 22:57:59, => train | nelbo: 1.3286 - nll: 1.3222 - kl: 0.0064 - steps: 6052
+27-May-26 22:57:59, Epoch 357:
+27-May-26 22:58:03, => train | nelbo: 1.3398 - nll: 1.3317 - kl: 0.0081 - steps: 6069
+27-May-26 22:58:03, => valid | nelbo: 1.3923 - nll: 1.3868 - kl: 0.0055 - steps: 6069
+27-May-26 22:58:04, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:58:04, Epoch 358:
+27-May-26 22:58:08, => train | nelbo: 1.3312 - nll: 1.3238 - kl: 0.0074 - steps: 6086
+27-May-26 22:58:08, Epoch 359:
+27-May-26 22:58:11, => train | nelbo: 1.3281 - nll: 1.3217 - kl: 0.0063 - steps: 6103
+27-May-26 22:58:11, Epoch 360:
+27-May-26 22:58:15, => train | nelbo: 1.3378 - nll: 1.3282 - kl: 0.0095 - steps: 6120
+27-May-26 22:58:15, Epoch 361:
+27-May-26 22:58:18, => train | nelbo: 1.3168 - nll: 1.3093 - kl: 0.0075 - steps: 6137
+27-May-26 22:58:19, => valid | nelbo: 1.3854 - nll: 1.3798 - kl: 0.0056 - steps: 6137
+27-May-26 22:58:20, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:58:20, Epoch 362:
+27-May-26 22:58:23, => train | nelbo: 1.3094 - nll: 1.3026 - kl: 0.0068 - steps: 6154
+27-May-26 22:58:23, Epoch 363:
+27-May-26 22:58:26, => train | nelbo: 1.3062 - nll: 1.3001 - kl: 0.0061 - steps: 6171
+27-May-26 22:58:26, Epoch 364:
+27-May-26 22:58:30, => train | nelbo: 1.3337 - nll: 1.3271 - kl: 0.0066 - steps: 6188
+27-May-26 22:58:30, Epoch 365:
+27-May-26 22:58:33, => train | nelbo: 1.3273 - nll: 1.3204 - kl: 0.0069 - steps: 6205
+27-May-26 22:58:34, => valid | nelbo: 1.3771 - nll: 1.3715 - kl: 0.0056 - steps: 6205
+27-May-26 22:58:35, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:58:35, Epoch 366:
+27-May-26 22:58:38, => train | nelbo: 1.3139 - nll: 1.3065 - kl: 0.0074 - steps: 6222
+27-May-26 22:58:38, Epoch 367:
+27-May-26 22:58:41, => train | nelbo: 1.3288 - nll: 1.3215 - kl: 0.0073 - steps: 6239
+27-May-26 22:58:41, Epoch 368:
+27-May-26 22:58:44, => train | nelbo: 1.3204 - nll: 1.3136 - kl: 0.0068 - steps: 6256
+27-May-26 22:58:44, Epoch 369:
+27-May-26 22:58:47, => train | nelbo: 1.3185 - nll: 1.3121 - kl: 0.0064 - steps: 6273
+27-May-26 22:58:48, => valid | nelbo: 1.3700 - nll: 1.3646 - kl: 0.0054 - steps: 6273
+27-May-26 22:58:49, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:58:49, Epoch 370:
+27-May-26 22:58:52, => train | nelbo: 1.3164 - nll: 1.3085 - kl: 0.0078 - steps: 6290
+27-May-26 22:58:52, Epoch 371:
+27-May-26 22:58:56, => train | nelbo: 1.3442 - nll: 1.3368 - kl: 0.0074 - steps: 6307
+27-May-26 22:58:56, Epoch 372:
+27-May-26 22:58:59, => train | nelbo: 1.3351 - nll: 1.3258 - kl: 0.0093 - steps: 6324
+27-May-26 22:58:59, Epoch 373:
+27-May-26 22:59:02, => train | nelbo: 1.3263 - nll: 1.3191 - kl: 0.0072 - steps: 6341
+27-May-26 22:59:03, => valid | nelbo: 1.3629 - nll: 1.3575 - kl: 0.0054 - steps: 6341
+27-May-26 22:59:04, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:59:04, Epoch 374:
+27-May-26 22:59:07, => train | nelbo: 1.3532 - nll: 1.3453 - kl: 0.0079 - steps: 6358
+27-May-26 22:59:07, Epoch 375:
+27-May-26 22:59:10, => train | nelbo: 1.3072 - nll: 1.3006 - kl: 0.0066 - steps: 6375
+27-May-26 22:59:10, Epoch 376:
+27-May-26 22:59:13, => train | nelbo: 1.3430 - nll: 1.3332 - kl: 0.0099 - steps: 6392
+27-May-26 22:59:13, Epoch 377:
+27-May-26 22:59:16, => train | nelbo: 1.3209 - nll: 1.3126 - kl: 0.0083 - steps: 6409
+27-May-26 22:59:17, => valid | nelbo: 1.3562 - nll: 1.3510 - kl: 0.0052 - steps: 6409
+27-May-26 22:59:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:59:18, Epoch 378:
+27-May-26 22:59:21, => train | nelbo: 1.3263 - nll: 1.3184 - kl: 0.0079 - steps: 6426
+27-May-26 22:59:21, Epoch 379:
+27-May-26 22:59:25, => train | nelbo: 1.3177 - nll: 1.3103 - kl: 0.0074 - steps: 6443
+27-May-26 22:59:25, Epoch 380:
+27-May-26 22:59:28, => train | nelbo: 1.3210 - nll: 1.3145 - kl: 0.0065 - steps: 6460
+27-May-26 22:59:28, Epoch 381:
+27-May-26 22:59:32, => train | nelbo: 1.3280 - nll: 1.3202 - kl: 0.0078 - steps: 6477
+27-May-26 22:59:33, => valid | nelbo: 1.3495 - nll: 1.3442 - kl: 0.0052 - steps: 6477
+27-May-26 22:59:34, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:59:34, Epoch 382:
+27-May-26 22:59:37, => train | nelbo: 1.3100 - nll: 1.3032 - kl: 0.0068 - steps: 6494
+27-May-26 22:59:37, Epoch 383:
+27-May-26 22:59:40, => train | nelbo: 1.3017 - nll: 1.2958 - kl: 0.0060 - steps: 6511
+27-May-26 22:59:40, Epoch 384:
+27-May-26 22:59:43, => train | nelbo: 1.3018 - nll: 1.2958 - kl: 0.0060 - steps: 6528
+27-May-26 22:59:43, Epoch 385:
+27-May-26 22:59:46, => train | nelbo: 1.3102 - nll: 1.3032 - kl: 0.0070 - steps: 6545
+27-May-26 22:59:47, => valid | nelbo: 1.3425 - nll: 1.3375 - kl: 0.0050 - steps: 6545
+27-May-26 22:59:48, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 22:59:48, Epoch 386:
+27-May-26 22:59:52, => train | nelbo: 1.3401 - nll: 1.3317 - kl: 0.0084 - steps: 6562
+27-May-26 22:59:52, Epoch 387:
+27-May-26 22:59:55, => train | nelbo: 1.3185 - nll: 1.3081 - kl: 0.0104 - steps: 6579
+27-May-26 22:59:55, Epoch 388:
+27-May-26 22:59:58, => train | nelbo: 1.3037 - nll: 1.2966 - kl: 0.0071 - steps: 6596
+27-May-26 22:59:58, Epoch 389:
+27-May-26 23:00:01, => train | nelbo: 1.3335 - nll: 1.3272 - kl: 0.0063 - steps: 6613
+27-May-26 23:00:02, => valid | nelbo: 1.3368 - nll: 1.3317 - kl: 0.0051 - steps: 6613
+27-May-26 23:00:03, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:00:03, Epoch 390:
+27-May-26 23:00:06, => train | nelbo: 1.3192 - nll: 1.3127 - kl: 0.0065 - steps: 6630
+27-May-26 23:00:06, Epoch 391:
+27-May-26 23:00:09, => train | nelbo: 1.3122 - nll: 1.3050 - kl: 0.0072 - steps: 6647
+27-May-26 23:00:09, Epoch 392:
+27-May-26 23:00:12, => train | nelbo: 1.3220 - nll: 1.3128 - kl: 0.0092 - steps: 6664
+27-May-26 23:00:12, Epoch 393:
+27-May-26 23:00:15, => train | nelbo: 1.3162 - nll: 1.3086 - kl: 0.0076 - steps: 6681
+27-May-26 23:00:16, => valid | nelbo: 1.3312 - nll: 1.3263 - kl: 0.0049 - steps: 6681
+27-May-26 23:00:17, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:00:17, Epoch 394:
+27-May-26 23:00:20, => train | nelbo: 1.3138 - nll: 1.3076 - kl: 0.0062 - steps: 6698
+27-May-26 23:00:20, Epoch 395:
+27-May-26 23:00:23, => train | nelbo: 1.3242 - nll: 1.3177 - kl: 0.0065 - steps: 6715
+27-May-26 23:00:23, Epoch 396:
+27-May-26 23:00:27, => train | nelbo: 1.3162 - nll: 1.3078 - kl: 0.0084 - steps: 6732
+27-May-26 23:00:27, Epoch 397:
+27-May-26 23:00:31, => train | nelbo: 1.3131 - nll: 1.3058 - kl: 0.0074 - steps: 6749
+27-May-26 23:00:31, => valid | nelbo: 1.3258 - nll: 1.3210 - kl: 0.0048 - steps: 6749
+27-May-26 23:00:33, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:00:33, Epoch 398:
+27-May-26 23:00:36, => train | nelbo: 1.2782 - nll: 1.2720 - kl: 0.0062 - steps: 6766
+27-May-26 23:00:36, Epoch 399:
+27-May-26 23:00:40, => train | nelbo: 1.3517 - nll: 1.3432 - kl: 0.0085 - steps: 6783
+27-May-26 23:00:40, Epoch 400:
+27-May-26 23:00:43, => train | nelbo: 1.3110 - nll: 1.3020 - kl: 0.0090 - steps: 6800
+27-May-26 23:00:43, Epoch 401:
+27-May-26 23:00:46, => train | nelbo: 1.2991 - nll: 1.2911 - kl: 0.0080 - steps: 6817
+27-May-26 23:00:47, => valid | nelbo: 1.3204 - nll: 1.3155 - kl: 0.0049 - steps: 6817
+27-May-26 23:00:48, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:00:48, Epoch 402:
+27-May-26 23:00:51, => train | nelbo: 1.2885 - nll: 1.2815 - kl: 0.0070 - steps: 6834
+27-May-26 23:00:51, Epoch 403:
+27-May-26 23:00:54, => train | nelbo: 1.3492 - nll: 1.3420 - kl: 0.0072 - steps: 6851
+27-May-26 23:00:54, Epoch 404:
+27-May-26 23:00:58, => train | nelbo: 1.3373 - nll: 1.3280 - kl: 0.0093 - steps: 6868
+27-May-26 23:00:58, Epoch 405:
+27-May-26 23:01:01, => train | nelbo: 1.3093 - nll: 1.3022 - kl: 0.0071 - steps: 6885
+27-May-26 23:01:02, => valid | nelbo: 1.3153 - nll: 1.3105 - kl: 0.0048 - steps: 6885
+27-May-26 23:01:03, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:01:03, Epoch 406:
+27-May-26 23:01:06, => train | nelbo: 1.3305 - nll: 1.3219 - kl: 0.0086 - steps: 6902
+27-May-26 23:01:06, Epoch 407:
+27-May-26 23:01:09, => train | nelbo: 1.3012 - nll: 1.2934 - kl: 0.0078 - steps: 6919
+27-May-26 23:01:09, Epoch 408:
+27-May-26 23:01:13, => train | nelbo: 1.2860 - nll: 1.2796 - kl: 0.0064 - steps: 6936
+27-May-26 23:01:13, Epoch 409:
+27-May-26 23:01:16, => train | nelbo: 1.3161 - nll: 1.3084 - kl: 0.0077 - steps: 6953
+27-May-26 23:01:17, => valid | nelbo: 1.3107 - nll: 1.3058 - kl: 0.0049 - steps: 6953
+27-May-26 23:01:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:01:18, Epoch 410:
+27-May-26 23:01:21, => train | nelbo: 1.2779 - nll: 1.2711 - kl: 0.0068 - steps: 6970
+27-May-26 23:01:21, Epoch 411:
+27-May-26 23:01:24, => train | nelbo: 1.2838 - nll: 1.2779 - kl: 0.0060 - steps: 6987
+27-May-26 23:01:24, Epoch 412:
+27-May-26 23:01:28, => train | nelbo: 1.2963 - nll: 1.2901 - kl: 0.0062 - steps: 7004
+27-May-26 23:01:28, Epoch 413:
+27-May-26 23:01:31, => train | nelbo: 1.2860 - nll: 1.2795 - kl: 0.0065 - steps: 7021
+27-May-26 23:01:32, => valid | nelbo: 1.3054 - nll: 1.3006 - kl: 0.0047 - steps: 7021
+27-May-26 23:01:33, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:01:33, Epoch 414:
+27-May-26 23:01:37, => train | nelbo: 1.2919 - nll: 1.2851 - kl: 0.0069 - steps: 7038
+27-May-26 23:01:37, Epoch 415:
+27-May-26 23:01:40, => train | nelbo: 1.2789 - nll: 1.2728 - kl: 0.0060 - steps: 7055
+27-May-26 23:01:40, Epoch 416:
+27-May-26 23:01:43, => train | nelbo: 1.2766 - nll: 1.2700 - kl: 0.0066 - steps: 7072
+27-May-26 23:01:43, Epoch 417:
+27-May-26 23:01:46, => train | nelbo: 1.2944 - nll: 1.2869 - kl: 0.0075 - steps: 7089
+27-May-26 23:01:47, => valid | nelbo: 1.2995 - nll: 1.2948 - kl: 0.0047 - steps: 7089
+27-May-26 23:01:48, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:01:48, Epoch 418:
+27-May-26 23:01:51, => train | nelbo: 1.2724 - nll: 1.2653 - kl: 0.0071 - steps: 7106
+27-May-26 23:01:51, Epoch 419:
+27-May-26 23:01:54, => train | nelbo: 1.2639 - nll: 1.2581 - kl: 0.0058 - steps: 7123
+27-May-26 23:01:54, Epoch 420:
+27-May-26 23:01:58, => train | nelbo: 1.2785 - nll: 1.2716 - kl: 0.0069 - steps: 7140
+27-May-26 23:01:58, Epoch 421:
+27-May-26 23:02:01, => train | nelbo: 1.2968 - nll: 1.2892 - kl: 0.0076 - steps: 7157
+27-May-26 23:02:01, => valid | nelbo: 1.2951 - nll: 1.2904 - kl: 0.0047 - steps: 7157
+27-May-26 23:02:02, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:02:02, Epoch 422:
+27-May-26 23:02:06, => train | nelbo: 1.2951 - nll: 1.2880 - kl: 0.0070 - steps: 7174
+27-May-26 23:02:06, Epoch 423:
+27-May-26 23:02:09, => train | nelbo: 1.2672 - nll: 1.2601 - kl: 0.0071 - steps: 7191
+27-May-26 23:02:09, Epoch 424:
+27-May-26 23:02:13, => train | nelbo: 1.2717 - nll: 1.2650 - kl: 0.0067 - steps: 7208
+27-May-26 23:02:13, Epoch 425:
+27-May-26 23:02:16, => train | nelbo: 1.2750 - nll: 1.2668 - kl: 0.0082 - steps: 7225
+27-May-26 23:02:16, => valid | nelbo: 1.2905 - nll: 1.2857 - kl: 0.0047 - steps: 7225
+27-May-26 23:02:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:02:18, Epoch 426:
+27-May-26 23:02:21, => train | nelbo: 1.2957 - nll: 1.2884 - kl: 0.0073 - steps: 7242
+27-May-26 23:02:21, Epoch 427:
+27-May-26 23:02:24, => train | nelbo: 1.3028 - nll: 1.2936 - kl: 0.0092 - steps: 7259
+27-May-26 23:02:24, Epoch 428:
+27-May-26 23:02:27, => train | nelbo: 1.2630 - nll: 1.2559 - kl: 0.0071 - steps: 7276
+27-May-26 23:02:27, Epoch 429:
+27-May-26 23:02:30, => train | nelbo: 1.3190 - nll: 1.3113 - kl: 0.0077 - steps: 7293
+27-May-26 23:02:31, => valid | nelbo: 1.2858 - nll: 1.2810 - kl: 0.0048 - steps: 7293
+27-May-26 23:02:32, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:02:32, Epoch 430:
+27-May-26 23:02:35, => train | nelbo: 1.3038 - nll: 1.2964 - kl: 0.0074 - steps: 7310
+27-May-26 23:02:35, Epoch 431:
+27-May-26 23:02:38, => train | nelbo: 1.3018 - nll: 1.2924 - kl: 0.0095 - steps: 7327
+27-May-26 23:02:38, Epoch 432:
+27-May-26 23:02:41, => train | nelbo: 1.2884 - nll: 1.2810 - kl: 0.0074 - steps: 7344
+27-May-26 23:02:41, Epoch 433:
+27-May-26 23:02:44, => train | nelbo: 1.2764 - nll: 1.2697 - kl: 0.0066 - steps: 7361
+27-May-26 23:02:45, => valid | nelbo: 1.2814 - nll: 1.2767 - kl: 0.0047 - steps: 7361
+27-May-26 23:02:46, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:02:46, Epoch 434:
+27-May-26 23:02:49, => train | nelbo: 1.2825 - nll: 1.2756 - kl: 0.0069 - steps: 7378
+27-May-26 23:02:49, Epoch 435:
+27-May-26 23:02:53, => train | nelbo: 1.3004 - nll: 1.2927 - kl: 0.0077 - steps: 7395
+27-May-26 23:02:53, Epoch 436:
+27-May-26 23:02:56, => train | nelbo: 1.3092 - nll: 1.3006 - kl: 0.0086 - steps: 7412
+27-May-26 23:02:56, Epoch 437:
+27-May-26 23:02:59, => train | nelbo: 1.3164 - nll: 1.3080 - kl: 0.0084 - steps: 7429
+27-May-26 23:03:00, => valid | nelbo: 1.2773 - nll: 1.2726 - kl: 0.0046 - steps: 7429
+27-May-26 23:03:01, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:03:01, Epoch 438:
+27-May-26 23:03:05, => train | nelbo: 1.2698 - nll: 1.2631 - kl: 0.0067 - steps: 7446
+27-May-26 23:03:05, Epoch 439:
+27-May-26 23:03:08, => train | nelbo: 1.3061 - nll: 1.2985 - kl: 0.0076 - steps: 7463
+27-May-26 23:03:08, Epoch 440:
+27-May-26 23:03:11, => train | nelbo: 1.2674 - nll: 1.2607 - kl: 0.0067 - steps: 7480
+27-May-26 23:03:11, Epoch 441:
+27-May-26 23:03:15, => train | nelbo: 1.2761 - nll: 1.2696 - kl: 0.0066 - steps: 7497
+27-May-26 23:03:15, => valid | nelbo: 1.2731 - nll: 1.2685 - kl: 0.0045 - steps: 7497
+27-May-26 23:03:17, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:03:17, Epoch 442:
+27-May-26 23:03:20, => train | nelbo: 1.2836 - nll: 1.2769 - kl: 0.0067 - steps: 7514
+27-May-26 23:03:20, Epoch 443:
+27-May-26 23:03:23, => train | nelbo: 1.2683 - nll: 1.2594 - kl: 0.0089 - steps: 7531
+27-May-26 23:03:23, Epoch 444:
+27-May-26 23:03:26, => train | nelbo: 1.2572 - nll: 1.2506 - kl: 0.0065 - steps: 7548
+27-May-26 23:03:26, Epoch 445:
+27-May-26 23:03:29, => train | nelbo: 1.2580 - nll: 1.2511 - kl: 0.0069 - steps: 7565
+27-May-26 23:03:30, => valid | nelbo: 1.2693 - nll: 1.2645 - kl: 0.0048 - steps: 7565
+27-May-26 23:03:31, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:03:31, Epoch 446:
+27-May-26 23:03:34, => train | nelbo: 1.2648 - nll: 1.2578 - kl: 0.0071 - steps: 7582
+27-May-26 23:03:34, Epoch 447:
+27-May-26 23:03:38, => train | nelbo: 1.2826 - nll: 1.2763 - kl: 0.0063 - steps: 7599
+27-May-26 23:03:38, Epoch 448:
+27-May-26 23:03:41, => train | nelbo: 1.2620 - nll: 1.2555 - kl: 0.0065 - steps: 7616
+27-May-26 23:03:41, Epoch 449:
+27-May-26 23:03:44, => train | nelbo: 1.2533 - nll: 1.2466 - kl: 0.0067 - steps: 7633
+27-May-26 23:03:45, => valid | nelbo: 1.2648 - nll: 1.2602 - kl: 0.0046 - steps: 7633
+27-May-26 23:03:46, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:03:46, Epoch 450:
+27-May-26 23:03:50, => train | nelbo: 1.2649 - nll: 1.2576 - kl: 0.0073 - steps: 7650
+27-May-26 23:03:50, Epoch 451:
+27-May-26 23:03:53, => train | nelbo: 1.2741 - nll: 1.2663 - kl: 0.0078 - steps: 7667
+27-May-26 23:03:53, Epoch 452:
+27-May-26 23:03:56, => train | nelbo: 1.2705 - nll: 1.2639 - kl: 0.0066 - steps: 7684
+27-May-26 23:03:56, Epoch 453:
+27-May-26 23:04:00, => train | nelbo: 1.2472 - nll: 1.2400 - kl: 0.0072 - steps: 7701
+27-May-26 23:04:01, => valid | nelbo: 1.2610 - nll: 1.2563 - kl: 0.0047 - steps: 7701
+27-May-26 23:04:02, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:04:02, Epoch 454:
+27-May-26 23:04:05, => train | nelbo: 1.2815 - nll: 1.2737 - kl: 0.0079 - steps: 7718
+27-May-26 23:04:05, Epoch 455:
+27-May-26 23:04:09, => train | nelbo: 1.2633 - nll: 1.2566 - kl: 0.0067 - steps: 7735
+27-May-26 23:04:09, Epoch 456:
+27-May-26 23:04:12, => train | nelbo: 1.2767 - nll: 1.2695 - kl: 0.0073 - steps: 7752
+27-May-26 23:04:12, Epoch 457:
+27-May-26 23:04:15, => train | nelbo: 1.2628 - nll: 1.2553 - kl: 0.0076 - steps: 7769
+27-May-26 23:04:16, => valid | nelbo: 1.2573 - nll: 1.2525 - kl: 0.0048 - steps: 7769
+27-May-26 23:04:17, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:04:17, Epoch 458:
+27-May-26 23:04:20, => train | nelbo: 1.2682 - nll: 1.2615 - kl: 0.0067 - steps: 7786
+27-May-26 23:04:20, Epoch 459:
+27-May-26 23:04:23, => train | nelbo: 1.2622 - nll: 1.2552 - kl: 0.0070 - steps: 7803
+27-May-26 23:04:23, Epoch 460:
+27-May-26 23:04:27, => train | nelbo: 1.2574 - nll: 1.2490 - kl: 0.0084 - steps: 7820
+27-May-26 23:04:27, Epoch 461:
+27-May-26 23:04:30, => train | nelbo: 1.2518 - nll: 1.2432 - kl: 0.0086 - steps: 7837
+27-May-26 23:04:30, => valid | nelbo: 1.2533 - nll: 1.2486 - kl: 0.0047 - steps: 7837
+27-May-26 23:04:31, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:04:31, Epoch 462:
+27-May-26 23:04:35, => train | nelbo: 1.2551 - nll: 1.2484 - kl: 0.0067 - steps: 7854
+27-May-26 23:04:35, Epoch 463:
+27-May-26 23:04:38, => train | nelbo: 1.2582 - nll: 1.2513 - kl: 0.0069 - steps: 7871
+27-May-26 23:04:38, Epoch 464:
+27-May-26 23:04:41, => train | nelbo: 1.2748 - nll: 1.2658 - kl: 0.0090 - steps: 7888
+27-May-26 23:04:41, Epoch 465:
+27-May-26 23:04:44, => train | nelbo: 1.2661 - nll: 1.2576 - kl: 0.0085 - steps: 7905
+27-May-26 23:04:45, => valid | nelbo: 1.2496 - nll: 1.2449 - kl: 0.0047 - steps: 7905
+27-May-26 23:04:46, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:04:46, Epoch 466:
+27-May-26 23:04:49, => train | nelbo: 1.2650 - nll: 1.2574 - kl: 0.0076 - steps: 7922
+27-May-26 23:04:49, Epoch 467:
+27-May-26 23:04:53, => train | nelbo: 1.2386 - nll: 1.2327 - kl: 0.0059 - steps: 7939
+27-May-26 23:04:53, Epoch 468:
+27-May-26 23:04:56, => train | nelbo: 1.2716 - nll: 1.2644 - kl: 0.0072 - steps: 7956
+27-May-26 23:04:56, Epoch 469:
+27-May-26 23:04:59, => train | nelbo: 1.2534 - nll: 1.2449 - kl: 0.0085 - steps: 7973
+27-May-26 23:05:00, => valid | nelbo: 1.2459 - nll: 1.2412 - kl: 0.0048 - steps: 7973
+27-May-26 23:05:01, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:05:01, Epoch 470:
+27-May-26 23:05:04, => train | nelbo: 1.2353 - nll: 1.2288 - kl: 0.0065 - steps: 7990
+27-May-26 23:05:04, Epoch 471:
+27-May-26 23:05:08, => train | nelbo: 1.2524 - nll: 1.2456 - kl: 0.0068 - steps: 8007
+27-May-26 23:05:08, Epoch 472:
+27-May-26 23:05:11, => train | nelbo: 1.2823 - nll: 1.2740 - kl: 0.0084 - steps: 8024
+27-May-26 23:05:11, Epoch 473:
+27-May-26 23:05:15, => train | nelbo: 1.2628 - nll: 1.2549 - kl: 0.0079 - steps: 8041
+27-May-26 23:05:16, => valid | nelbo: 1.2428 - nll: 1.2382 - kl: 0.0047 - steps: 8041
+27-May-26 23:05:17, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:05:17, Epoch 474:
+27-May-26 23:05:20, => train | nelbo: 1.2570 - nll: 1.2491 - kl: 0.0079 - steps: 8058
+27-May-26 23:05:20, Epoch 475:
+27-May-26 23:05:23, => train | nelbo: 1.2769 - nll: 1.2700 - kl: 0.0070 - steps: 8075
+27-May-26 23:05:23, Epoch 476:
+27-May-26 23:05:26, => train | nelbo: 1.2654 - nll: 1.2585 - kl: 0.0069 - steps: 8092
+27-May-26 23:05:26, Epoch 477:
+27-May-26 23:05:30, => train | nelbo: 1.2655 - nll: 1.2578 - kl: 0.0078 - steps: 8109
+27-May-26 23:05:30, => valid | nelbo: 1.2394 - nll: 1.2348 - kl: 0.0046 - steps: 8109
+27-May-26 23:05:31, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:05:31, Epoch 478:
+27-May-26 23:05:35, => train | nelbo: 1.2422 - nll: 1.2343 - kl: 0.0079 - steps: 8126
+27-May-26 23:05:35, Epoch 479:
+27-May-26 23:05:38, => train | nelbo: 1.2586 - nll: 1.2512 - kl: 0.0074 - steps: 8143
+27-May-26 23:05:38, Epoch 480:
+27-May-26 23:05:42, => train | nelbo: 1.2610 - nll: 1.2538 - kl: 0.0072 - steps: 8160
+27-May-26 23:05:42, Epoch 481:
+27-May-26 23:05:45, => train | nelbo: 1.2433 - nll: 1.2368 - kl: 0.0065 - steps: 8177
+27-May-26 23:05:46, => valid | nelbo: 1.2354 - nll: 1.2308 - kl: 0.0046 - steps: 8177
+27-May-26 23:05:47, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:05:47, Epoch 482:
+27-May-26 23:05:53, => train | nelbo: 1.2337 - nll: 1.2270 - kl: 0.0067 - steps: 8194
+27-May-26 23:05:53, Epoch 483:
+27-May-26 23:05:57, => train | nelbo: 1.2252 - nll: 1.2189 - kl: 0.0063 - steps: 8211
+27-May-26 23:05:57, Epoch 484:
+27-May-26 23:06:00, => train | nelbo: 1.2664 - nll: 1.2590 - kl: 0.0074 - steps: 8228
+27-May-26 23:06:00, Epoch 485:
+27-May-26 23:06:03, => train | nelbo: 1.2435 - nll: 1.2360 - kl: 0.0075 - steps: 8245
+27-May-26 23:06:04, => valid | nelbo: 1.2324 - nll: 1.2278 - kl: 0.0046 - steps: 8245
+27-May-26 23:06:05, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:06:05, Epoch 486:
+27-May-26 23:06:09, => train | nelbo: 1.3108 - nll: 1.3016 - kl: 0.0092 - steps: 8262
+27-May-26 23:06:09, Epoch 487:
+27-May-26 23:06:12, => train | nelbo: 1.2794 - nll: 1.2695 - kl: 0.0099 - steps: 8279
+27-May-26 23:06:12, Epoch 488:
+27-May-26 23:06:15, => train | nelbo: 1.2843 - nll: 1.2773 - kl: 0.0071 - steps: 8296
+27-May-26 23:06:15, Epoch 489:
+27-May-26 23:06:19, => train | nelbo: 1.2667 - nll: 1.2597 - kl: 0.0071 - steps: 8313
+27-May-26 23:06:19, => valid | nelbo: 1.2298 - nll: 1.2251 - kl: 0.0047 - steps: 8313
+27-May-26 23:06:20, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:06:20, Epoch 490:
+27-May-26 23:06:24, => train | nelbo: 1.2452 - nll: 1.2382 - kl: 0.0069 - steps: 8330
+27-May-26 23:06:24, Epoch 491:
+27-May-26 23:06:27, => train | nelbo: 1.2460 - nll: 1.2388 - kl: 0.0072 - steps: 8347
+27-May-26 23:06:27, Epoch 492:
+27-May-26 23:06:31, => train | nelbo: 1.2415 - nll: 1.2346 - kl: 0.0069 - steps: 8364
+27-May-26 23:06:31, Epoch 493:
+27-May-26 23:06:34, => train | nelbo: 1.2267 - nll: 1.2204 - kl: 0.0063 - steps: 8381
+27-May-26 23:06:34, => valid | nelbo: 1.2266 - nll: 1.2221 - kl: 0.0045 - steps: 8381
+27-May-26 23:06:36, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:06:36, Epoch 494:
+27-May-26 23:06:39, => train | nelbo: 1.2656 - nll: 1.2576 - kl: 0.0081 - steps: 8398
+27-May-26 23:06:39, Epoch 495:
+27-May-26 23:06:42, => train | nelbo: 1.2712 - nll: 1.2634 - kl: 0.0078 - steps: 8415
+27-May-26 23:06:42, Epoch 496:
+27-May-26 23:06:45, => train | nelbo: 1.2695 - nll: 1.2609 - kl: 0.0086 - steps: 8432
+27-May-26 23:06:45, Epoch 497:
+27-May-26 23:06:48, => train | nelbo: 1.2433 - nll: 1.2363 - kl: 0.0069 - steps: 8449
+27-May-26 23:06:49, => valid | nelbo: 1.2237 - nll: 1.2192 - kl: 0.0045 - steps: 8449
+27-May-26 23:06:50, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:06:50, Epoch 498:
+27-May-26 23:06:53, => train | nelbo: 1.2388 - nll: 1.2322 - kl: 0.0067 - steps: 8466
+27-May-26 23:06:53, Epoch 499:
+27-May-26 23:06:57, => train | nelbo: 1.2409 - nll: 1.2323 - kl: 0.0086 - steps: 8483
+27-May-26 23:06:57, Epoch 500:
+27-May-26 23:07:00, => train | nelbo: 1.2303 - nll: 1.2236 - kl: 0.0067 - steps: 8500
+27-May-26 23:07:00, Epoch 501:
+27-May-26 23:07:03, => train | nelbo: 1.2192 - nll: 1.2130 - kl: 0.0062 - steps: 8517
+27-May-26 23:07:04, => valid | nelbo: 1.2202 - nll: 1.2157 - kl: 0.0045 - steps: 8517
+27-May-26 23:07:05, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:07:05, Epoch 502:
+27-May-26 23:07:08, => train | nelbo: 1.2315 - nll: 1.2246 - kl: 0.0069 - steps: 8534
+27-May-26 23:07:08, Epoch 503:
+27-May-26 23:07:12, => train | nelbo: 1.2453 - nll: 1.2381 - kl: 0.0072 - steps: 8551
+27-May-26 23:07:12, Epoch 504:
+27-May-26 23:07:15, => train | nelbo: 1.2417 - nll: 1.2335 - kl: 0.0082 - steps: 8568
+27-May-26 23:07:15, Epoch 505:
+27-May-26 23:07:18, => train | nelbo: 1.2841 - nll: 1.2757 - kl: 0.0083 - steps: 8585
+27-May-26 23:07:19, => valid | nelbo: 1.2173 - nll: 1.2127 - kl: 0.0046 - steps: 8585
+27-May-26 23:07:20, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:07:20, Epoch 506:
+27-May-26 23:07:24, => train | nelbo: 1.2429 - nll: 1.2344 - kl: 0.0085 - steps: 8602
+27-May-26 23:07:24, Epoch 507:
+27-May-26 23:07:27, => train | nelbo: 1.2353 - nll: 1.2282 - kl: 0.0071 - steps: 8619
+27-May-26 23:07:27, Epoch 508:
+27-May-26 23:07:30, => train | nelbo: 1.2389 - nll: 1.2313 - kl: 0.0075 - steps: 8636
+27-May-26 23:07:30, Epoch 509:
+27-May-26 23:07:33, => train | nelbo: 1.2634 - nll: 1.2540 - kl: 0.0094 - steps: 8653
+27-May-26 23:07:34, => valid | nelbo: 1.2150 - nll: 1.2104 - kl: 0.0046 - steps: 8653
+27-May-26 23:07:35, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:07:35, Epoch 510:
+27-May-26 23:07:38, => train | nelbo: 1.2337 - nll: 1.2263 - kl: 0.0074 - steps: 8670
+27-May-26 23:07:38, Epoch 511:
+27-May-26 23:07:41, => train | nelbo: 1.2193 - nll: 1.2129 - kl: 0.0064 - steps: 8687
+27-May-26 23:07:41, Epoch 512:
+27-May-26 23:07:45, => train | nelbo: 1.2457 - nll: 1.2394 - kl: 0.0063 - steps: 8704
+27-May-26 23:07:45, Epoch 513:
+27-May-26 23:07:48, => train | nelbo: 1.2282 - nll: 1.2208 - kl: 0.0074 - steps: 8721
+27-May-26 23:07:48, => valid | nelbo: 1.2118 - nll: 1.2072 - kl: 0.0046 - steps: 8721
+27-May-26 23:07:50, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:07:50, Epoch 514:
+27-May-26 23:07:53, => train | nelbo: 1.2271 - nll: 1.2210 - kl: 0.0061 - steps: 8738
+27-May-26 23:07:53, Epoch 515:
+27-May-26 23:07:56, => train | nelbo: 1.2326 - nll: 1.2262 - kl: 0.0063 - steps: 8755
+27-May-26 23:07:56, Epoch 516:
+27-May-26 23:07:59, => train | nelbo: 1.2333 - nll: 1.2272 - kl: 0.0061 - steps: 8772
+27-May-26 23:07:59, Epoch 517:
+27-May-26 23:08:02, => train | nelbo: 1.2098 - nll: 1.2027 - kl: 0.0071 - steps: 8789
+27-May-26 23:08:03, => valid | nelbo: 1.2089 - nll: 1.2043 - kl: 0.0046 - steps: 8789
+27-May-26 23:08:04, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:08:04, Epoch 518:
+27-May-26 23:08:08, => train | nelbo: 1.2642 - nll: 1.2565 - kl: 0.0076 - steps: 8806
+27-May-26 23:08:08, Epoch 519:
+27-May-26 23:08:11, => train | nelbo: 1.2367 - nll: 1.2294 - kl: 0.0074 - steps: 8823
+27-May-26 23:08:11, Epoch 520:
+27-May-26 23:08:14, => train | nelbo: 1.2387 - nll: 1.2310 - kl: 0.0077 - steps: 8840
+27-May-26 23:08:14, Epoch 521:
+27-May-26 23:08:18, => train | nelbo: 1.2339 - nll: 1.2272 - kl: 0.0066 - steps: 8857
+27-May-26 23:08:18, => valid | nelbo: 1.2058 - nll: 1.2013 - kl: 0.0045 - steps: 8857
+27-May-26 23:08:19, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:08:19, Epoch 522:
+27-May-26 23:08:22, => train | nelbo: 1.2285 - nll: 1.2211 - kl: 0.0073 - steps: 8874
+27-May-26 23:08:22, Epoch 523:
+27-May-26 23:08:25, => train | nelbo: 1.2154 - nll: 1.2089 - kl: 0.0065 - steps: 8891
+27-May-26 23:08:25, Epoch 524:
+27-May-26 23:08:29, => train | nelbo: 1.2296 - nll: 1.2212 - kl: 0.0085 - steps: 8908
+27-May-26 23:08:29, Epoch 525:
+27-May-26 23:08:32, => train | nelbo: 1.2144 - nll: 1.2071 - kl: 0.0073 - steps: 8925
+27-May-26 23:08:32, => valid | nelbo: 1.2034 - nll: 1.1988 - kl: 0.0046 - steps: 8925
+27-May-26 23:08:34, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:08:34, Epoch 526:
+27-May-26 23:08:37, => train | nelbo: 1.2063 - nll: 1.1999 - kl: 0.0064 - steps: 8942
+27-May-26 23:08:37, Epoch 527:
+27-May-26 23:08:40, => train | nelbo: 1.2108 - nll: 1.2040 - kl: 0.0067 - steps: 8959
+27-May-26 23:08:40, Epoch 528:
+27-May-26 23:08:43, => train | nelbo: 1.2413 - nll: 1.2331 - kl: 0.0081 - steps: 8976
+27-May-26 23:08:43, Epoch 529:
+27-May-26 23:08:47, => train | nelbo: 1.2148 - nll: 1.2068 - kl: 0.0080 - steps: 8993
+27-May-26 23:08:47, => valid | nelbo: 1.2003 - nll: 1.1957 - kl: 0.0046 - steps: 8993
+27-May-26 23:08:49, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:08:49, Epoch 530:
+27-May-26 23:08:52, => train | nelbo: 1.2308 - nll: 1.2232 - kl: 0.0075 - steps: 9010
+27-May-26 23:08:52, Epoch 531:
+27-May-26 23:08:55, => train | nelbo: 1.2105 - nll: 1.2031 - kl: 0.0074 - steps: 9027
+27-May-26 23:08:55, Epoch 532:
+27-May-26 23:08:58, => train | nelbo: 1.2413 - nll: 1.2334 - kl: 0.0079 - steps: 9044
+27-May-26 23:08:58, Epoch 533:
+27-May-26 23:09:01, => train | nelbo: 1.2482 - nll: 1.2388 - kl: 0.0094 - steps: 9061
+27-May-26 23:09:02, => valid | nelbo: 1.1976 - nll: 1.1931 - kl: 0.0045 - steps: 9061
+27-May-26 23:09:03, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:09:03, Epoch 534:
+27-May-26 23:09:07, => train | nelbo: 1.2462 - nll: 1.2389 - kl: 0.0072 - steps: 9078
+27-May-26 23:09:07, Epoch 535:
+27-May-26 23:09:10, => train | nelbo: 1.2515 - nll: 1.2433 - kl: 0.0082 - steps: 9095
+27-May-26 23:09:10, Epoch 536:
+27-May-26 23:09:13, => train | nelbo: 1.2320 - nll: 1.2231 - kl: 0.0090 - steps: 9112
+27-May-26 23:09:13, Epoch 537:
+27-May-26 23:09:16, => train | nelbo: 1.2345 - nll: 1.2259 - kl: 0.0086 - steps: 9129
+27-May-26 23:09:17, => valid | nelbo: 1.1955 - nll: 1.1909 - kl: 0.0046 - steps: 9129
+27-May-26 23:09:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:09:18, Epoch 538:
+27-May-26 23:09:21, => train | nelbo: 1.2072 - nll: 1.2007 - kl: 0.0065 - steps: 9146
+27-May-26 23:09:21, Epoch 539:
+27-May-26 23:09:25, => train | nelbo: 1.2234 - nll: 1.2175 - kl: 0.0059 - steps: 9163
+27-May-26 23:09:25, Epoch 540:
+27-May-26 23:09:29, => train | nelbo: 1.2265 - nll: 1.2195 - kl: 0.0070 - steps: 9180
+27-May-26 23:09:29, Epoch 541:
+27-May-26 23:09:32, => train | nelbo: 1.2078 - nll: 1.2007 - kl: 0.0070 - steps: 9197
+27-May-26 23:09:33, => valid | nelbo: 1.1924 - nll: 1.1880 - kl: 0.0044 - steps: 9197
+27-May-26 23:09:34, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:09:34, Epoch 542:
+27-May-26 23:09:37, => train | nelbo: 1.2124 - nll: 1.2048 - kl: 0.0077 - steps: 9214
+27-May-26 23:09:37, Epoch 543:
+27-May-26 23:09:41, => train | nelbo: 1.2635 - nll: 1.2550 - kl: 0.0085 - steps: 9231
+27-May-26 23:09:41, Epoch 544:
+27-May-26 23:09:44, => train | nelbo: 1.2188 - nll: 1.2122 - kl: 0.0067 - steps: 9248
+27-May-26 23:09:44, Epoch 545:
+27-May-26 23:09:47, => train | nelbo: 1.2236 - nll: 1.2172 - kl: 0.0064 - steps: 9265
+27-May-26 23:09:47, => valid | nelbo: 1.1901 - nll: 1.1857 - kl: 0.0045 - steps: 9265
+27-May-26 23:09:49, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:09:49, Epoch 546:
+27-May-26 23:09:52, => train | nelbo: 1.2190 - nll: 1.2130 - kl: 0.0060 - steps: 9282
+27-May-26 23:09:52, Epoch 547:
+27-May-26 23:09:55, => train | nelbo: 1.1987 - nll: 1.1920 - kl: 0.0068 - steps: 9299
+27-May-26 23:09:55, Epoch 548:
+27-May-26 23:09:58, => train | nelbo: 1.2167 - nll: 1.2089 - kl: 0.0078 - steps: 9316
+27-May-26 23:09:58, Epoch 549:
+27-May-26 23:10:01, => train | nelbo: 1.2173 - nll: 1.2104 - kl: 0.0070 - steps: 9333
+27-May-26 23:10:02, => valid | nelbo: 1.1872 - nll: 1.1828 - kl: 0.0045 - steps: 9333
+27-May-26 23:10:03, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:10:03, Epoch 550:
+27-May-26 23:10:06, => train | nelbo: 1.2220 - nll: 1.2139 - kl: 0.0081 - steps: 9350
+27-May-26 23:10:06, Epoch 551:
+27-May-26 23:10:09, => train | nelbo: 1.2119 - nll: 1.2041 - kl: 0.0078 - steps: 9367
+27-May-26 23:10:09, Epoch 552:
+27-May-26 23:10:12, => train | nelbo: 1.2167 - nll: 1.2100 - kl: 0.0066 - steps: 9384
+27-May-26 23:10:12, Epoch 553:
+27-May-26 23:10:16, => train | nelbo: 1.2158 - nll: 1.2086 - kl: 0.0072 - steps: 9401
+27-May-26 23:10:17, => valid | nelbo: 1.1853 - nll: 1.1809 - kl: 0.0044 - steps: 9401
+27-May-26 23:10:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:10:18, Epoch 554:
+27-May-26 23:10:22, => train | nelbo: 1.2180 - nll: 1.2101 - kl: 0.0079 - steps: 9418
+27-May-26 23:10:22, Epoch 555:
+27-May-26 23:10:25, => train | nelbo: 1.2271 - nll: 1.2198 - kl: 0.0073 - steps: 9435
+27-May-26 23:10:25, Epoch 556:
+27-May-26 23:10:28, => train | nelbo: 1.1977 - nll: 1.1901 - kl: 0.0076 - steps: 9452
+27-May-26 23:10:28, Epoch 557:
+27-May-26 23:10:31, => train | nelbo: 1.2051 - nll: 1.1985 - kl: 0.0065 - steps: 9469
+27-May-26 23:10:32, => valid | nelbo: 1.1823 - nll: 1.1779 - kl: 0.0044 - steps: 9469
+27-May-26 23:10:33, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:10:33, Epoch 558:
+27-May-26 23:10:36, => train | nelbo: 1.2344 - nll: 1.2267 - kl: 0.0077 - steps: 9486
+27-May-26 23:10:36, Epoch 559:
+27-May-26 23:10:39, => train | nelbo: 1.2102 - nll: 1.2031 - kl: 0.0071 - steps: 9503
+27-May-26 23:10:39, Epoch 560:
+27-May-26 23:10:42, => train | nelbo: 1.2501 - nll: 1.2424 - kl: 0.0076 - steps: 9520
+27-May-26 23:10:42, Epoch 561:
+27-May-26 23:10:45, => train | nelbo: 1.2106 - nll: 1.2034 - kl: 0.0072 - steps: 9537
+27-May-26 23:10:46, => valid | nelbo: 1.1804 - nll: 1.1760 - kl: 0.0044 - steps: 9537
+27-May-26 23:10:47, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:10:47, Epoch 562:
+27-May-26 23:10:50, => train | nelbo: 1.2061 - nll: 1.1997 - kl: 0.0064 - steps: 9554
+27-May-26 23:10:50, Epoch 563:
+27-May-26 23:10:54, => train | nelbo: 1.2127 - nll: 1.2064 - kl: 0.0063 - steps: 9571
+27-May-26 23:10:54, Epoch 564:
+27-May-26 23:10:57, => train | nelbo: 1.1964 - nll: 1.1900 - kl: 0.0065 - steps: 9588
+27-May-26 23:10:57, Epoch 565:
+27-May-26 23:11:00, => train | nelbo: 1.1967 - nll: 1.1899 - kl: 0.0068 - steps: 9605
+27-May-26 23:11:01, => valid | nelbo: 1.1775 - nll: 1.1732 - kl: 0.0043 - steps: 9605
+27-May-26 23:11:02, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:11:02, Epoch 566:
+27-May-26 23:11:05, => train | nelbo: 1.2291 - nll: 1.2196 - kl: 0.0096 - steps: 9622
+27-May-26 23:11:05, Epoch 567:
+27-May-26 23:11:09, => train | nelbo: 1.2303 - nll: 1.2217 - kl: 0.0086 - steps: 9639
+27-May-26 23:11:09, Epoch 568:
+27-May-26 23:11:12, => train | nelbo: 1.2352 - nll: 1.2267 - kl: 0.0085 - steps: 9656
+27-May-26 23:11:12, Epoch 569:
+27-May-26 23:11:15, => train | nelbo: 1.2297 - nll: 1.2214 - kl: 0.0083 - steps: 9673
+27-May-26 23:11:16, => valid | nelbo: 1.1756 - nll: 1.1713 - kl: 0.0044 - steps: 9673
+27-May-26 23:11:17, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:11:17, Epoch 570:
+27-May-26 23:11:20, => train | nelbo: 1.2715 - nll: 1.2639 - kl: 0.0076 - steps: 9690
+27-May-26 23:11:20, Epoch 571:
+27-May-26 23:11:24, => train | nelbo: 1.2379 - nll: 1.2265 - kl: 0.0114 - steps: 9707
+27-May-26 23:11:24, Epoch 572:
+27-May-26 23:11:27, => train | nelbo: 1.2115 - nll: 1.2038 - kl: 0.0077 - steps: 9724
+27-May-26 23:11:27, Epoch 573:
+27-May-26 23:11:30, => train | nelbo: 1.1911 - nll: 1.1848 - kl: 0.0063 - steps: 9741
+27-May-26 23:11:31, => valid | nelbo: 1.1741 - nll: 1.1697 - kl: 0.0044 - steps: 9741
+27-May-26 23:11:32, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:11:32, Epoch 574:
+27-May-26 23:11:36, => train | nelbo: 1.2168 - nll: 1.2093 - kl: 0.0076 - steps: 9758
+27-May-26 23:11:36, Epoch 575:
+27-May-26 23:11:39, => train | nelbo: 1.1848 - nll: 1.1780 - kl: 0.0068 - steps: 9775
+27-May-26 23:11:39, Epoch 576:
+27-May-26 23:11:42, => train | nelbo: 1.2268 - nll: 1.2196 - kl: 0.0072 - steps: 9792
+27-May-26 23:11:42, Epoch 577:
+27-May-26 23:11:45, => train | nelbo: 1.1959 - nll: 1.1875 - kl: 0.0084 - steps: 9809
+27-May-26 23:11:46, => valid | nelbo: 1.1715 - nll: 1.1672 - kl: 0.0042 - steps: 9809
+27-May-26 23:11:47, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:11:47, Epoch 578:
+27-May-26 23:11:50, => train | nelbo: 1.2564 - nll: 1.2481 - kl: 0.0083 - steps: 9826
+27-May-26 23:11:50, Epoch 579:
+27-May-26 23:11:54, => train | nelbo: 1.2073 - nll: 1.1988 - kl: 0.0085 - steps: 9843
+27-May-26 23:11:54, Epoch 580:
+27-May-26 23:11:57, => train | nelbo: 1.2274 - nll: 1.2200 - kl: 0.0074 - steps: 9860
+27-May-26 23:11:57, Epoch 581:
+27-May-26 23:12:01, => train | nelbo: 1.2082 - nll: 1.2001 - kl: 0.0081 - steps: 9877
+27-May-26 23:12:02, => valid | nelbo: 1.1696 - nll: 1.1653 - kl: 0.0044 - steps: 9877
+27-May-26 23:12:03, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:12:03, Epoch 582:
+27-May-26 23:12:06, => train | nelbo: 1.2083 - nll: 1.2014 - kl: 0.0069 - steps: 9894
+27-May-26 23:12:06, Epoch 583:
+27-May-26 23:12:10, => train | nelbo: 1.1923 - nll: 1.1854 - kl: 0.0069 - steps: 9911
+27-May-26 23:12:10, Epoch 584:
+27-May-26 23:12:13, => train | nelbo: 1.2041 - nll: 1.1969 - kl: 0.0072 - steps: 9928
+27-May-26 23:12:13, Epoch 585:
+27-May-26 23:12:16, => train | nelbo: 1.2061 - nll: 1.1985 - kl: 0.0075 - steps: 9945
+27-May-26 23:12:17, => valid | nelbo: 1.1674 - nll: 1.1630 - kl: 0.0043 - steps: 9945
+27-May-26 23:12:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:12:18, Epoch 586:
+27-May-26 23:12:22, => train | nelbo: 1.1814 - nll: 1.1739 - kl: 0.0075 - steps: 9962
+27-May-26 23:12:22, Epoch 587:
+27-May-26 23:12:25, => train | nelbo: 1.1848 - nll: 1.1784 - kl: 0.0064 - steps: 9979
+27-May-26 23:12:25, Epoch 588:
+27-May-26 23:12:28, => train | nelbo: 1.1924 - nll: 1.1859 - kl: 0.0064 - steps: 9996
+27-May-26 23:12:28, Epoch 589:
+27-May-26 23:12:35, => train | nelbo: 1.1825 - nll: 1.1755 - kl: 0.0069 - steps: 10013
+27-May-26 23:12:35, => valid | nelbo: 1.1649 - nll: 1.1605 - kl: 0.0044 - steps: 10013
+27-May-26 23:12:36, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:12:36, Epoch 590:
+27-May-26 23:12:40, => train | nelbo: 1.1847 - nll: 1.1777 - kl: 0.0070 - steps: 10030
+27-May-26 23:12:40, Epoch 591:
+27-May-26 23:12:43, => train | nelbo: 1.1938 - nll: 1.1874 - kl: 0.0064 - steps: 10047
+27-May-26 23:12:43, Epoch 592:
+27-May-26 23:12:46, => train | nelbo: 1.1937 - nll: 1.1874 - kl: 0.0063 - steps: 10064
+27-May-26 23:12:46, Epoch 593:
+27-May-26 23:12:49, => train | nelbo: 1.1826 - nll: 1.1762 - kl: 0.0064 - steps: 10081
+27-May-26 23:12:50, => valid | nelbo: 1.1620 - nll: 1.1578 - kl: 0.0042 - steps: 10081
+27-May-26 23:12:51, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:12:51, Epoch 594:
+27-May-26 23:12:54, => train | nelbo: 1.2057 - nll: 1.1961 - kl: 0.0096 - steps: 10098
+27-May-26 23:12:54, Epoch 595:
+27-May-26 23:12:58, => train | nelbo: 1.1946 - nll: 1.1866 - kl: 0.0080 - steps: 10115
+27-May-26 23:12:58, Epoch 596:
+27-May-26 23:13:01, => train | nelbo: 1.2042 - nll: 1.1969 - kl: 0.0073 - steps: 10132
+27-May-26 23:13:01, Epoch 597:
+27-May-26 23:13:05, => train | nelbo: 1.1982 - nll: 1.1883 - kl: 0.0099 - steps: 10149
+27-May-26 23:13:05, => valid | nelbo: 1.1603 - nll: 1.1560 - kl: 0.0043 - steps: 10149
+27-May-26 23:13:06, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:13:06, Epoch 598:
+27-May-26 23:13:09, => train | nelbo: 1.1799 - nll: 1.1731 - kl: 0.0068 - steps: 10166
+27-May-26 23:13:09, Epoch 599:
+27-May-26 23:13:13, => train | nelbo: 1.1772 - nll: 1.1709 - kl: 0.0062 - steps: 10183
+27-May-26 23:13:13, Epoch 600:
+27-May-26 23:13:16, => train | nelbo: 1.1663 - nll: 1.1597 - kl: 0.0066 - steps: 10200
+27-May-26 23:13:16, Epoch 601:
+27-May-26 23:13:19, => train | nelbo: 1.1764 - nll: 1.1693 - kl: 0.0071 - steps: 10217
+27-May-26 23:13:20, => valid | nelbo: 1.1574 - nll: 1.1531 - kl: 0.0043 - steps: 10217
+27-May-26 23:13:21, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:13:21, Epoch 602:
+27-May-26 23:13:24, => train | nelbo: 1.1943 - nll: 1.1877 - kl: 0.0066 - steps: 10234
+27-May-26 23:13:24, Epoch 603:
+27-May-26 23:13:28, => train | nelbo: 1.2211 - nll: 1.2137 - kl: 0.0074 - steps: 10251
+27-May-26 23:13:28, Epoch 604:
+27-May-26 23:13:31, => train | nelbo: 1.1880 - nll: 1.1812 - kl: 0.0069 - steps: 10268
+27-May-26 23:13:31, Epoch 605:
+27-May-26 23:13:34, => train | nelbo: 1.1935 - nll: 1.1861 - kl: 0.0074 - steps: 10285
+27-May-26 23:13:35, => valid | nelbo: 1.1553 - nll: 1.1511 - kl: 0.0042 - steps: 10285
+27-May-26 23:13:36, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:13:36, Epoch 606:
+27-May-26 23:13:40, => train | nelbo: 1.1960 - nll: 1.1892 - kl: 0.0067 - steps: 10302
+27-May-26 23:13:40, Epoch 607:
+27-May-26 23:13:43, => train | nelbo: 1.1993 - nll: 1.1903 - kl: 0.0090 - steps: 10319
+27-May-26 23:13:43, Epoch 608:
+27-May-26 23:13:47, => train | nelbo: 1.1975 - nll: 1.1903 - kl: 0.0073 - steps: 10336
+27-May-26 23:13:47, Epoch 609:
+27-May-26 23:13:50, => train | nelbo: 1.1830 - nll: 1.1765 - kl: 0.0066 - steps: 10353
+27-May-26 23:13:51, => valid | nelbo: 1.1534 - nll: 1.1492 - kl: 0.0042 - steps: 10353
+27-May-26 23:13:52, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:13:52, Epoch 610:
+27-May-26 23:13:56, => train | nelbo: 1.2320 - nll: 1.2217 - kl: 0.0102 - steps: 10370
+27-May-26 23:13:56, Epoch 611:
+27-May-26 23:14:00, => train | nelbo: 1.2487 - nll: 1.2379 - kl: 0.0108 - steps: 10387
+27-May-26 23:14:00, Epoch 612:
+27-May-26 23:14:03, => train | nelbo: 1.2448 - nll: 1.2375 - kl: 0.0073 - steps: 10404
+27-May-26 23:14:03, Epoch 613:
+27-May-26 23:14:07, => train | nelbo: 1.2017 - nll: 1.1951 - kl: 0.0065 - steps: 10421
+27-May-26 23:14:07, => valid | nelbo: 1.1521 - nll: 1.1479 - kl: 0.0042 - steps: 10421
+27-May-26 23:14:09, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:14:09, Epoch 614:
+27-May-26 23:14:12, => train | nelbo: 1.1931 - nll: 1.1868 - kl: 0.0062 - steps: 10438
+27-May-26 23:14:12, Epoch 615:
+27-May-26 23:14:15, => train | nelbo: 1.1862 - nll: 1.1782 - kl: 0.0080 - steps: 10455
+27-May-26 23:14:15, Epoch 616:
+27-May-26 23:14:18, => train | nelbo: 1.1715 - nll: 1.1648 - kl: 0.0067 - steps: 10472
+27-May-26 23:14:18, Epoch 617:
+27-May-26 23:14:22, => train | nelbo: 1.1788 - nll: 1.1719 - kl: 0.0069 - steps: 10489
+27-May-26 23:14:23, => valid | nelbo: 1.1502 - nll: 1.1459 - kl: 0.0043 - steps: 10489
+27-May-26 23:14:24, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:14:24, Epoch 618:
+27-May-26 23:14:27, => train | nelbo: 1.1810 - nll: 1.1744 - kl: 0.0066 - steps: 10506
+27-May-26 23:14:27, Epoch 619:
+27-May-26 23:14:31, => train | nelbo: 1.2004 - nll: 1.1932 - kl: 0.0072 - steps: 10523
+27-May-26 23:14:31, Epoch 620:
+27-May-26 23:14:34, => train | nelbo: 1.1919 - nll: 1.1849 - kl: 0.0070 - steps: 10540
+27-May-26 23:14:34, Epoch 621:
+27-May-26 23:14:37, => train | nelbo: 1.1905 - nll: 1.1827 - kl: 0.0078 - steps: 10557
+27-May-26 23:14:38, => valid | nelbo: 1.1480 - nll: 1.1437 - kl: 0.0043 - steps: 10557
+27-May-26 23:14:39, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:14:39, Epoch 622:
+27-May-26 23:14:42, => train | nelbo: 1.1707 - nll: 1.1635 - kl: 0.0073 - steps: 10574
+27-May-26 23:14:42, Epoch 623:
+27-May-26 23:14:46, => train | nelbo: 1.1690 - nll: 1.1614 - kl: 0.0076 - steps: 10591
+27-May-26 23:14:46, Epoch 624:
+27-May-26 23:14:49, => train | nelbo: 1.1765 - nll: 1.1691 - kl: 0.0074 - steps: 10608
+27-May-26 23:14:49, Epoch 625:
+27-May-26 23:14:53, => train | nelbo: 1.1648 - nll: 1.1572 - kl: 0.0076 - steps: 10625
+27-May-26 23:14:54, => valid | nelbo: 1.1459 - nll: 1.1416 - kl: 0.0043 - steps: 10625
+27-May-26 23:14:55, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:14:55, Epoch 626:
+27-May-26 23:14:58, => train | nelbo: 1.1616 - nll: 1.1554 - kl: 0.0061 - steps: 10642
+27-May-26 23:14:58, Epoch 627:
+27-May-26 23:15:01, => train | nelbo: 1.1844 - nll: 1.1780 - kl: 0.0063 - steps: 10659
+27-May-26 23:15:01, Epoch 628:
+27-May-26 23:15:05, => train | nelbo: 1.1729 - nll: 1.1657 - kl: 0.0072 - steps: 10676
+27-May-26 23:15:05, Epoch 629:
+27-May-26 23:15:08, => train | nelbo: 1.2185 - nll: 1.2099 - kl: 0.0086 - steps: 10693
+27-May-26 23:15:09, => valid | nelbo: 1.1439 - nll: 1.1396 - kl: 0.0043 - steps: 10693
+27-May-26 23:15:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:15:10, Epoch 630:
+27-May-26 23:15:13, => train | nelbo: 1.2338 - nll: 1.2188 - kl: 0.0150 - steps: 10710
+27-May-26 23:15:13, Epoch 631:
+27-May-26 23:15:17, => train | nelbo: 1.1876 - nll: 1.1791 - kl: 0.0085 - steps: 10727
+27-May-26 23:15:17, Epoch 632:
+27-May-26 23:15:20, => train | nelbo: 1.1720 - nll: 1.1656 - kl: 0.0064 - steps: 10744
+27-May-26 23:15:20, Epoch 633:
+27-May-26 23:15:23, => train | nelbo: 1.2056 - nll: 1.1994 - kl: 0.0062 - steps: 10761
+27-May-26 23:15:24, => valid | nelbo: 1.1425 - nll: 1.1383 - kl: 0.0042 - steps: 10761
+27-May-26 23:15:25, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:15:25, Epoch 634:
+27-May-26 23:15:28, => train | nelbo: 1.2116 - nll: 1.2020 - kl: 0.0095 - steps: 10778
+27-May-26 23:15:28, Epoch 635:
+27-May-26 23:15:31, => train | nelbo: 1.1743 - nll: 1.1664 - kl: 0.0079 - steps: 10795
+27-May-26 23:15:31, Epoch 636:
+27-May-26 23:15:35, => train | nelbo: 1.1890 - nll: 1.1820 - kl: 0.0070 - steps: 10812
+27-May-26 23:15:35, Epoch 637:
+27-May-26 23:15:38, => train | nelbo: 1.2003 - nll: 1.1927 - kl: 0.0077 - steps: 10829
+27-May-26 23:15:39, => valid | nelbo: 1.1405 - nll: 1.1363 - kl: 0.0042 - steps: 10829
+27-May-26 23:15:40, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:15:40, Epoch 638:
+27-May-26 23:15:43, => train | nelbo: 1.1658 - nll: 1.1594 - kl: 0.0064 - steps: 10846
+27-May-26 23:15:43, Epoch 639:
+27-May-26 23:15:47, => train | nelbo: 1.2397 - nll: 1.2312 - kl: 0.0085 - steps: 10863
+27-May-26 23:15:47, Epoch 640:
+27-May-26 23:15:50, => train | nelbo: 1.1816 - nll: 1.1739 - kl: 0.0078 - steps: 10880
+27-May-26 23:15:50, Epoch 641:
+27-May-26 23:15:53, => train | nelbo: 1.2269 - nll: 1.2182 - kl: 0.0087 - steps: 10897
+27-May-26 23:15:54, => valid | nelbo: 1.1393 - nll: 1.1350 - kl: 0.0042 - steps: 10897
+27-May-26 23:15:55, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:15:55, Epoch 642:
+27-May-26 23:15:59, => train | nelbo: 1.2353 - nll: 1.2230 - kl: 0.0124 - steps: 10914
+27-May-26 23:15:59, Epoch 643:
+27-May-26 23:16:02, => train | nelbo: 1.1678 - nll: 1.1601 - kl: 0.0076 - steps: 10931
+27-May-26 23:16:02, Epoch 644:
+27-May-26 23:16:05, => train | nelbo: 1.1768 - nll: 1.1706 - kl: 0.0062 - steps: 10948
+27-May-26 23:16:05, Epoch 645:
+27-May-26 23:16:08, => train | nelbo: 1.1723 - nll: 1.1658 - kl: 0.0064 - steps: 10965
+27-May-26 23:16:09, => valid | nelbo: 1.1376 - nll: 1.1334 - kl: 0.0042 - steps: 10965
+27-May-26 23:16:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:16:10, Epoch 646:
+27-May-26 23:16:13, => train | nelbo: 1.1655 - nll: 1.1588 - kl: 0.0067 - steps: 10982
+27-May-26 23:16:13, Epoch 647:
+27-May-26 23:16:16, => train | nelbo: 1.1815 - nll: 1.1753 - kl: 0.0062 - steps: 10999
+27-May-26 23:16:16, Epoch 648:
+27-May-26 23:16:19, => train | nelbo: 1.1655 - nll: 1.1579 - kl: 0.0075 - steps: 11016
+27-May-26 23:16:19, Epoch 649:
+27-May-26 23:16:22, => train | nelbo: 1.1888 - nll: 1.1801 - kl: 0.0087 - steps: 11033
+27-May-26 23:16:23, => valid | nelbo: 1.1356 - nll: 1.1314 - kl: 0.0042 - steps: 11033
+27-May-26 23:16:24, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:16:24, Epoch 650:
+27-May-26 23:16:27, => train | nelbo: 1.1879 - nll: 1.1813 - kl: 0.0065 - steps: 11050
+27-May-26 23:16:27, Epoch 651:
+27-May-26 23:16:30, => train | nelbo: 1.1694 - nll: 1.1623 - kl: 0.0071 - steps: 11067
+27-May-26 23:16:30, Epoch 652:
+27-May-26 23:16:34, => train | nelbo: 1.1563 - nll: 1.1494 - kl: 0.0069 - steps: 11084
+27-May-26 23:16:34, Epoch 653:
+27-May-26 23:16:37, => train | nelbo: 1.1882 - nll: 1.1805 - kl: 0.0077 - steps: 11101
+27-May-26 23:16:38, => valid | nelbo: 1.1338 - nll: 1.1297 - kl: 0.0042 - steps: 11101
+27-May-26 23:16:39, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:16:39, Epoch 654:
+27-May-26 23:16:42, => train | nelbo: 1.1648 - nll: 1.1577 - kl: 0.0071 - steps: 11118
+27-May-26 23:16:42, Epoch 655:
+27-May-26 23:16:45, => train | nelbo: 1.1531 - nll: 1.1466 - kl: 0.0065 - steps: 11135
+27-May-26 23:16:45, Epoch 656:
+27-May-26 23:16:49, => train | nelbo: 1.1764 - nll: 1.1689 - kl: 0.0076 - steps: 11152
+27-May-26 23:16:49, Epoch 657:
+27-May-26 23:16:52, => train | nelbo: 1.1759 - nll: 1.1686 - kl: 0.0073 - steps: 11169
+27-May-26 23:16:53, => valid | nelbo: 1.1319 - nll: 1.1276 - kl: 0.0043 - steps: 11169
+27-May-26 23:16:54, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:16:54, Epoch 658:
+27-May-26 23:16:57, => train | nelbo: 1.1725 - nll: 1.1651 - kl: 0.0074 - steps: 11186
+27-May-26 23:16:57, Epoch 659:
+27-May-26 23:17:01, => train | nelbo: 1.1657 - nll: 1.1583 - kl: 0.0075 - steps: 11203
+27-May-26 23:17:01, Epoch 660:
+27-May-26 23:17:04, => train | nelbo: 1.1569 - nll: 1.1502 - kl: 0.0067 - steps: 11220
+27-May-26 23:17:04, Epoch 661:
+27-May-26 23:17:08, => train | nelbo: 1.1518 - nll: 1.1456 - kl: 0.0062 - steps: 11237
+27-May-26 23:17:08, => valid | nelbo: 1.1297 - nll: 1.1255 - kl: 0.0042 - steps: 11237
+27-May-26 23:17:09, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:17:09, Epoch 662:
+27-May-26 23:17:13, => train | nelbo: 1.1946 - nll: 1.1847 - kl: 0.0099 - steps: 11254
+27-May-26 23:17:13, Epoch 663:
+27-May-26 23:17:16, => train | nelbo: 1.1915 - nll: 1.1836 - kl: 0.0079 - steps: 11271
+27-May-26 23:17:16, Epoch 664:
+27-May-26 23:17:19, => train | nelbo: 1.1936 - nll: 1.1837 - kl: 0.0099 - steps: 11288
+27-May-26 23:17:19, Epoch 665:
+27-May-26 23:17:23, => train | nelbo: 1.1964 - nll: 1.1893 - kl: 0.0071 - steps: 11305
+27-May-26 23:17:23, => valid | nelbo: 1.1284 - nll: 1.1242 - kl: 0.0042 - steps: 11305
+27-May-26 23:17:25, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:17:25, Epoch 666:
+27-May-26 23:17:28, => train | nelbo: 1.2133 - nll: 1.2031 - kl: 0.0102 - steps: 11322
+27-May-26 23:17:28, Epoch 667:
+27-May-26 23:17:31, => train | nelbo: 1.1745 - nll: 1.1675 - kl: 0.0070 - steps: 11339
+27-May-26 23:17:31, Epoch 668:
+27-May-26 23:17:34, => train | nelbo: 1.1650 - nll: 1.1582 - kl: 0.0068 - steps: 11356
+27-May-26 23:17:34, Epoch 669:
+27-May-26 23:17:38, => train | nelbo: 1.1614 - nll: 1.1537 - kl: 0.0077 - steps: 11373
+27-May-26 23:17:38, => valid | nelbo: 1.1270 - nll: 1.1226 - kl: 0.0043 - steps: 11373
+27-May-26 23:17:40, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:17:40, Epoch 670:
+27-May-26 23:17:43, => train | nelbo: 1.1767 - nll: 1.1692 - kl: 0.0075 - steps: 11390
+27-May-26 23:17:43, Epoch 671:
+27-May-26 23:17:46, => train | nelbo: 1.1419 - nll: 1.1353 - kl: 0.0066 - steps: 11407
+27-May-26 23:17:46, Epoch 672:
+27-May-26 23:17:49, => train | nelbo: 1.1831 - nll: 1.1757 - kl: 0.0074 - steps: 11424
+27-May-26 23:17:49, Epoch 673:
+27-May-26 23:17:53, => train | nelbo: 1.1611 - nll: 1.1530 - kl: 0.0082 - steps: 11441
+27-May-26 23:17:54, => valid | nelbo: 1.1249 - nll: 1.1207 - kl: 0.0042 - steps: 11441
+27-May-26 23:17:55, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:17:55, Epoch 674:
+27-May-26 23:17:58, => train | nelbo: 1.1655 - nll: 1.1580 - kl: 0.0075 - steps: 11458
+27-May-26 23:17:58, Epoch 675:
+27-May-26 23:18:02, => train | nelbo: 1.1501 - nll: 1.1436 - kl: 0.0066 - steps: 11475
+27-May-26 23:18:02, Epoch 676:
+27-May-26 23:18:05, => train | nelbo: 1.1788 - nll: 1.1704 - kl: 0.0084 - steps: 11492
+27-May-26 23:18:05, Epoch 677:
+27-May-26 23:18:08, => train | nelbo: 1.1544 - nll: 1.1476 - kl: 0.0068 - steps: 11509
+27-May-26 23:18:09, => valid | nelbo: 1.1233 - nll: 1.1190 - kl: 0.0043 - steps: 11509
+27-May-26 23:18:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:18:10, Epoch 678:
+27-May-26 23:18:13, => train | nelbo: 1.1663 - nll: 1.1599 - kl: 0.0064 - steps: 11526
+27-May-26 23:18:13, Epoch 679:
+27-May-26 23:18:17, => train | nelbo: 1.1628 - nll: 1.1556 - kl: 0.0072 - steps: 11543
+27-May-26 23:18:17, Epoch 680:
+27-May-26 23:18:20, => train | nelbo: 1.1444 - nll: 1.1376 - kl: 0.0068 - steps: 11560
+27-May-26 23:18:20, Epoch 681:
+27-May-26 23:18:23, => train | nelbo: 1.1599 - nll: 1.1532 - kl: 0.0067 - steps: 11577
+27-May-26 23:18:24, => valid | nelbo: 1.1216 - nll: 1.1173 - kl: 0.0043 - steps: 11577
+27-May-26 23:18:25, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:18:25, Epoch 682:
+27-May-26 23:18:28, => train | nelbo: 1.1546 - nll: 1.1469 - kl: 0.0077 - steps: 11594
+27-May-26 23:18:28, Epoch 683:
+27-May-26 23:18:32, => train | nelbo: 1.1435 - nll: 1.1367 - kl: 0.0068 - steps: 11611
+27-May-26 23:18:32, Epoch 684:
+27-May-26 23:18:35, => train | nelbo: 1.1591 - nll: 1.1526 - kl: 0.0065 - steps: 11628
+27-May-26 23:18:35, Epoch 685:
+27-May-26 23:18:38, => train | nelbo: 1.1581 - nll: 1.1508 - kl: 0.0073 - steps: 11645
+27-May-26 23:18:39, => valid | nelbo: 1.1197 - nll: 1.1152 - kl: 0.0044 - steps: 11645
+27-May-26 23:18:40, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:18:40, Epoch 686:
+27-May-26 23:18:43, => train | nelbo: 1.1419 - nll: 1.1334 - kl: 0.0085 - steps: 11662
+27-May-26 23:18:43, Epoch 687:
+27-May-26 23:18:47, => train | nelbo: 1.1424 - nll: 1.1366 - kl: 0.0058 - steps: 11679
+27-May-26 23:18:47, Epoch 688:
+27-May-26 23:18:50, => train | nelbo: 1.1422 - nll: 1.1347 - kl: 0.0074 - steps: 11696
+27-May-26 23:18:50, Epoch 689:
+27-May-26 23:18:54, => train | nelbo: 1.1952 - nll: 1.1876 - kl: 0.0076 - steps: 11713
+27-May-26 23:18:54, => valid | nelbo: 1.1176 - nll: 1.1133 - kl: 0.0043 - steps: 11713
+27-May-26 23:18:56, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:18:56, Epoch 690:
+27-May-26 23:18:59, => train | nelbo: 1.2135 - nll: 1.2020 - kl: 0.0115 - steps: 11730
+27-May-26 23:18:59, Epoch 691:
+27-May-26 23:19:02, => train | nelbo: 1.1550 - nll: 1.1465 - kl: 0.0086 - steps: 11747
+27-May-26 23:19:02, Epoch 692:
+27-May-26 23:19:06, => train | nelbo: 1.1433 - nll: 1.1370 - kl: 0.0064 - steps: 11764
+27-May-26 23:19:06, Epoch 693:
+27-May-26 23:19:09, => train | nelbo: 1.1945 - nll: 1.1859 - kl: 0.0085 - steps: 11781
+27-May-26 23:19:10, => valid | nelbo: 1.1163 - nll: 1.1119 - kl: 0.0044 - steps: 11781
+27-May-26 23:19:11, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:19:11, Epoch 694:
+27-May-26 23:19:14, => train | nelbo: 1.1625 - nll: 1.1540 - kl: 0.0085 - steps: 11798
+27-May-26 23:19:14, Epoch 695:
+27-May-26 23:19:18, => train | nelbo: 1.1275 - nll: 1.1215 - kl: 0.0060 - steps: 11815
+27-May-26 23:19:18, Epoch 696:
+27-May-26 23:19:21, => train | nelbo: 1.1669 - nll: 1.1598 - kl: 0.0071 - steps: 11832
+27-May-26 23:19:21, Epoch 697:
+27-May-26 23:19:25, => train | nelbo: 1.1523 - nll: 1.1447 - kl: 0.0076 - steps: 11849
+27-May-26 23:19:25, => valid | nelbo: 1.1147 - nll: 1.1103 - kl: 0.0044 - steps: 11849
+27-May-26 23:19:27, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:19:27, Epoch 698:
+27-May-26 23:19:30, => train | nelbo: 1.1469 - nll: 1.1402 - kl: 0.0067 - steps: 11866
+27-May-26 23:19:30, Epoch 699:
+27-May-26 23:19:33, => train | nelbo: 1.1625 - nll: 1.1554 - kl: 0.0072 - steps: 11883
+27-May-26 23:19:33, Epoch 700:
+27-May-26 23:19:37, => train | nelbo: 1.1513 - nll: 1.1443 - kl: 0.0070 - steps: 11900
+27-May-26 23:19:37, Epoch 701:
+27-May-26 23:19:40, => train | nelbo: 1.1459 - nll: 1.1393 - kl: 0.0066 - steps: 11917
+27-May-26 23:19:41, => valid | nelbo: 1.1130 - nll: 1.1085 - kl: 0.0045 - steps: 11917
+27-May-26 23:19:42, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:19:42, Epoch 702:
+27-May-26 23:19:45, => train | nelbo: 1.1333 - nll: 1.1269 - kl: 0.0064 - steps: 11934
+27-May-26 23:19:45, Epoch 703:
+27-May-26 23:19:48, => train | nelbo: 1.1402 - nll: 1.1325 - kl: 0.0077 - steps: 11951
+27-May-26 23:19:48, Epoch 704:
+27-May-26 23:19:51, => train | nelbo: 1.1405 - nll: 1.1330 - kl: 0.0076 - steps: 11968
+27-May-26 23:19:51, Epoch 705:
+27-May-26 23:19:55, => train | nelbo: 1.1672 - nll: 1.1588 - kl: 0.0084 - steps: 11985
+27-May-26 23:19:56, => valid | nelbo: 1.1107 - nll: 1.1062 - kl: 0.0045 - steps: 11985
+27-May-26 23:19:57, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:19:57, Epoch 706:
+27-May-26 23:20:00, => train | nelbo: 1.1373 - nll: 1.1300 - kl: 0.0072 - steps: 12002
+27-May-26 23:20:00, Epoch 707:
+27-May-26 23:20:03, => train | nelbo: 1.1614 - nll: 1.1542 - kl: 0.0072 - steps: 12019
+27-May-26 23:20:03, Epoch 708:
+27-May-26 23:20:07, => train | nelbo: 1.1456 - nll: 1.1382 - kl: 0.0074 - steps: 12036
+27-May-26 23:20:07, Epoch 709:
+27-May-26 23:20:11, => train | nelbo: 1.1492 - nll: 1.1425 - kl: 0.0066 - steps: 12053
+27-May-26 23:20:11, => valid | nelbo: 1.1092 - nll: 1.1047 - kl: 0.0045 - steps: 12053
+27-May-26 23:20:12, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:20:12, Epoch 710:
+27-May-26 23:20:16, => train | nelbo: 1.1457 - nll: 1.1379 - kl: 0.0078 - steps: 12070
+27-May-26 23:20:16, Epoch 711:
+27-May-26 23:20:20, => train | nelbo: 1.1218 - nll: 1.1155 - kl: 0.0063 - steps: 12087
+27-May-26 23:20:20, Epoch 712:
+27-May-26 23:20:23, => train | nelbo: 1.2055 - nll: 1.1981 - kl: 0.0074 - steps: 12104
+27-May-26 23:20:23, Epoch 713:
+27-May-26 23:20:27, => train | nelbo: 1.1488 - nll: 1.1419 - kl: 0.0070 - steps: 12121
+27-May-26 23:20:28, => valid | nelbo: 1.1078 - nll: 1.1031 - kl: 0.0046 - steps: 12121
+27-May-26 23:20:29, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:20:29, Epoch 714:
+27-May-26 23:20:32, => train | nelbo: 1.1393 - nll: 1.1312 - kl: 0.0081 - steps: 12138
+27-May-26 23:20:32, Epoch 715:
+27-May-26 23:20:36, => train | nelbo: 1.1277 - nll: 1.1203 - kl: 0.0074 - steps: 12155
+27-May-26 23:20:36, Epoch 716:
+27-May-26 23:20:39, => train | nelbo: 1.1615 - nll: 1.1531 - kl: 0.0084 - steps: 12172
+27-May-26 23:20:39, Epoch 717:
+27-May-26 23:20:42, => train | nelbo: 1.1382 - nll: 1.1314 - kl: 0.0068 - steps: 12189
+27-May-26 23:20:43, => valid | nelbo: 1.1059 - nll: 1.1013 - kl: 0.0046 - steps: 12189
+27-May-26 23:20:44, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:20:44, Epoch 718:
+27-May-26 23:20:47, => train | nelbo: 1.1410 - nll: 1.1323 - kl: 0.0087 - steps: 12206
+27-May-26 23:20:47, Epoch 719:
+27-May-26 23:20:50, => train | nelbo: 1.1492 - nll: 1.1420 - kl: 0.0072 - steps: 12223
+27-May-26 23:20:50, Epoch 720:
+27-May-26 23:20:53, => train | nelbo: 1.1946 - nll: 1.1826 - kl: 0.0119 - steps: 12240
+27-May-26 23:20:53, Epoch 721:
+27-May-26 23:20:56, => train | nelbo: 1.1738 - nll: 1.1663 - kl: 0.0075 - steps: 12257
+27-May-26 23:20:57, => valid | nelbo: 1.1051 - nll: 1.1004 - kl: 0.0047 - steps: 12257
+27-May-26 23:20:58, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:20:58, Epoch 722:
+27-May-26 23:21:01, => train | nelbo: 1.1443 - nll: 1.1382 - kl: 0.0061 - steps: 12274
+27-May-26 23:21:01, Epoch 723:
+27-May-26 23:21:04, => train | nelbo: 1.1411 - nll: 1.1344 - kl: 0.0066 - steps: 12291
+27-May-26 23:21:04, Epoch 724:
+27-May-26 23:21:08, => train | nelbo: 1.1490 - nll: 1.1405 - kl: 0.0085 - steps: 12308
+27-May-26 23:21:08, Epoch 725:
+27-May-26 23:21:11, => train | nelbo: 1.1544 - nll: 1.1476 - kl: 0.0069 - steps: 12325
+27-May-26 23:21:12, => valid | nelbo: 1.1036 - nll: 1.0989 - kl: 0.0047 - steps: 12325
+27-May-26 23:21:13, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:21:13, Epoch 726:
+27-May-26 23:21:17, => train | nelbo: 1.1609 - nll: 1.1534 - kl: 0.0075 - steps: 12342
+27-May-26 23:21:17, Epoch 727:
+27-May-26 23:21:20, => train | nelbo: 1.1687 - nll: 1.1614 - kl: 0.0073 - steps: 12359
+27-May-26 23:21:20, Epoch 728:
+27-May-26 23:21:23, => train | nelbo: 1.1775 - nll: 1.1686 - kl: 0.0088 - steps: 12376
+27-May-26 23:21:23, Epoch 729:
+27-May-26 23:21:26, => train | nelbo: 1.1459 - nll: 1.1389 - kl: 0.0069 - steps: 12393
+27-May-26 23:21:27, => valid | nelbo: 1.1023 - nll: 1.0977 - kl: 0.0047 - steps: 12393
+27-May-26 23:21:28, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:21:28, Epoch 730:
+27-May-26 23:21:31, => train | nelbo: 1.1569 - nll: 1.1498 - kl: 0.0071 - steps: 12410
+27-May-26 23:21:31, Epoch 731:
+27-May-26 23:21:35, => train | nelbo: 1.1385 - nll: 1.1316 - kl: 0.0069 - steps: 12427
+27-May-26 23:21:35, Epoch 732:
+27-May-26 23:21:38, => train | nelbo: 1.1362 - nll: 1.1292 - kl: 0.0071 - steps: 12444
+27-May-26 23:21:38, Epoch 733:
+27-May-26 23:21:41, => train | nelbo: 1.1599 - nll: 1.1519 - kl: 0.0080 - steps: 12461
+27-May-26 23:21:42, => valid | nelbo: 1.1008 - nll: 1.0963 - kl: 0.0045 - steps: 12461
+27-May-26 23:21:43, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:21:43, Epoch 734:
+27-May-26 23:21:46, => train | nelbo: 1.1464 - nll: 1.1392 - kl: 0.0071 - steps: 12478
+27-May-26 23:21:46, Epoch 735:
+27-May-26 23:21:49, => train | nelbo: 1.1404 - nll: 1.1337 - kl: 0.0067 - steps: 12495
+27-May-26 23:21:49, Epoch 736:
+27-May-26 23:21:52, => train | nelbo: 1.1902 - nll: 1.1821 - kl: 0.0081 - steps: 12512
+27-May-26 23:21:52, Epoch 737:
+27-May-26 23:21:56, => train | nelbo: 1.1532 - nll: 1.1449 - kl: 0.0083 - steps: 12529
+27-May-26 23:21:56, => valid | nelbo: 1.1001 - nll: 1.0953 - kl: 0.0047 - steps: 12529
+27-May-26 23:21:58, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:21:58, Epoch 738:
+27-May-26 23:22:01, => train | nelbo: 1.1567 - nll: 1.1492 - kl: 0.0075 - steps: 12546
+27-May-26 23:22:01, Epoch 739:
+27-May-26 23:22:04, => train | nelbo: 1.1514 - nll: 1.1435 - kl: 0.0080 - steps: 12563
+27-May-26 23:22:04, Epoch 740:
+27-May-26 23:22:07, => train | nelbo: 1.1520 - nll: 1.1443 - kl: 0.0077 - steps: 12580
+27-May-26 23:22:07, Epoch 741:
+27-May-26 23:22:11, => train | nelbo: 1.1630 - nll: 1.1550 - kl: 0.0080 - steps: 12597
+27-May-26 23:22:12, => valid | nelbo: 1.0982 - nll: 1.0937 - kl: 0.0046 - steps: 12597
+27-May-26 23:22:13, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:22:13, Epoch 742:
+27-May-26 23:22:16, => train | nelbo: 1.1198 - nll: 1.1132 - kl: 0.0066 - steps: 12614
+27-May-26 23:22:16, Epoch 743:
+27-May-26 23:22:20, => train | nelbo: 1.1443 - nll: 1.1365 - kl: 0.0078 - steps: 12631
+27-May-26 23:22:20, Epoch 744:
+27-May-26 23:22:23, => train | nelbo: 1.1234 - nll: 1.1164 - kl: 0.0070 - steps: 12648
+27-May-26 23:22:23, Epoch 745:
+27-May-26 23:22:27, => train | nelbo: 1.1317 - nll: 1.1241 - kl: 0.0075 - steps: 12665
+27-May-26 23:22:27, => valid | nelbo: 1.0967 - nll: 1.0921 - kl: 0.0046 - steps: 12665
+27-May-26 23:22:28, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:22:28, Epoch 746:
+27-May-26 23:22:32, => train | nelbo: 1.1559 - nll: 1.1479 - kl: 0.0080 - steps: 12682
+27-May-26 23:22:32, Epoch 747:
+27-May-26 23:22:35, => train | nelbo: 1.1358 - nll: 1.1279 - kl: 0.0080 - steps: 12699
+27-May-26 23:22:35, Epoch 748:
+27-May-26 23:22:39, => train | nelbo: 1.1320 - nll: 1.1249 - kl: 0.0071 - steps: 12716
+27-May-26 23:22:39, Epoch 749:
+27-May-26 23:22:42, => train | nelbo: 1.1323 - nll: 1.1257 - kl: 0.0067 - steps: 12733
+27-May-26 23:22:43, => valid | nelbo: 1.0950 - nll: 1.0904 - kl: 0.0045 - steps: 12733
+27-May-26 23:22:44, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:22:44, Epoch 750:
+27-May-26 23:22:47, => train | nelbo: 1.1469 - nll: 1.1382 - kl: 0.0087 - steps: 12750
+27-May-26 23:22:47, Epoch 751:
+27-May-26 23:22:51, => train | nelbo: 1.1247 - nll: 1.1172 - kl: 0.0075 - steps: 12767
+27-May-26 23:22:51, Epoch 752:
+27-May-26 23:22:55, => train | nelbo: 1.1675 - nll: 1.1581 - kl: 0.0094 - steps: 12784
+27-May-26 23:22:55, Epoch 753:
+27-May-26 23:22:58, => train | nelbo: 1.1499 - nll: 1.1424 - kl: 0.0075 - steps: 12801
+27-May-26 23:22:59, => valid | nelbo: 1.0939 - nll: 1.0892 - kl: 0.0046 - steps: 12801
+27-May-26 23:23:00, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:23:00, Epoch 754:
+27-May-26 23:23:03, => train | nelbo: 1.1312 - nll: 1.1242 - kl: 0.0070 - steps: 12818
+27-May-26 23:23:03, Epoch 755:
+27-May-26 23:23:07, => train | nelbo: 1.1439 - nll: 1.1374 - kl: 0.0064 - steps: 12835
+27-May-26 23:23:07, Epoch 756:
+27-May-26 23:23:10, => train | nelbo: 1.1344 - nll: 1.1272 - kl: 0.0072 - steps: 12852
+27-May-26 23:23:10, Epoch 757:
+27-May-26 23:23:14, => train | nelbo: 1.1480 - nll: 1.1387 - kl: 0.0093 - steps: 12869
+27-May-26 23:23:15, => valid | nelbo: 1.0926 - nll: 1.0878 - kl: 0.0047 - steps: 12869
+27-May-26 23:23:16, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:23:16, Epoch 758:
+27-May-26 23:23:19, => train | nelbo: 1.1294 - nll: 1.1218 - kl: 0.0076 - steps: 12886
+27-May-26 23:23:19, Epoch 759:
+27-May-26 23:23:23, => train | nelbo: 1.1344 - nll: 1.1280 - kl: 0.0064 - steps: 12903
+27-May-26 23:23:23, Epoch 760:
+27-May-26 23:23:26, => train | nelbo: 1.1384 - nll: 1.1318 - kl: 0.0065 - steps: 12920
+27-May-26 23:23:26, Epoch 761:
+27-May-26 23:23:29, => train | nelbo: 1.1149 - nll: 1.1076 - kl: 0.0073 - steps: 12937
+27-May-26 23:23:30, => valid | nelbo: 1.0910 - nll: 1.0864 - kl: 0.0046 - steps: 12937
+27-May-26 23:23:31, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:23:31, Epoch 762:
+27-May-26 23:23:35, => train | nelbo: 1.1398 - nll: 1.1325 - kl: 0.0073 - steps: 12954
+27-May-26 23:23:35, Epoch 763:
+27-May-26 23:23:38, => train | nelbo: 1.1139 - nll: 1.1069 - kl: 0.0069 - steps: 12971
+27-May-26 23:23:38, Epoch 764:
+27-May-26 23:23:41, => train | nelbo: 1.1179 - nll: 1.1111 - kl: 0.0068 - steps: 12988
+27-May-26 23:23:41, Epoch 765:
+27-May-26 23:23:45, => train | nelbo: 1.1222 - nll: 1.1157 - kl: 0.0065 - steps: 13005
+27-May-26 23:23:45, => valid | nelbo: 1.0891 - nll: 1.0845 - kl: 0.0047 - steps: 13005
+27-May-26 23:23:47, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:23:47, Epoch 766:
+27-May-26 23:23:50, => train | nelbo: 1.1128 - nll: 1.1056 - kl: 0.0073 - steps: 13022
+27-May-26 23:23:50, Epoch 767:
+27-May-26 23:23:54, => train | nelbo: 1.1275 - nll: 1.1205 - kl: 0.0070 - steps: 13039
+27-May-26 23:23:54, Epoch 768:
+27-May-26 23:23:57, => train | nelbo: 1.1185 - nll: 1.1114 - kl: 0.0070 - steps: 13056
+27-May-26 23:23:57, Epoch 769:
+27-May-26 23:24:00, => train | nelbo: 1.1040 - nll: 1.0967 - kl: 0.0072 - steps: 13073
+27-May-26 23:24:01, => valid | nelbo: 1.0878 - nll: 1.0830 - kl: 0.0047 - steps: 13073
+27-May-26 23:24:02, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:24:02, Epoch 770:
+27-May-26 23:24:06, => train | nelbo: 1.1404 - nll: 1.1325 - kl: 0.0079 - steps: 13090
+27-May-26 23:24:06, Epoch 771:
+27-May-26 23:24:09, => train | nelbo: 1.1431 - nll: 1.1356 - kl: 0.0076 - steps: 13107
+27-May-26 23:24:09, Epoch 772:
+27-May-26 23:24:12, => train | nelbo: 1.1360 - nll: 1.1289 - kl: 0.0071 - steps: 13124
+27-May-26 23:24:12, Epoch 773:
+27-May-26 23:24:16, => train | nelbo: 1.1474 - nll: 1.1389 - kl: 0.0085 - steps: 13141
+27-May-26 23:24:17, => valid | nelbo: 1.0868 - nll: 1.0820 - kl: 0.0048 - steps: 13141
+27-May-26 23:24:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:24:18, Epoch 774:
+27-May-26 23:24:21, => train | nelbo: 1.1325 - nll: 1.1252 - kl: 0.0072 - steps: 13158
+27-May-26 23:24:21, Epoch 775:
+27-May-26 23:24:25, => train | nelbo: 1.1478 - nll: 1.1387 - kl: 0.0091 - steps: 13175
+27-May-26 23:24:25, Epoch 776:
+27-May-26 23:24:28, => train | nelbo: 1.1564 - nll: 1.1493 - kl: 0.0071 - steps: 13192
+27-May-26 23:24:28, Epoch 777:
+27-May-26 23:24:31, => train | nelbo: 1.1330 - nll: 1.1258 - kl: 0.0073 - steps: 13209
+27-May-26 23:24:32, => valid | nelbo: 1.0854 - nll: 1.0806 - kl: 0.0048 - steps: 13209
+27-May-26 23:24:33, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:24:33, Epoch 778:
+27-May-26 23:24:37, => train | nelbo: 1.1288 - nll: 1.1212 - kl: 0.0076 - steps: 13226
+27-May-26 23:24:37, Epoch 779:
+27-May-26 23:24:40, => train | nelbo: 1.1467 - nll: 1.1384 - kl: 0.0083 - steps: 13243
+27-May-26 23:24:40, Epoch 780:
+27-May-26 23:24:43, => train | nelbo: 1.1370 - nll: 1.1300 - kl: 0.0070 - steps: 13260
+27-May-26 23:24:43, Epoch 781:
+27-May-26 23:24:46, => train | nelbo: 1.1422 - nll: 1.1327 - kl: 0.0095 - steps: 13277
+27-May-26 23:24:47, => valid | nelbo: 1.0841 - nll: 1.0795 - kl: 0.0046 - steps: 13277
+27-May-26 23:24:48, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:24:48, Epoch 782:
+27-May-26 23:24:51, => train | nelbo: 1.1734 - nll: 1.1630 - kl: 0.0104 - steps: 13294
+27-May-26 23:24:51, Epoch 783:
+27-May-26 23:24:55, => train | nelbo: 1.1357 - nll: 1.1272 - kl: 0.0086 - steps: 13311
+27-May-26 23:24:55, Epoch 784:
+27-May-26 23:24:58, => train | nelbo: 1.1287 - nll: 1.1226 - kl: 0.0061 - steps: 13328
+27-May-26 23:24:58, Epoch 785:
+27-May-26 23:25:01, => train | nelbo: 1.1421 - nll: 1.1333 - kl: 0.0089 - steps: 13345
+27-May-26 23:25:02, => valid | nelbo: 1.0831 - nll: 1.0783 - kl: 0.0047 - steps: 13345
+27-May-26 23:25:03, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:25:03, Epoch 786:
+27-May-26 23:25:06, => train | nelbo: 1.1337 - nll: 1.1267 - kl: 0.0070 - steps: 13362
+27-May-26 23:25:06, Epoch 787:
+27-May-26 23:25:10, => train | nelbo: 1.1147 - nll: 1.1086 - kl: 0.0061 - steps: 13379
+27-May-26 23:25:10, Epoch 788:
+27-May-26 23:25:13, => train | nelbo: 1.1181 - nll: 1.1104 - kl: 0.0077 - steps: 13396
+27-May-26 23:25:13, Epoch 789:
+27-May-26 23:25:16, => train | nelbo: 1.1587 - nll: 1.1518 - kl: 0.0069 - steps: 13413
+27-May-26 23:25:16, => valid | nelbo: 1.0818 - nll: 1.0771 - kl: 0.0047 - steps: 13413
+27-May-26 23:25:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:25:18, Epoch 790:
+27-May-26 23:25:21, => train | nelbo: 1.1302 - nll: 1.1216 - kl: 0.0086 - steps: 13430
+27-May-26 23:25:21, Epoch 791:
+27-May-26 23:25:25, => train | nelbo: 1.1197 - nll: 1.1131 - kl: 0.0066 - steps: 13447
+27-May-26 23:25:25, Epoch 792:
+27-May-26 23:25:28, => train | nelbo: 1.1290 - nll: 1.1221 - kl: 0.0070 - steps: 13464
+27-May-26 23:25:28, Epoch 793:
+27-May-26 23:25:32, => train | nelbo: 1.1401 - nll: 1.1321 - kl: 0.0079 - steps: 13481
+27-May-26 23:25:33, => valid | nelbo: 1.0809 - nll: 1.0761 - kl: 0.0048 - steps: 13481
+27-May-26 23:25:34, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:25:34, Epoch 794:
+27-May-26 23:25:38, => train | nelbo: 1.1129 - nll: 1.1065 - kl: 0.0064 - steps: 13498
+27-May-26 23:25:38, Epoch 795:
+27-May-26 23:25:41, => train | nelbo: 1.1253 - nll: 1.1188 - kl: 0.0064 - steps: 13515
+27-May-26 23:25:41, Epoch 796:
+27-May-26 23:25:44, => train | nelbo: 1.1291 - nll: 1.1219 - kl: 0.0073 - steps: 13532
+27-May-26 23:25:44, Epoch 797:
+27-May-26 23:25:48, => train | nelbo: 1.0980 - nll: 1.0907 - kl: 0.0073 - steps: 13549
+27-May-26 23:25:48, => valid | nelbo: 1.0798 - nll: 1.0750 - kl: 0.0048 - steps: 13549
+27-May-26 23:25:49, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:25:49, Epoch 798:
+27-May-26 23:25:53, => train | nelbo: 1.1155 - nll: 1.1080 - kl: 0.0075 - steps: 13566
+27-May-26 23:25:53, Epoch 799:
+27-May-26 23:25:56, => train | nelbo: 1.1398 - nll: 1.1324 - kl: 0.0074 - steps: 13583
+27-May-26 23:25:56, Epoch 800:
+27-May-26 23:26:00, => train | nelbo: 1.1272 - nll: 1.1201 - kl: 0.0071 - steps: 13600
+27-May-26 23:26:00, Epoch 801:
+27-May-26 23:26:03, => train | nelbo: 1.1218 - nll: 1.1142 - kl: 0.0076 - steps: 13617
+27-May-26 23:26:04, => valid | nelbo: 1.0780 - nll: 1.0731 - kl: 0.0048 - steps: 13617
+27-May-26 23:26:05, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:26:05, Epoch 802:
+27-May-26 23:26:09, => train | nelbo: 1.1103 - nll: 1.1036 - kl: 0.0067 - steps: 13634
+27-May-26 23:26:09, Epoch 803:
+27-May-26 23:26:13, => train | nelbo: 1.1188 - nll: 1.1122 - kl: 0.0066 - steps: 13651
+27-May-26 23:26:13, Epoch 804:
+27-May-26 23:26:16, => train | nelbo: 1.1287 - nll: 1.1199 - kl: 0.0088 - steps: 13668
+27-May-26 23:26:16, Epoch 805:
+27-May-26 23:26:19, => train | nelbo: 1.1343 - nll: 1.1276 - kl: 0.0067 - steps: 13685
+27-May-26 23:26:20, => valid | nelbo: 1.0768 - nll: 1.0720 - kl: 0.0048 - steps: 13685
+27-May-26 23:26:21, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:26:21, Epoch 806:
+27-May-26 23:26:25, => train | nelbo: 1.1914 - nll: 1.1811 - kl: 0.0103 - steps: 13702
+27-May-26 23:26:25, Epoch 807:
+27-May-26 23:26:29, => train | nelbo: 1.1370 - nll: 1.1284 - kl: 0.0085 - steps: 13719
+27-May-26 23:26:29, Epoch 808:
+27-May-26 23:26:32, => train | nelbo: 1.1197 - nll: 1.1126 - kl: 0.0071 - steps: 13736
+27-May-26 23:26:32, Epoch 809:
+27-May-26 23:26:35, => train | nelbo: 1.1319 - nll: 1.1248 - kl: 0.0071 - steps: 13753
+27-May-26 23:26:36, => valid | nelbo: 1.0762 - nll: 1.0713 - kl: 0.0049 - steps: 13753
+27-May-26 23:26:37, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:26:37, Epoch 810:
+27-May-26 23:26:41, => train | nelbo: 1.1233 - nll: 1.1165 - kl: 0.0068 - steps: 13770
+27-May-26 23:26:41, Epoch 811:
+27-May-26 23:26:44, => train | nelbo: 1.1123 - nll: 1.1060 - kl: 0.0064 - steps: 13787
+27-May-26 23:26:44, Epoch 812:
+27-May-26 23:26:47, => train | nelbo: 1.1095 - nll: 1.1027 - kl: 0.0068 - steps: 13804
+27-May-26 23:26:47, Epoch 813:
+27-May-26 23:26:51, => train | nelbo: 1.1184 - nll: 1.1104 - kl: 0.0080 - steps: 13821
+27-May-26 23:26:51, => valid | nelbo: 1.0749 - nll: 1.0701 - kl: 0.0047 - steps: 13821
+27-May-26 23:26:52, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:26:52, Epoch 814:
+27-May-26 23:26:56, => train | nelbo: 1.1544 - nll: 1.1448 - kl: 0.0096 - steps: 13838
+27-May-26 23:26:56, Epoch 815:
+27-May-26 23:26:59, => train | nelbo: 1.1108 - nll: 1.1042 - kl: 0.0066 - steps: 13855
+27-May-26 23:26:59, Epoch 816:
+27-May-26 23:27:02, => train | nelbo: 1.1531 - nll: 1.1449 - kl: 0.0081 - steps: 13872
+27-May-26 23:27:02, Epoch 817:
+27-May-26 23:27:05, => train | nelbo: 1.1022 - nll: 1.0950 - kl: 0.0072 - steps: 13889
+27-May-26 23:27:06, => valid | nelbo: 1.0740 - nll: 1.0691 - kl: 0.0049 - steps: 13889
+27-May-26 23:27:07, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:27:07, Epoch 818:
+27-May-26 23:27:10, => train | nelbo: 1.1255 - nll: 1.1193 - kl: 0.0062 - steps: 13906
+27-May-26 23:27:10, Epoch 819:
+27-May-26 23:27:14, => train | nelbo: 1.1328 - nll: 1.1247 - kl: 0.0081 - steps: 13923
+27-May-26 23:27:14, Epoch 820:
+27-May-26 23:27:17, => train | nelbo: 1.1346 - nll: 1.1265 - kl: 0.0081 - steps: 13940
+27-May-26 23:27:17, Epoch 821:
+27-May-26 23:27:21, => train | nelbo: 1.1140 - nll: 1.1060 - kl: 0.0081 - steps: 13957
+27-May-26 23:27:21, => valid | nelbo: 1.0725 - nll: 1.0678 - kl: 0.0047 - steps: 13957
+27-May-26 23:27:22, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:27:22, Epoch 822:
+27-May-26 23:27:26, => train | nelbo: 1.1243 - nll: 1.1164 - kl: 0.0078 - steps: 13974
+27-May-26 23:27:26, Epoch 823:
+27-May-26 23:27:29, => train | nelbo: 1.1429 - nll: 1.1352 - kl: 0.0077 - steps: 13991
+27-May-26 23:27:29, Epoch 824:
+27-May-26 23:27:33, => train | nelbo: 1.1415 - nll: 1.1340 - kl: 0.0075 - steps: 14008
+27-May-26 23:27:33, Epoch 825:
+27-May-26 23:27:36, => train | nelbo: 1.1136 - nll: 1.1073 - kl: 0.0063 - steps: 14025
+27-May-26 23:27:37, => valid | nelbo: 1.0714 - nll: 1.0668 - kl: 0.0047 - steps: 14025
+27-May-26 23:27:38, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:27:38, Epoch 826:
+27-May-26 23:27:42, => train | nelbo: 1.1055 - nll: 1.0981 - kl: 0.0074 - steps: 14042
+27-May-26 23:27:42, Epoch 827:
+27-May-26 23:27:45, => train | nelbo: 1.1199 - nll: 1.1115 - kl: 0.0084 - steps: 14059
+27-May-26 23:27:45, Epoch 828:
+27-May-26 23:27:49, => train | nelbo: 1.1349 - nll: 1.1273 - kl: 0.0077 - steps: 14076
+27-May-26 23:27:49, Epoch 829:
+27-May-26 23:27:53, => train | nelbo: 1.1346 - nll: 1.1247 - kl: 0.0099 - steps: 14093
+27-May-26 23:27:53, => valid | nelbo: 1.0708 - nll: 1.0662 - kl: 0.0046 - steps: 14093
+27-May-26 23:27:55, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:27:55, Epoch 830:
+27-May-26 23:27:58, => train | nelbo: 1.1126 - nll: 1.1054 - kl: 0.0072 - steps: 14110
+27-May-26 23:27:58, Epoch 831:
+27-May-26 23:28:01, => train | nelbo: 1.1100 - nll: 1.1032 - kl: 0.0068 - steps: 14127
+27-May-26 23:28:01, Epoch 832:
+27-May-26 23:28:04, => train | nelbo: 1.1260 - nll: 1.1181 - kl: 0.0079 - steps: 14144
+27-May-26 23:28:04, Epoch 833:
+27-May-26 23:28:08, => train | nelbo: 1.1213 - nll: 1.1122 - kl: 0.0091 - steps: 14161
+27-May-26 23:28:08, => valid | nelbo: 1.0695 - nll: 1.0648 - kl: 0.0047 - steps: 14161
+27-May-26 23:28:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:28:10, Epoch 834:
+27-May-26 23:28:13, => train | nelbo: 1.1225 - nll: 1.1151 - kl: 0.0074 - steps: 14178
+27-May-26 23:28:13, Epoch 835:
+27-May-26 23:28:16, => train | nelbo: 1.1079 - nll: 1.1013 - kl: 0.0066 - steps: 14195
+27-May-26 23:28:16, Epoch 836:
+27-May-26 23:28:19, => train | nelbo: 1.1001 - nll: 1.0932 - kl: 0.0069 - steps: 14212
+27-May-26 23:28:19, Epoch 837:
+27-May-26 23:28:22, => train | nelbo: 1.0923 - nll: 1.0860 - kl: 0.0063 - steps: 14229
+27-May-26 23:28:23, => valid | nelbo: 1.0683 - nll: 1.0637 - kl: 0.0046 - steps: 14229
+27-May-26 23:28:24, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:28:24, Epoch 838:
+27-May-26 23:28:27, => train | nelbo: 1.1153 - nll: 1.1074 - kl: 0.0079 - steps: 14246
+27-May-26 23:28:27, Epoch 839:
+27-May-26 23:28:30, => train | nelbo: 1.1227 - nll: 1.1143 - kl: 0.0084 - steps: 14263
+27-May-26 23:28:30, Epoch 840:
+27-May-26 23:28:34, => train | nelbo: 1.1219 - nll: 1.1142 - kl: 0.0077 - steps: 14280
+27-May-26 23:28:34, Epoch 841:
+27-May-26 23:28:37, => train | nelbo: 1.1166 - nll: 1.1100 - kl: 0.0066 - steps: 14297
+27-May-26 23:28:38, => valid | nelbo: 1.0670 - nll: 1.0624 - kl: 0.0045 - steps: 14297
+27-May-26 23:28:39, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:28:39, Epoch 842:
+27-May-26 23:28:43, => train | nelbo: 1.1050 - nll: 1.0987 - kl: 0.0062 - steps: 14314
+27-May-26 23:28:43, Epoch 843:
+27-May-26 23:28:46, => train | nelbo: 1.1046 - nll: 1.0983 - kl: 0.0064 - steps: 14331
+27-May-26 23:28:46, Epoch 844:
+27-May-26 23:28:49, => train | nelbo: 1.1167 - nll: 1.1092 - kl: 0.0075 - steps: 14348
+27-May-26 23:28:49, Epoch 845:
+27-May-26 23:28:53, => train | nelbo: 1.1121 - nll: 1.1046 - kl: 0.0075 - steps: 14365
+27-May-26 23:28:54, => valid | nelbo: 1.0657 - nll: 1.0613 - kl: 0.0045 - steps: 14365
+27-May-26 23:28:55, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:28:55, Epoch 846:
+27-May-26 23:28:58, => train | nelbo: 1.1041 - nll: 1.0974 - kl: 0.0067 - steps: 14382
+27-May-26 23:28:58, Epoch 847:
+27-May-26 23:29:02, => train | nelbo: 1.0943 - nll: 1.0876 - kl: 0.0067 - steps: 14399
+27-May-26 23:29:02, Epoch 848:
+27-May-26 23:29:05, => train | nelbo: 1.1161 - nll: 1.1093 - kl: 0.0068 - steps: 14416
+27-May-26 23:29:05, Epoch 849:
+27-May-26 23:29:09, => train | nelbo: 1.1009 - nll: 1.0927 - kl: 0.0082 - steps: 14433
+27-May-26 23:29:09, => valid | nelbo: 1.0644 - nll: 1.0599 - kl: 0.0045 - steps: 14433
+27-May-26 23:29:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:29:10, Epoch 850:
+27-May-26 23:29:14, => train | nelbo: 1.1217 - nll: 1.1146 - kl: 0.0071 - steps: 14450
+27-May-26 23:29:14, Epoch 851:
+27-May-26 23:29:17, => train | nelbo: 1.0988 - nll: 1.0917 - kl: 0.0071 - steps: 14467
+27-May-26 23:29:17, Epoch 852:
+27-May-26 23:29:21, => train | nelbo: 1.1002 - nll: 1.0929 - kl: 0.0074 - steps: 14484
+27-May-26 23:29:21, Epoch 853:
+27-May-26 23:29:24, => train | nelbo: 1.1001 - nll: 1.0926 - kl: 0.0075 - steps: 14501
+27-May-26 23:29:25, => valid | nelbo: 1.0630 - nll: 1.0585 - kl: 0.0045 - steps: 14501
+27-May-26 23:29:26, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:29:26, Epoch 854:
+27-May-26 23:29:29, => train | nelbo: 1.1199 - nll: 1.1113 - kl: 0.0086 - steps: 14518
+27-May-26 23:29:29, Epoch 855:
+27-May-26 23:29:32, => train | nelbo: 1.1284 - nll: 1.1192 - kl: 0.0092 - steps: 14535
+27-May-26 23:29:32, Epoch 856:
+27-May-26 23:29:35, => train | nelbo: 1.1502 - nll: 1.1421 - kl: 0.0081 - steps: 14552
+27-May-26 23:29:35, Epoch 857:
+27-May-26 23:29:39, => train | nelbo: 1.1374 - nll: 1.1293 - kl: 0.0081 - steps: 14569
+27-May-26 23:29:39, => valid | nelbo: 1.0623 - nll: 1.0578 - kl: 0.0044 - steps: 14569
+27-May-26 23:29:41, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:29:41, Epoch 858:
+27-May-26 23:29:44, => train | nelbo: 1.0902 - nll: 1.0830 - kl: 0.0072 - steps: 14586
+27-May-26 23:29:44, Epoch 859:
+27-May-26 23:29:48, => train | nelbo: 1.1085 - nll: 1.1012 - kl: 0.0073 - steps: 14603
+27-May-26 23:29:48, Epoch 860:
+27-May-26 23:29:51, => train | nelbo: 1.0966 - nll: 1.0862 - kl: 0.0104 - steps: 14620
+27-May-26 23:29:51, Epoch 861:
+27-May-26 23:29:55, => train | nelbo: 1.1504 - nll: 1.1427 - kl: 0.0077 - steps: 14637
+27-May-26 23:29:56, => valid | nelbo: 1.0613 - nll: 1.0569 - kl: 0.0044 - steps: 14637
+27-May-26 23:29:57, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:29:57, Epoch 862:
+27-May-26 23:30:00, => train | nelbo: 1.1144 - nll: 1.1061 - kl: 0.0083 - steps: 14654
+27-May-26 23:30:00, Epoch 863:
+27-May-26 23:30:04, => train | nelbo: 1.1320 - nll: 1.1253 - kl: 0.0066 - steps: 14671
+27-May-26 23:30:04, Epoch 864:
+27-May-26 23:30:07, => train | nelbo: 1.1141 - nll: 1.1060 - kl: 0.0081 - steps: 14688
+27-May-26 23:30:07, Epoch 865:
+27-May-26 23:30:11, => train | nelbo: 1.0997 - nll: 1.0926 - kl: 0.0071 - steps: 14705
+27-May-26 23:30:11, => valid | nelbo: 1.0606 - nll: 1.0561 - kl: 0.0045 - steps: 14705
+27-May-26 23:30:13, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:30:13, Epoch 866:
+27-May-26 23:30:16, => train | nelbo: 1.1023 - nll: 1.0949 - kl: 0.0075 - steps: 14722
+27-May-26 23:30:16, Epoch 867:
+27-May-26 23:30:20, => train | nelbo: 1.1288 - nll: 1.1220 - kl: 0.0069 - steps: 14739
+27-May-26 23:30:20, Epoch 868:
+27-May-26 23:30:23, => train | nelbo: 1.1092 - nll: 1.1008 - kl: 0.0084 - steps: 14756
+27-May-26 23:30:23, Epoch 869:
+27-May-26 23:30:27, => train | nelbo: 1.0990 - nll: 1.0920 - kl: 0.0071 - steps: 14773
+27-May-26 23:30:27, => valid | nelbo: 1.0597 - nll: 1.0552 - kl: 0.0044 - steps: 14773
+27-May-26 23:30:28, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:30:28, Epoch 870:
+27-May-26 23:30:32, => train | nelbo: 1.1408 - nll: 1.1317 - kl: 0.0090 - steps: 14790
+27-May-26 23:30:32, Epoch 871:
+27-May-26 23:30:36, => train | nelbo: 1.1193 - nll: 1.1110 - kl: 0.0083 - steps: 14807
+27-May-26 23:30:36, Epoch 872:
+27-May-26 23:30:39, => train | nelbo: 1.0939 - nll: 1.0873 - kl: 0.0066 - steps: 14824
+27-May-26 23:30:39, Epoch 873:
+27-May-26 23:30:42, => train | nelbo: 1.1426 - nll: 1.1351 - kl: 0.0075 - steps: 14841
+27-May-26 23:30:43, => valid | nelbo: 1.0587 - nll: 1.0542 - kl: 0.0045 - steps: 14841
+27-May-26 23:30:44, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:30:44, Epoch 874:
+27-May-26 23:30:48, => train | nelbo: 1.1245 - nll: 1.1165 - kl: 0.0080 - steps: 14858
+27-May-26 23:30:48, Epoch 875:
+27-May-26 23:30:51, => train | nelbo: 1.0957 - nll: 1.0892 - kl: 0.0066 - steps: 14875
+27-May-26 23:30:51, Epoch 876:
+27-May-26 23:30:55, => train | nelbo: 1.1147 - nll: 1.1072 - kl: 0.0075 - steps: 14892
+27-May-26 23:30:55, Epoch 877:
+27-May-26 23:30:58, => train | nelbo: 1.0971 - nll: 1.0906 - kl: 0.0064 - steps: 14909
+27-May-26 23:30:59, => valid | nelbo: 1.0580 - nll: 1.0536 - kl: 0.0044 - steps: 14909
+27-May-26 23:31:00, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:31:00, Epoch 878:
+27-May-26 23:31:04, => train | nelbo: 1.1003 - nll: 1.0931 - kl: 0.0072 - steps: 14926
+27-May-26 23:31:04, Epoch 879:
+27-May-26 23:31:07, => train | nelbo: 1.0989 - nll: 1.0917 - kl: 0.0072 - steps: 14943
+27-May-26 23:31:07, Epoch 880:
+27-May-26 23:31:10, => train | nelbo: 1.1079 - nll: 1.0997 - kl: 0.0083 - steps: 14960
+27-May-26 23:31:10, Epoch 881:
+27-May-26 23:31:13, => train | nelbo: 1.0919 - nll: 1.0837 - kl: 0.0082 - steps: 14977
+27-May-26 23:31:14, => valid | nelbo: 1.0566 - nll: 1.0522 - kl: 0.0044 - steps: 14977
+27-May-26 23:31:15, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:31:15, Epoch 882:
+27-May-26 23:31:19, => train | nelbo: 1.1388 - nll: 1.1299 - kl: 0.0088 - steps: 14994
+27-May-26 23:31:19, Epoch 883:
+27-May-26 23:31:22, => train | nelbo: 1.1172 - nll: 1.1094 - kl: 0.0078 - steps: 15011
+27-May-26 23:31:22, Epoch 884:
+27-May-26 23:31:26, => train | nelbo: 1.0920 - nll: 1.0852 - kl: 0.0068 - steps: 15028
+27-May-26 23:31:26, Epoch 885:
+27-May-26 23:31:29, => train | nelbo: 1.1058 - nll: 1.0990 - kl: 0.0068 - steps: 15045
+27-May-26 23:31:30, => valid | nelbo: 1.0556 - nll: 1.0512 - kl: 0.0044 - steps: 15045
+27-May-26 23:31:31, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:31:31, Epoch 886:
+27-May-26 23:31:35, => train | nelbo: 1.0851 - nll: 1.0786 - kl: 0.0065 - steps: 15062
+27-May-26 23:31:35, Epoch 887:
+27-May-26 23:31:38, => train | nelbo: 1.1079 - nll: 1.1011 - kl: 0.0068 - steps: 15079
+27-May-26 23:31:38, Epoch 888:
+27-May-26 23:31:42, => train | nelbo: 1.0992 - nll: 1.0914 - kl: 0.0079 - steps: 15096
+27-May-26 23:31:42, Epoch 889:
+27-May-26 23:31:45, => train | nelbo: 1.1004 - nll: 1.0924 - kl: 0.0079 - steps: 15113
+27-May-26 23:31:46, => valid | nelbo: 1.0543 - nll: 1.0500 - kl: 0.0043 - steps: 15113
+27-May-26 23:31:47, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:31:47, Epoch 890:
+27-May-26 23:31:50, => train | nelbo: 1.1175 - nll: 1.1087 - kl: 0.0088 - steps: 15130
+27-May-26 23:31:50, Epoch 891:
+27-May-26 23:31:54, => train | nelbo: 1.1179 - nll: 1.1108 - kl: 0.0072 - steps: 15147
+27-May-26 23:31:54, Epoch 892:
+27-May-26 23:31:57, => train | nelbo: 1.1001 - nll: 1.0930 - kl: 0.0072 - steps: 15164
+27-May-26 23:31:57, Epoch 893:
+27-May-26 23:32:00, => train | nelbo: 1.0884 - nll: 1.0821 - kl: 0.0063 - steps: 15181
+27-May-26 23:32:01, => valid | nelbo: 1.0536 - nll: 1.0493 - kl: 0.0043 - steps: 15181
+27-May-26 23:32:02, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:32:02, Epoch 894:
+27-May-26 23:32:05, => train | nelbo: 1.0840 - nll: 1.0774 - kl: 0.0066 - steps: 15198
+27-May-26 23:32:05, Epoch 895:
+27-May-26 23:32:08, => train | nelbo: 1.0898 - nll: 1.0816 - kl: 0.0082 - steps: 15215
+27-May-26 23:32:08, Epoch 896:
+27-May-26 23:32:11, => train | nelbo: 1.1041 - nll: 1.0971 - kl: 0.0070 - steps: 15232
+27-May-26 23:32:11, Epoch 897:
+27-May-26 23:32:15, => train | nelbo: 1.0867 - nll: 1.0800 - kl: 0.0067 - steps: 15249
+27-May-26 23:32:16, => valid | nelbo: 1.0523 - nll: 1.0479 - kl: 0.0044 - steps: 15249
+27-May-26 23:32:17, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:32:17, Epoch 898:
+27-May-26 23:32:20, => train | nelbo: 1.0923 - nll: 1.0850 - kl: 0.0073 - steps: 15266
+27-May-26 23:32:20, Epoch 899:
+27-May-26 23:32:23, => train | nelbo: 1.0888 - nll: 1.0824 - kl: 0.0064 - steps: 15283
+27-May-26 23:32:23, Epoch 900:
+27-May-26 23:32:26, => train | nelbo: 1.1059 - nll: 1.0987 - kl: 0.0073 - steps: 15300
+27-May-26 23:32:26, Epoch 901:
+27-May-26 23:32:30, => train | nelbo: 1.0900 - nll: 1.0814 - kl: 0.0086 - steps: 15317
+27-May-26 23:32:31, => valid | nelbo: 1.0506 - nll: 1.0464 - kl: 0.0043 - steps: 15317
+27-May-26 23:32:32, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:32:32, Epoch 902:
+27-May-26 23:32:35, => train | nelbo: 1.1049 - nll: 1.0981 - kl: 0.0068 - steps: 15334
+27-May-26 23:32:35, Epoch 903:
+27-May-26 23:32:38, => train | nelbo: 1.0810 - nll: 1.0742 - kl: 0.0068 - steps: 15351
+27-May-26 23:32:38, Epoch 904:
+27-May-26 23:32:42, => train | nelbo: 1.0960 - nll: 1.0888 - kl: 0.0072 - steps: 15368
+27-May-26 23:32:42, Epoch 905:
+27-May-26 23:32:45, => train | nelbo: 1.1154 - nll: 1.1083 - kl: 0.0071 - steps: 15385
+27-May-26 23:32:46, => valid | nelbo: 1.0499 - nll: 1.0457 - kl: 0.0043 - steps: 15385
+27-May-26 23:32:47, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:32:47, Epoch 906:
+27-May-26 23:32:51, => train | nelbo: 1.0957 - nll: 1.0887 - kl: 0.0069 - steps: 15402
+27-May-26 23:32:51, Epoch 907:
+27-May-26 23:32:54, => train | nelbo: 1.0961 - nll: 1.0891 - kl: 0.0070 - steps: 15419
+27-May-26 23:32:54, Epoch 908:
+27-May-26 23:32:58, => train | nelbo: 1.1103 - nll: 1.1029 - kl: 0.0073 - steps: 15436
+27-May-26 23:32:58, Epoch 909:
+27-May-26 23:33:01, => train | nelbo: 1.0953 - nll: 1.0872 - kl: 0.0081 - steps: 15453
+27-May-26 23:33:01, => valid | nelbo: 1.0487 - nll: 1.0445 - kl: 0.0042 - steps: 15453
+27-May-26 23:33:02, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:33:02, Epoch 910:
+27-May-26 23:33:06, => train | nelbo: 1.0935 - nll: 1.0854 - kl: 0.0081 - steps: 15470
+27-May-26 23:33:06, Epoch 911:
+27-May-26 23:33:09, => train | nelbo: 1.1281 - nll: 1.1193 - kl: 0.0088 - steps: 15487
+27-May-26 23:33:09, Epoch 912:
+27-May-26 23:33:12, => train | nelbo: 1.1028 - nll: 1.0946 - kl: 0.0083 - steps: 15504
+27-May-26 23:33:12, Epoch 913:
+27-May-26 23:33:16, => train | nelbo: 1.0875 - nll: 1.0808 - kl: 0.0067 - steps: 15521
+27-May-26 23:33:16, => valid | nelbo: 1.0481 - nll: 1.0437 - kl: 0.0044 - steps: 15521
+27-May-26 23:33:17, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:33:17, Epoch 914:
+27-May-26 23:33:21, => train | nelbo: 1.1713 - nll: 1.1607 - kl: 0.0106 - steps: 15538
+27-May-26 23:33:21, Epoch 915:
+27-May-26 23:33:24, => train | nelbo: 1.0884 - nll: 1.0807 - kl: 0.0077 - steps: 15555
+27-May-26 23:33:24, Epoch 916:
+27-May-26 23:33:28, => train | nelbo: 1.0876 - nll: 1.0812 - kl: 0.0064 - steps: 15572
+27-May-26 23:33:28, Epoch 917:
+27-May-26 23:33:31, => train | nelbo: 1.1112 - nll: 1.1037 - kl: 0.0075 - steps: 15589
+27-May-26 23:33:32, => valid | nelbo: 1.0475 - nll: 1.0433 - kl: 0.0042 - steps: 15589
+27-May-26 23:33:33, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:33:33, Epoch 918:
+27-May-26 23:33:36, => train | nelbo: 1.0863 - nll: 1.0796 - kl: 0.0067 - steps: 15606
+27-May-26 23:33:36, Epoch 919:
+27-May-26 23:33:40, => train | nelbo: 1.0905 - nll: 1.0831 - kl: 0.0074 - steps: 15623
+27-May-26 23:33:40, Epoch 920:
+27-May-26 23:33:43, => train | nelbo: 1.0881 - nll: 1.0811 - kl: 0.0069 - steps: 15640
+27-May-26 23:33:43, Epoch 921:
+27-May-26 23:33:46, => train | nelbo: 1.0788 - nll: 1.0723 - kl: 0.0065 - steps: 15657
+27-May-26 23:33:47, => valid | nelbo: 1.0465 - nll: 1.0422 - kl: 0.0042 - steps: 15657
+27-May-26 23:33:48, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:33:48, Epoch 922:
+27-May-26 23:33:52, => train | nelbo: 1.0789 - nll: 1.0722 - kl: 0.0067 - steps: 15674
+27-May-26 23:33:52, Epoch 923:
+27-May-26 23:33:55, => train | nelbo: 1.1108 - nll: 1.1039 - kl: 0.0069 - steps: 15691
+27-May-26 23:33:55, Epoch 924:
+27-May-26 23:33:59, => train | nelbo: 1.0958 - nll: 1.0883 - kl: 0.0075 - steps: 15708
+27-May-26 23:33:59, Epoch 925:
+27-May-26 23:34:02, => train | nelbo: 1.1095 - nll: 1.1021 - kl: 0.0074 - steps: 15725
+27-May-26 23:34:03, => valid | nelbo: 1.0455 - nll: 1.0412 - kl: 0.0043 - steps: 15725
+27-May-26 23:34:04, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:34:04, Epoch 926:
+27-May-26 23:34:08, => train | nelbo: 1.0952 - nll: 1.0878 - kl: 0.0074 - steps: 15742
+27-May-26 23:34:08, Epoch 927:
+27-May-26 23:34:11, => train | nelbo: 1.0885 - nll: 1.0818 - kl: 0.0066 - steps: 15759
+27-May-26 23:34:11, Epoch 928:
+27-May-26 23:34:14, => train | nelbo: 1.1061 - nll: 1.0993 - kl: 0.0068 - steps: 15776
+27-May-26 23:34:14, Epoch 929:
+27-May-26 23:34:18, => train | nelbo: 1.1064 - nll: 1.0964 - kl: 0.0100 - steps: 15793
+27-May-26 23:34:19, => valid | nelbo: 1.0446 - nll: 1.0403 - kl: 0.0043 - steps: 15793
+27-May-26 23:34:20, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:34:20, Epoch 930:
+27-May-26 23:34:23, => train | nelbo: 1.0872 - nll: 1.0796 - kl: 0.0076 - steps: 15810
+27-May-26 23:34:23, Epoch 931:
+27-May-26 23:34:26, => train | nelbo: 1.0954 - nll: 1.0875 - kl: 0.0080 - steps: 15827
+27-May-26 23:34:26, Epoch 932:
+27-May-26 23:34:29, => train | nelbo: 1.0973 - nll: 1.0896 - kl: 0.0076 - steps: 15844
+27-May-26 23:34:29, Epoch 933:
+27-May-26 23:34:32, => train | nelbo: 1.0840 - nll: 1.0762 - kl: 0.0078 - steps: 15861
+27-May-26 23:34:33, => valid | nelbo: 1.0437 - nll: 1.0394 - kl: 0.0043 - steps: 15861
+27-May-26 23:34:34, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:34:34, Epoch 934:
+27-May-26 23:34:37, => train | nelbo: 1.1239 - nll: 1.1165 - kl: 0.0073 - steps: 15878
+27-May-26 23:34:37, Epoch 935:
+27-May-26 23:34:40, => train | nelbo: 1.0837 - nll: 1.0772 - kl: 0.0065 - steps: 15895
+27-May-26 23:34:40, Epoch 936:
+27-May-26 23:34:43, => train | nelbo: 1.1030 - nll: 1.0959 - kl: 0.0071 - steps: 15912
+27-May-26 23:34:43, Epoch 937:
+27-May-26 23:34:47, => train | nelbo: 1.1017 - nll: 1.0932 - kl: 0.0085 - steps: 15929
+27-May-26 23:34:47, => valid | nelbo: 1.0429 - nll: 1.0387 - kl: 0.0042 - steps: 15929
+27-May-26 23:34:48, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:34:48, Epoch 938:
+27-May-26 23:34:51, => train | nelbo: 1.0937 - nll: 1.0867 - kl: 0.0070 - steps: 15946
+27-May-26 23:34:51, Epoch 939:
+27-May-26 23:34:55, => train | nelbo: 1.0918 - nll: 1.0843 - kl: 0.0075 - steps: 15963
+27-May-26 23:34:55, Epoch 940:
+27-May-26 23:34:58, => train | nelbo: 1.1150 - nll: 1.1075 - kl: 0.0075 - steps: 15980
+27-May-26 23:34:58, Epoch 941:
+27-May-26 23:35:02, => train | nelbo: 1.0788 - nll: 1.0710 - kl: 0.0079 - steps: 15997
+27-May-26 23:35:02, => valid | nelbo: 1.0423 - nll: 1.0380 - kl: 0.0044 - steps: 15997
+27-May-26 23:35:04, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:35:04, Epoch 942:
+27-May-26 23:35:07, => train | nelbo: 1.1024 - nll: 1.0944 - kl: 0.0080 - steps: 16014
+27-May-26 23:35:07, Epoch 943:
+27-May-26 23:35:10, => train | nelbo: 1.0828 - nll: 1.0738 - kl: 0.0090 - steps: 16031
+27-May-26 23:35:10, Epoch 944:
+27-May-26 23:35:14, => train | nelbo: 1.0833 - nll: 1.0771 - kl: 0.0063 - steps: 16048
+27-May-26 23:35:14, Epoch 945:
+27-May-26 23:35:17, => train | nelbo: 1.0832 - nll: 1.0763 - kl: 0.0068 - steps: 16065
+27-May-26 23:35:18, => valid | nelbo: 1.0411 - nll: 1.0368 - kl: 0.0043 - steps: 16065
+27-May-26 23:35:19, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:35:19, Epoch 946:
+27-May-26 23:35:22, => train | nelbo: 1.1023 - nll: 1.0951 - kl: 0.0072 - steps: 16082
+27-May-26 23:35:22, Epoch 947:
+27-May-26 23:35:26, => train | nelbo: 1.0837 - nll: 1.0757 - kl: 0.0080 - steps: 16099
+27-May-26 23:35:26, Epoch 948:
+27-May-26 23:35:29, => train | nelbo: 1.0772 - nll: 1.0703 - kl: 0.0069 - steps: 16116
+27-May-26 23:35:29, Epoch 949:
+27-May-26 23:35:33, => train | nelbo: 1.0884 - nll: 1.0801 - kl: 0.0084 - steps: 16133
+27-May-26 23:35:33, => valid | nelbo: 1.0399 - nll: 1.0356 - kl: 0.0042 - steps: 16133
+27-May-26 23:35:34, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:35:34, Epoch 950:
+27-May-26 23:35:38, => train | nelbo: 1.0859 - nll: 1.0787 - kl: 0.0072 - steps: 16150
+27-May-26 23:35:38, Epoch 951:
+27-May-26 23:35:41, => train | nelbo: 1.0659 - nll: 1.0594 - kl: 0.0065 - steps: 16167
+27-May-26 23:35:41, Epoch 952:
+27-May-26 23:35:45, => train | nelbo: 1.0847 - nll: 1.0765 - kl: 0.0083 - steps: 16184
+27-May-26 23:35:45, Epoch 953:
+27-May-26 23:35:49, => train | nelbo: 1.0730 - nll: 1.0655 - kl: 0.0074 - steps: 16201
+27-May-26 23:35:50, => valid | nelbo: 1.0388 - nll: 1.0345 - kl: 0.0043 - steps: 16201
+27-May-26 23:35:51, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:35:51, Epoch 954:
+27-May-26 23:35:54, => train | nelbo: 1.0764 - nll: 1.0701 - kl: 0.0063 - steps: 16218
+27-May-26 23:35:54, Epoch 955:
+27-May-26 23:35:58, => train | nelbo: 1.0711 - nll: 1.0649 - kl: 0.0062 - steps: 16235
+27-May-26 23:35:58, Epoch 956:
+27-May-26 23:36:02, => train | nelbo: 1.0704 - nll: 1.0638 - kl: 0.0066 - steps: 16252
+27-May-26 23:36:02, Epoch 957:
+27-May-26 23:36:05, => train | nelbo: 1.0732 - nll: 1.0654 - kl: 0.0079 - steps: 16269
+27-May-26 23:36:06, => valid | nelbo: 1.0377 - nll: 1.0335 - kl: 0.0042 - steps: 16269
+27-May-26 23:36:07, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:36:07, Epoch 958:
+27-May-26 23:36:10, => train | nelbo: 1.0960 - nll: 1.0877 - kl: 0.0083 - steps: 16286
+27-May-26 23:36:10, Epoch 959:
+27-May-26 23:36:14, => train | nelbo: 1.0877 - nll: 1.0792 - kl: 0.0084 - steps: 16303
+27-May-26 23:36:14, Epoch 960:
+27-May-26 23:36:17, => train | nelbo: 1.0777 - nll: 1.0702 - kl: 0.0075 - steps: 16320
+27-May-26 23:36:17, Epoch 961:
+27-May-26 23:36:20, => train | nelbo: 1.1180 - nll: 1.1096 - kl: 0.0085 - steps: 16337
+27-May-26 23:36:21, => valid | nelbo: 1.0368 - nll: 1.0326 - kl: 0.0043 - steps: 16337
+27-May-26 23:36:22, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:36:22, Epoch 962:
+27-May-26 23:36:26, => train | nelbo: 1.0916 - nll: 1.0839 - kl: 0.0077 - steps: 16354
+27-May-26 23:36:26, Epoch 963:
+27-May-26 23:36:29, => train | nelbo: 1.0900 - nll: 1.0820 - kl: 0.0080 - steps: 16371
+27-May-26 23:36:29, Epoch 964:
+27-May-26 23:36:33, => train | nelbo: 1.0678 - nll: 1.0617 - kl: 0.0061 - steps: 16388
+27-May-26 23:36:33, Epoch 965:
+27-May-26 23:36:36, => train | nelbo: 1.0736 - nll: 1.0655 - kl: 0.0080 - steps: 16405
+27-May-26 23:36:37, => valid | nelbo: 1.0360 - nll: 1.0318 - kl: 0.0043 - steps: 16405
+27-May-26 23:36:38, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:36:38, Epoch 966:
+27-May-26 23:36:42, => train | nelbo: 1.1143 - nll: 1.1070 - kl: 0.0073 - steps: 16422
+27-May-26 23:36:42, Epoch 967:
+27-May-26 23:36:45, => train | nelbo: 1.0886 - nll: 1.0807 - kl: 0.0079 - steps: 16439
+27-May-26 23:36:45, Epoch 968:
+27-May-26 23:36:48, => train | nelbo: 1.0825 - nll: 1.0751 - kl: 0.0073 - steps: 16456
+27-May-26 23:36:48, Epoch 969:
+27-May-26 23:36:52, => train | nelbo: 1.1636 - nll: 1.1521 - kl: 0.0115 - steps: 16473
+27-May-26 23:36:53, => valid | nelbo: 1.0355 - nll: 1.0312 - kl: 0.0043 - steps: 16473
+27-May-26 23:36:54, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:36:54, Epoch 970:
+27-May-26 23:36:57, => train | nelbo: 1.1016 - nll: 1.0943 - kl: 0.0073 - steps: 16490
+27-May-26 23:36:57, Epoch 971:
+27-May-26 23:37:00, => train | nelbo: 1.0820 - nll: 1.0739 - kl: 0.0081 - steps: 16507
+27-May-26 23:37:00, Epoch 972:
+27-May-26 23:37:03, => train | nelbo: 1.1176 - nll: 1.1110 - kl: 0.0066 - steps: 16524
+27-May-26 23:37:03, Epoch 973:
+27-May-26 23:37:06, => train | nelbo: 1.0976 - nll: 1.0900 - kl: 0.0076 - steps: 16541
+27-May-26 23:37:07, => valid | nelbo: 1.0349 - nll: 1.0307 - kl: 0.0042 - steps: 16541
+27-May-26 23:37:08, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:37:08, Epoch 974:
+27-May-26 23:37:11, => train | nelbo: 1.0759 - nll: 1.0689 - kl: 0.0071 - steps: 16558
+27-May-26 23:37:11, Epoch 975:
+27-May-26 23:37:15, => train | nelbo: 1.0939 - nll: 1.0851 - kl: 0.0088 - steps: 16575
+27-May-26 23:37:15, Epoch 976:
+27-May-26 23:37:18, => train | nelbo: 1.0783 - nll: 1.0693 - kl: 0.0090 - steps: 16592
+27-May-26 23:37:18, Epoch 977:
+27-May-26 23:37:21, => train | nelbo: 1.0826 - nll: 1.0761 - kl: 0.0065 - steps: 16609
+27-May-26 23:37:22, => valid | nelbo: 1.0344 - nll: 1.0302 - kl: 0.0042 - steps: 16609
+27-May-26 23:37:23, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:37:23, Epoch 978:
+27-May-26 23:37:26, => train | nelbo: 1.0756 - nll: 1.0690 - kl: 0.0066 - steps: 16626
+27-May-26 23:37:26, Epoch 979:
+27-May-26 23:37:29, => train | nelbo: 1.1072 - nll: 1.1004 - kl: 0.0067 - steps: 16643
+27-May-26 23:37:29, Epoch 980:
+27-May-26 23:37:33, => train | nelbo: 1.0770 - nll: 1.0682 - kl: 0.0089 - steps: 16660
+27-May-26 23:37:33, Epoch 981:
+27-May-26 23:37:36, => train | nelbo: 1.0559 - nll: 1.0492 - kl: 0.0066 - steps: 16677
+27-May-26 23:37:37, => valid | nelbo: 1.0335 - nll: 1.0292 - kl: 0.0043 - steps: 16677
+27-May-26 23:37:38, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:37:38, Epoch 982:
+27-May-26 23:37:42, => train | nelbo: 1.0854 - nll: 1.0780 - kl: 0.0074 - steps: 16694
+27-May-26 23:37:42, Epoch 983:
+27-May-26 23:37:45, => train | nelbo: 1.0726 - nll: 1.0653 - kl: 0.0073 - steps: 16711
+27-May-26 23:37:45, Epoch 984:
+27-May-26 23:37:48, => train | nelbo: 1.0730 - nll: 1.0663 - kl: 0.0067 - steps: 16728
+27-May-26 23:37:48, Epoch 985:
+27-May-26 23:37:52, => train | nelbo: 1.1170 - nll: 1.1091 - kl: 0.0079 - steps: 16745
+27-May-26 23:37:53, => valid | nelbo: 1.0329 - nll: 1.0287 - kl: 0.0042 - steps: 16745
+27-May-26 23:37:54, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:37:54, Epoch 986:
+27-May-26 23:37:57, => train | nelbo: 1.1048 - nll: 1.0948 - kl: 0.0100 - steps: 16762
+27-May-26 23:37:57, Epoch 987:
+27-May-26 23:38:01, => train | nelbo: 1.1079 - nll: 1.0995 - kl: 0.0085 - steps: 16779
+27-May-26 23:38:01, Epoch 988:
+27-May-26 23:38:04, => train | nelbo: 1.1063 - nll: 1.0989 - kl: 0.0074 - steps: 16796
+27-May-26 23:38:04, Epoch 989:
+27-May-26 23:38:08, => train | nelbo: 1.0772 - nll: 1.0702 - kl: 0.0070 - steps: 16813
+27-May-26 23:38:09, => valid | nelbo: 1.0323 - nll: 1.0281 - kl: 0.0042 - steps: 16813
+27-May-26 23:38:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:38:10, Epoch 990:
+27-May-26 23:38:14, => train | nelbo: 1.1138 - nll: 1.1060 - kl: 0.0078 - steps: 16830
+27-May-26 23:38:14, Epoch 991:
+27-May-26 23:38:17, => train | nelbo: 1.0659 - nll: 1.0591 - kl: 0.0069 - steps: 16847
+27-May-26 23:38:17, Epoch 992:
+27-May-26 23:38:21, => train | nelbo: 1.0623 - nll: 1.0550 - kl: 0.0073 - steps: 16864
+27-May-26 23:38:21, Epoch 993:
+27-May-26 23:38:24, => train | nelbo: 1.0769 - nll: 1.0690 - kl: 0.0079 - steps: 16881
+27-May-26 23:38:25, => valid | nelbo: 1.0317 - nll: 1.0273 - kl: 0.0044 - steps: 16881
+27-May-26 23:38:26, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:38:26, Epoch 994:
+27-May-26 23:38:30, => train | nelbo: 1.0944 - nll: 1.0868 - kl: 0.0077 - steps: 16898
+27-May-26 23:38:30, Epoch 995:
+27-May-26 23:38:33, => train | nelbo: 1.0862 - nll: 1.0784 - kl: 0.0078 - steps: 16915
+27-May-26 23:38:33, Epoch 996:
+27-May-26 23:38:37, => train | nelbo: 1.0728 - nll: 1.0662 - kl: 0.0066 - steps: 16932
+27-May-26 23:38:37, Epoch 997:
+27-May-26 23:38:40, => train | nelbo: 1.0971 - nll: 1.0874 - kl: 0.0097 - steps: 16949
+27-May-26 23:38:41, => valid | nelbo: 1.0310 - nll: 1.0267 - kl: 0.0043 - steps: 16949
+27-May-26 23:38:42, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:38:42, Epoch 998:
+27-May-26 23:38:46, => train | nelbo: 1.0741 - nll: 1.0663 - kl: 0.0078 - steps: 16966
+27-May-26 23:38:46, Epoch 999:
+27-May-26 23:38:49, => train | nelbo: 1.0777 - nll: 1.0714 - kl: 0.0063 - steps: 16983
+27-May-26 23:38:49, Epoch 1000:
+27-May-26 23:38:53, => train | nelbo: 1.0739 - nll: 1.0672 - kl: 0.0067 - steps: 17000
+27-May-26 23:38:53, Epoch 1001:
+27-May-26 23:38:56, => train | nelbo: 1.0815 - nll: 1.0743 - kl: 0.0072 - steps: 17017
+27-May-26 23:38:57, => valid | nelbo: 1.0302 - nll: 1.0259 - kl: 0.0043 - steps: 17017
+27-May-26 23:38:58, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:38:58, Epoch 1002:
+27-May-26 23:39:01, => train | nelbo: 1.0838 - nll: 1.0769 - kl: 0.0069 - steps: 17034
+27-May-26 23:39:01, Epoch 1003:
+27-May-26 23:39:05, => train | nelbo: 1.1180 - nll: 1.1107 - kl: 0.0073 - steps: 17051
+27-May-26 23:39:05, Epoch 1004:
+27-May-26 23:39:08, => train | nelbo: 1.1024 - nll: 1.0920 - kl: 0.0104 - steps: 17068
+27-May-26 23:39:08, Epoch 1005:
+27-May-26 23:39:12, => train | nelbo: 1.0905 - nll: 1.0829 - kl: 0.0076 - steps: 17085
+27-May-26 23:39:12, => valid | nelbo: 1.0296 - nll: 1.0253 - kl: 0.0043 - steps: 17085
+27-May-26 23:39:14, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:39:14, Epoch 1006:
+27-May-26 23:39:17, => train | nelbo: 1.0838 - nll: 1.0767 - kl: 0.0071 - steps: 17102
+27-May-26 23:39:17, Epoch 1007:
+27-May-26 23:39:20, => train | nelbo: 1.0738 - nll: 1.0675 - kl: 0.0063 - steps: 17119
+27-May-26 23:39:20, Epoch 1008:
+27-May-26 23:39:24, => train | nelbo: 1.1305 - nll: 1.1176 - kl: 0.0130 - steps: 17136
+27-May-26 23:39:24, Epoch 1009:
+27-May-26 23:39:28, => train | nelbo: 1.1054 - nll: 1.0975 - kl: 0.0079 - steps: 17153
+27-May-26 23:39:28, => valid | nelbo: 1.0292 - nll: 1.0249 - kl: 0.0043 - steps: 17153
+27-May-26 23:39:29, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:39:29, Epoch 1010:
+27-May-26 23:39:33, => train | nelbo: 1.0900 - nll: 1.0790 - kl: 0.0110 - steps: 17170
+27-May-26 23:39:33, Epoch 1011:
+27-May-26 23:39:36, => train | nelbo: 1.0879 - nll: 1.0811 - kl: 0.0068 - steps: 17187
+27-May-26 23:39:36, Epoch 1012:
+27-May-26 23:39:39, => train | nelbo: 1.0915 - nll: 1.0848 - kl: 0.0067 - steps: 17204
+27-May-26 23:39:39, Epoch 1013:
+27-May-26 23:39:43, => train | nelbo: 1.0709 - nll: 1.0644 - kl: 0.0065 - steps: 17221
+27-May-26 23:39:44, => valid | nelbo: 1.0286 - nll: 1.0244 - kl: 0.0042 - steps: 17221
+27-May-26 23:39:45, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:39:45, Epoch 1014:
+27-May-26 23:39:48, => train | nelbo: 1.0878 - nll: 1.0803 - kl: 0.0075 - steps: 17238
+27-May-26 23:39:48, Epoch 1015:
+27-May-26 23:39:52, => train | nelbo: 1.0679 - nll: 1.0604 - kl: 0.0076 - steps: 17255
+27-May-26 23:39:52, Epoch 1016:
+27-May-26 23:39:55, => train | nelbo: 1.0882 - nll: 1.0805 - kl: 0.0077 - steps: 17272
+27-May-26 23:39:55, Epoch 1017:
+27-May-26 23:39:59, => train | nelbo: 1.0530 - nll: 1.0462 - kl: 0.0069 - steps: 17289
+27-May-26 23:40:00, => valid | nelbo: 1.0277 - nll: 1.0235 - kl: 0.0042 - steps: 17289
+27-May-26 23:40:01, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:40:01, Epoch 1018:
+27-May-26 23:40:04, => train | nelbo: 1.1179 - nll: 1.1104 - kl: 0.0075 - steps: 17306
+27-May-26 23:40:04, Epoch 1019:
+27-May-26 23:40:07, => train | nelbo: 1.0974 - nll: 1.0877 - kl: 0.0097 - steps: 17323
+27-May-26 23:40:07, Epoch 1020:
+27-May-26 23:40:11, => train | nelbo: 1.0622 - nll: 1.0550 - kl: 0.0072 - steps: 17340
+27-May-26 23:40:11, Epoch 1021:
+27-May-26 23:40:14, => train | nelbo: 1.0660 - nll: 1.0587 - kl: 0.0072 - steps: 17357
+27-May-26 23:40:14, => valid | nelbo: 1.0272 - nll: 1.0228 - kl: 0.0044 - steps: 17357
+27-May-26 23:40:16, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:40:16, Epoch 1022:
+27-May-26 23:40:19, => train | nelbo: 1.0904 - nll: 1.0825 - kl: 0.0079 - steps: 17374
+27-May-26 23:40:19, Epoch 1023:
+27-May-26 23:40:22, => train | nelbo: 1.0861 - nll: 1.0783 - kl: 0.0078 - steps: 17391
+27-May-26 23:40:22, Epoch 1024:
+27-May-26 23:40:26, => train | nelbo: 1.0720 - nll: 1.0637 - kl: 0.0083 - steps: 17408
+27-May-26 23:40:26, Epoch 1025:
+27-May-26 23:40:29, => train | nelbo: 1.1005 - nll: 1.0930 - kl: 0.0075 - steps: 17425
+27-May-26 23:40:30, => valid | nelbo: 1.0267 - nll: 1.0224 - kl: 0.0043 - steps: 17425
+27-May-26 23:40:31, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:40:31, Epoch 1026:
+27-May-26 23:40:34, => train | nelbo: 1.0600 - nll: 1.0528 - kl: 0.0072 - steps: 17442
+27-May-26 23:40:34, Epoch 1027:
+27-May-26 23:40:38, => train | nelbo: 1.0758 - nll: 1.0692 - kl: 0.0066 - steps: 17459
+27-May-26 23:40:38, Epoch 1028:
+27-May-26 23:40:41, => train | nelbo: 1.1099 - nll: 1.1022 - kl: 0.0078 - steps: 17476
+27-May-26 23:40:41, Epoch 1029:
+27-May-26 23:40:44, => train | nelbo: 1.0873 - nll: 1.0799 - kl: 0.0074 - steps: 17493
+27-May-26 23:40:45, => valid | nelbo: 1.0258 - nll: 1.0216 - kl: 0.0042 - steps: 17493
+27-May-26 23:40:46, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:40:46, Epoch 1030:
+27-May-26 23:40:49, => train | nelbo: 1.0478 - nll: 1.0411 - kl: 0.0067 - steps: 17510
+27-May-26 23:40:49, Epoch 1031:
+27-May-26 23:40:53, => train | nelbo: 1.0759 - nll: 1.0693 - kl: 0.0067 - steps: 17527
+27-May-26 23:40:53, Epoch 1032:
+27-May-26 23:40:56, => train | nelbo: 1.0855 - nll: 1.0747 - kl: 0.0108 - steps: 17544
+27-May-26 23:40:56, Epoch 1033:
+27-May-26 23:41:00, => train | nelbo: 1.0596 - nll: 1.0530 - kl: 0.0065 - steps: 17561
+27-May-26 23:41:01, => valid | nelbo: 1.0250 - nll: 1.0208 - kl: 0.0042 - steps: 17561
+27-May-26 23:41:02, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:41:02, Epoch 1034:
+27-May-26 23:41:05, => train | nelbo: 1.0560 - nll: 1.0496 - kl: 0.0064 - steps: 17578
+27-May-26 23:41:05, Epoch 1035:
+27-May-26 23:41:09, => train | nelbo: 1.0731 - nll: 1.0659 - kl: 0.0072 - steps: 17595
+27-May-26 23:41:09, Epoch 1036:
+27-May-26 23:41:12, => train | nelbo: 1.0649 - nll: 1.0583 - kl: 0.0066 - steps: 17612
+27-May-26 23:41:12, Epoch 1037:
+27-May-26 23:41:16, => train | nelbo: 1.0590 - nll: 1.0522 - kl: 0.0068 - steps: 17629
+27-May-26 23:41:17, => valid | nelbo: 1.0242 - nll: 1.0199 - kl: 0.0043 - steps: 17629
+27-May-26 23:41:18, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:41:18, Epoch 1038:
+27-May-26 23:41:21, => train | nelbo: 1.0640 - nll: 1.0570 - kl: 0.0070 - steps: 17646
+27-May-26 23:41:21, Epoch 1039:
+27-May-26 23:41:25, => train | nelbo: 1.0620 - nll: 1.0548 - kl: 0.0072 - steps: 17663
+27-May-26 23:41:25, Epoch 1040:
+27-May-26 23:41:28, => train | nelbo: 1.0669 - nll: 1.0597 - kl: 0.0072 - steps: 17680
+27-May-26 23:41:28, Epoch 1041:
+27-May-26 23:41:32, => train | nelbo: 1.0636 - nll: 1.0570 - kl: 0.0066 - steps: 17697
+27-May-26 23:41:32, => valid | nelbo: 1.0234 - nll: 1.0191 - kl: 0.0043 - steps: 17697
+27-May-26 23:41:33, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:41:33, Epoch 1042:
+27-May-26 23:41:37, => train | nelbo: 1.0527 - nll: 1.0455 - kl: 0.0072 - steps: 17714
+27-May-26 23:41:37, Epoch 1043:
+27-May-26 23:41:41, => train | nelbo: 1.0629 - nll: 1.0559 - kl: 0.0070 - steps: 17731
+27-May-26 23:41:41, Epoch 1044:
+27-May-26 23:41:44, => train | nelbo: 1.1021 - nll: 1.0930 - kl: 0.0091 - steps: 17748
+27-May-26 23:41:44, Epoch 1045:
+27-May-26 23:41:47, => train | nelbo: 1.0899 - nll: 1.0813 - kl: 0.0086 - steps: 17765
+27-May-26 23:41:48, => valid | nelbo: 1.0224 - nll: 1.0181 - kl: 0.0042 - steps: 17765
+27-May-26 23:41:49, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:41:49, Epoch 1046:
+27-May-26 23:41:52, => train | nelbo: 1.0888 - nll: 1.0808 - kl: 0.0080 - steps: 17782
+27-May-26 23:41:52, Epoch 1047:
+27-May-26 23:41:56, => train | nelbo: 1.0596 - nll: 1.0533 - kl: 0.0063 - steps: 17799
+27-May-26 23:41:56, Epoch 1048:
+27-May-26 23:41:59, => train | nelbo: 1.0675 - nll: 1.0597 - kl: 0.0079 - steps: 17816
+27-May-26 23:41:59, Epoch 1049:
+27-May-26 23:42:03, => train | nelbo: 1.0707 - nll: 1.0627 - kl: 0.0081 - steps: 17833
+27-May-26 23:42:03, => valid | nelbo: 1.0217 - nll: 1.0174 - kl: 0.0043 - steps: 17833
+27-May-26 23:42:05, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:42:05, Epoch 1050:
+27-May-26 23:42:08, => train | nelbo: 1.1403 - nll: 1.1273 - kl: 0.0130 - steps: 17850
+27-May-26 23:42:08, Epoch 1051:
+27-May-26 23:42:11, => train | nelbo: 1.0833 - nll: 1.0731 - kl: 0.0102 - steps: 17867
+27-May-26 23:42:11, Epoch 1052:
+27-May-26 23:42:15, => train | nelbo: 1.0758 - nll: 1.0692 - kl: 0.0066 - steps: 17884
+27-May-26 23:42:15, Epoch 1053:
+27-May-26 23:42:18, => train | nelbo: 1.0838 - nll: 1.0772 - kl: 0.0066 - steps: 17901
+27-May-26 23:42:19, => valid | nelbo: 1.0211 - nll: 1.0170 - kl: 0.0042 - steps: 17901
+27-May-26 23:42:20, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:42:20, Epoch 1054:
+27-May-26 23:42:24, => train | nelbo: 1.0622 - nll: 1.0557 - kl: 0.0065 - steps: 17918
+27-May-26 23:42:24, Epoch 1055:
+27-May-26 23:42:27, => train | nelbo: 1.0461 - nll: 1.0395 - kl: 0.0065 - steps: 17935
+27-May-26 23:42:27, Epoch 1056:
+27-May-26 23:42:31, => train | nelbo: 1.0614 - nll: 1.0548 - kl: 0.0066 - steps: 17952
+27-May-26 23:42:31, Epoch 1057:
+27-May-26 23:42:35, => train | nelbo: 1.0843 - nll: 1.0767 - kl: 0.0076 - steps: 17969
+27-May-26 23:42:35, => valid | nelbo: 1.0205 - nll: 1.0162 - kl: 0.0043 - steps: 17969
+27-May-26 23:42:36, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:42:36, Epoch 1058:
+27-May-26 23:42:40, => train | nelbo: 1.0748 - nll: 1.0646 - kl: 0.0102 - steps: 17986
+27-May-26 23:42:40, Epoch 1059:
+27-May-26 23:42:43, => train | nelbo: 1.0647 - nll: 1.0575 - kl: 0.0072 - steps: 18003
+27-May-26 23:42:43, Epoch 1060:
+27-May-26 23:42:47, => train | nelbo: 1.0587 - nll: 1.0516 - kl: 0.0072 - steps: 18020
+27-May-26 23:42:47, Epoch 1061:
+27-May-26 23:42:50, => train | nelbo: 1.0690 - nll: 1.0619 - kl: 0.0071 - steps: 18037
+27-May-26 23:42:51, => valid | nelbo: 1.0198 - nll: 1.0154 - kl: 0.0044 - steps: 18037
+27-May-26 23:42:52, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:42:52, Epoch 1062:
+27-May-26 23:42:55, => train | nelbo: 1.0772 - nll: 1.0696 - kl: 0.0077 - steps: 18054
+27-May-26 23:42:55, Epoch 1063:
+27-May-26 23:42:59, => train | nelbo: 1.0716 - nll: 1.0646 - kl: 0.0071 - steps: 18071
+27-May-26 23:42:59, Epoch 1064:
+27-May-26 23:43:03, => train | nelbo: 1.0765 - nll: 1.0683 - kl: 0.0082 - steps: 18088
+27-May-26 23:43:03, Epoch 1065:
+27-May-26 23:43:06, => train | nelbo: 1.0656 - nll: 1.0585 - kl: 0.0072 - steps: 18105
+27-May-26 23:43:07, => valid | nelbo: 1.0190 - nll: 1.0147 - kl: 0.0043 - steps: 18105
+27-May-26 23:43:08, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:43:08, Epoch 1066:
+27-May-26 23:43:11, => train | nelbo: 1.0693 - nll: 1.0618 - kl: 0.0075 - steps: 18122
+27-May-26 23:43:11, Epoch 1067:
+27-May-26 23:43:15, => train | nelbo: 1.0847 - nll: 1.0773 - kl: 0.0074 - steps: 18139
+27-May-26 23:43:15, Epoch 1068:
+27-May-26 23:43:18, => train | nelbo: 1.0593 - nll: 1.0527 - kl: 0.0066 - steps: 18156
+27-May-26 23:43:18, Epoch 1069:
+27-May-26 23:43:22, => train | nelbo: 1.0675 - nll: 1.0609 - kl: 0.0065 - steps: 18173
+27-May-26 23:43:23, => valid | nelbo: 1.0183 - nll: 1.0140 - kl: 0.0043 - steps: 18173
+27-May-26 23:43:24, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:43:24, Epoch 1070:
+27-May-26 23:43:27, => train | nelbo: 1.0653 - nll: 1.0583 - kl: 0.0070 - steps: 18190
+27-May-26 23:43:27, Epoch 1071:
+27-May-26 23:43:30, => train | nelbo: 1.0879 - nll: 1.0800 - kl: 0.0079 - steps: 18207
+27-May-26 23:43:30, Epoch 1072:
+27-May-26 23:43:34, => train | nelbo: 1.0567 - nll: 1.0497 - kl: 0.0070 - steps: 18224
+27-May-26 23:43:34, Epoch 1073:
+27-May-26 23:43:38, => train | nelbo: 1.0993 - nll: 1.0919 - kl: 0.0074 - steps: 18241
+27-May-26 23:43:38, => valid | nelbo: 1.0180 - nll: 1.0136 - kl: 0.0043 - steps: 18241
+27-May-26 23:43:40, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:43:40, Epoch 1074:
+27-May-26 23:43:43, => train | nelbo: 1.0638 - nll: 1.0560 - kl: 0.0077 - steps: 18258
+27-May-26 23:43:43, Epoch 1075:
+27-May-26 23:43:47, => train | nelbo: 1.0813 - nll: 1.0729 - kl: 0.0084 - steps: 18275
+27-May-26 23:43:47, Epoch 1076:
+27-May-26 23:43:50, => train | nelbo: 1.0594 - nll: 1.0504 - kl: 0.0089 - steps: 18292
+27-May-26 23:43:50, Epoch 1077:
+27-May-26 23:43:54, => train | nelbo: 1.0486 - nll: 1.0417 - kl: 0.0070 - steps: 18309
+27-May-26 23:43:55, => valid | nelbo: 1.0170 - nll: 1.0126 - kl: 0.0044 - steps: 18309
+27-May-26 23:43:56, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:43:56, Epoch 1078:
+27-May-26 23:43:59, => train | nelbo: 1.0472 - nll: 1.0412 - kl: 0.0060 - steps: 18326
+27-May-26 23:43:59, Epoch 1079:
+27-May-26 23:44:02, => train | nelbo: 1.0533 - nll: 1.0463 - kl: 0.0070 - steps: 18343
+27-May-26 23:44:02, Epoch 1080:
+27-May-26 23:44:05, => train | nelbo: 1.0445 - nll: 1.0371 - kl: 0.0075 - steps: 18360
+27-May-26 23:44:05, Epoch 1081:
+27-May-26 23:44:08, => train | nelbo: 1.0896 - nll: 1.0817 - kl: 0.0079 - steps: 18377
+27-May-26 23:44:09, => valid | nelbo: 1.0160 - nll: 1.0118 - kl: 0.0042 - steps: 18377
+27-May-26 23:44:10, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:44:10, Epoch 1082:
+27-May-26 23:44:14, => train | nelbo: 1.0811 - nll: 1.0710 - kl: 0.0101 - steps: 18394
+27-May-26 23:44:14, Epoch 1083:
+27-May-26 23:44:17, => train | nelbo: 1.0535 - nll: 1.0468 - kl: 0.0067 - steps: 18411
+27-May-26 23:44:17, Epoch 1084:
+27-May-26 23:44:21, => train | nelbo: 1.0629 - nll: 1.0558 - kl: 0.0071 - steps: 18428
+27-May-26 23:44:21, Epoch 1085:
+27-May-26 23:44:24, => train | nelbo: 1.0843 - nll: 1.0769 - kl: 0.0074 - steps: 18445
+27-May-26 23:44:24, => valid | nelbo: 1.0155 - nll: 1.0112 - kl: 0.0043 - steps: 18445
+27-May-26 23:44:25, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:44:25, Epoch 1086:
+27-May-26 23:44:29, => train | nelbo: 1.0794 - nll: 1.0726 - kl: 0.0068 - steps: 18462
+27-May-26 23:44:29, Epoch 1087:
+27-May-26 23:44:33, => train | nelbo: 1.0567 - nll: 1.0480 - kl: 0.0086 - steps: 18479
+27-May-26 23:44:33, Epoch 1088:
+27-May-26 23:44:35, => train | nelbo: 1.0533 - nll: 1.0454 - kl: 0.0079 - steps: 18496
+27-May-26 23:44:35, Epoch 1089:
+27-May-26 23:44:39, => train | nelbo: 1.0467 - nll: 1.0395 - kl: 0.0072 - steps: 18513
+27-May-26 23:44:39, => valid | nelbo: 1.0150 - nll: 1.0106 - kl: 0.0044 - steps: 18513
+27-May-26 23:44:41, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:44:41, Epoch 1090:
+27-May-26 23:44:44, => train | nelbo: 1.0718 - nll: 1.0645 - kl: 0.0073 - steps: 18530
+27-May-26 23:44:44, Epoch 1091:
+27-May-26 23:44:48, => train | nelbo: 1.0715 - nll: 1.0636 - kl: 0.0079 - steps: 18547
+27-May-26 23:44:48, Epoch 1092:
+27-May-26 23:44:51, => train | nelbo: 1.0625 - nll: 1.0555 - kl: 0.0071 - steps: 18564
+27-May-26 23:44:51, Epoch 1093:
+27-May-26 23:44:55, => train | nelbo: 1.0630 - nll: 1.0560 - kl: 0.0070 - steps: 18581
+27-May-26 23:44:55, => valid | nelbo: 1.0143 - nll: 1.0099 - kl: 0.0044 - steps: 18581
+27-May-26 23:44:56, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:44:56, Epoch 1094:
+27-May-26 23:45:00, => train | nelbo: 1.0520 - nll: 1.0447 - kl: 0.0073 - steps: 18598
+27-May-26 23:45:00, Epoch 1095:
+27-May-26 23:45:03, => train | nelbo: 1.0519 - nll: 1.0454 - kl: 0.0065 - steps: 18615
+27-May-26 23:45:03, Epoch 1096:
+27-May-26 23:45:06, => train | nelbo: 1.0641 - nll: 1.0568 - kl: 0.0073 - steps: 18632
+27-May-26 23:45:06, Epoch 1097:
+27-May-26 23:45:09, => train | nelbo: 1.0660 - nll: 1.0587 - kl: 0.0073 - steps: 18649
+27-May-26 23:45:10, => valid | nelbo: 1.0134 - nll: 1.0091 - kl: 0.0043 - steps: 18649
+27-May-26 23:45:11, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:45:11, Epoch 1098:
+27-May-26 23:45:15, => train | nelbo: 1.0499 - nll: 1.0429 - kl: 0.0070 - steps: 18666
+27-May-26 23:45:15, Epoch 1099:
+27-May-26 23:45:18, => train | nelbo: 1.0479 - nll: 1.0407 - kl: 0.0072 - steps: 18683
+27-May-26 23:45:18, Epoch 1100:
+27-May-26 23:45:21, => train | nelbo: 1.0533 - nll: 1.0444 - kl: 0.0089 - steps: 18700
+27-May-26 23:45:21, Epoch 1101:
+27-May-26 23:45:25, => train | nelbo: 1.0849 - nll: 1.0765 - kl: 0.0084 - steps: 18717
+27-May-26 23:45:25, => valid | nelbo: 1.0128 - nll: 1.0084 - kl: 0.0044 - steps: 18717
+27-May-26 23:45:26, Model saved: ../checkpoints/f_p_f/ultrasound_run1/checkpoint.pt
+27-May-26 23:45:26, Epoch 1102:
+27-May-26 23:45:30, => train | nelbo: 1.0421 - nll: 1.0341 - kl: 0.0080 - steps: 18734
+27-May-26 23:45:30, Epoch 1103:
+27-May-26 23:45:33, => train | nelbo: 1.1237 - nll: 1.1135 - kl: 0.0102 - steps: 18751
+27-May-26 23:45:33, Epoch 1104:
+27-May-26 23:45:36, => train | nelbo: 1.0641 - nll: 1.0552 - kl: 0.0089 - steps: 18768
+27-May-26 23:45:36, Epoch 1105:
+27-May-26 23:45:37, Updates skipped: 1 - grad_norm: nan - nll_nan: 1 - kl_nan: 1
